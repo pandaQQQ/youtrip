@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!--如果检测到浏览器是ie就强制使用ie的兼容模式(edge版本)-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--屏幕如果缩放按照1比1缩放-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--以上三个必放-->
+
+  <link rel="stylesheet" href="css/xr_person.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="font/font-awesome.min.css">
+  <link rel="stylesheet" href="font/font-awesome.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/homePublic.css">
+  <title>个人中心</title>
+</head>
+<body>
+<!--页头-->
+<div class="xr_navcolor">
+    <%-include("head.ejs")%>
+</div>
+<div class="xr_sectionx">
+  <div class="container-fluid">
+    <div class="row xr_section">
+      <ul class="col-md-2 col-xs-3 text-center xr_navul">
+        <li class=" xr_li xr_zitia">
+          <img src="images/timg.jpg" width="100%" height="100px" class="xr_form">
+          <input type="file" class="xr_sendfile">
+          <span id="xr_huiyuan"></span>
+        </li>
+        <li class="xr_newzitia">
+          <i class="fa fa-user" aria-hidden="true"></i>
+          <span onclick=personmesg() >个人信息</span>
+        </li>
+        <li class="xr_newzitia" onclick="xr_dingdan()">
+          <i class="fa fa-file-text" aria-hidden="true"></i>
+          <span >套餐订单</span>
+        </li>
+        <li class="xr_newzitia" onclick="mysoucang()">
+          <i class="fa fa-heart" aria-hidden="true"></i>
+          <span  >我的收藏</span>
+        </li>
+        <li  class="xr_newzitia" onclick="xr_pingjia()" >
+          <i class="fa fa-star" aria-hidden="true"></i>
+          <span>我的评价</span>
+        </li>
+        <li  class="xr_newzitia" onclick="xr_qianzheng()">
+          <i class="fa fa-address-book" aria-hidden="true"></i>
+          <span>签证订单</span>
+        </li>
+      </ul>
+      <!--右边具体栏-->
+      <!------------------------个人信息模块-------------------------->
+      <div class=" col-md-9 col-xs-8 xr_rightcontent xr_position" id="xr_positionxr">
+        <div class="xr_contentheader">
+          <div class="row ">
+            <div class="col-xs-4 col-xs-offset-2 text-center" id="xr_jibenxinxi" onclick=personxinxixianshi()>基本信息</div>
+            <div class="col-xs-4 col-xs-offset-1 text-left" onclick="xr_mima()" id="xr_mimaxiugai">密码修改</div>
+            <div class="xr_xuanzhongxian1" id="xr_xiahua1"></div>
+          </div>
+        </div>
+        <div class="xr_contentheaderxian" ></div>
+        <div class="xr_divrelativ">
+          <!-------------------------基本信息--------------------->
+          <div class="xr_nichengdiv xr_forminput">
+            <div class="row">
+              <form action="" class="col-xs-4 col-xs-offset-4 text-left " >
+                <span class="xr_nichen">昵 称：</span> <input type="text" placeholder="请输入昵称" class="xr_nicheninput">
+              </form>
+              <div class="xr_inputxian"></div>
+            </div>
+          </div>
+          <div class="xr_nichengdiv1 xr_forminput">
+            <div class="row">
+              <form action="" class="col-xs-4 col-xs-offset-4 text-left xr_forminput" >
+                <span class="xr_nichen">姓 名：</span> <input type="text" placeholder="请输入真实姓名" class="xr_nicheninput">
+              </form>
+              <div class="xr_inputxian1">
+              </div>
+            </div>
+          </div>
+          <div class="xr_nichengdiv1 xr_sex">
+            <div class="row">
+              <div class="col-xs-offset-4 col-xs-4">
+                <span class="xr_phone"> 性 别：</span>
+                <label class="radio-inline   ">
+                  <input type="radio" name="inlineRadioOptions" checked id="inlineRadio1" value="男"> 男
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="女"> 女
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="xr_nichengdiv1 xr_phone">
+            <div class="row">
+              <form action="" class="col-xs-5 col-xs-offset-3 text-left xr_forminput text-right " >
+                <span class="xr_nichen ">手机号码：</span> <input type="text" placeholder="请输入11位手机号" class="xr_nicheninput">
+              </form>
+              <div class="xr_inputxian2"></div>
+            </div>
+          </div>
+          <div class="xr_nichengdiv1 xr_phone">
+            <div class="row">
+              <form action="" class="col-xs-5 col-xs-offset-3 text-left xr_forminput text-right " >
+                <span class="xr_nichen ">邮箱：</span> <input type="text"  class="xr_nicheninput">
+              </form>
+              <div class="xr_inputxian3"></div>
+            </div>
+          </div>
+          <div class="xr_nichengdiv1">
+            <div class="row">
+              <div class="col-xs-3 col-xs-offset-3 text-right">
+                <div>
+                  <button type="button" class="mybtn btn-yes" onclick="xr_updatepersonmesg()">确定</button>
+                </div>
+              </div>
+              <div class="col-xs-3  text-left">
+                <button type="button" class="mybtn btn-no" onclick="xr_quxiao()">取消</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!---------------------------------------密码修改----------------------->
+        <div class="xrmima ">   <!--设置隐藏-->
+          <div class="xr_mimajuli">
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3 ">
+                <span>新密码：</span><input type="password" class="divinputmima" placeholder="请输入6位及以上密码">
+
+              </div>
+              <div id="mymima"></div>
+              <div class="divmimainputxian"></div>
+            </div>
+            <div class="row"></div>
+          </div>
+
+          <div class="xr_mimajuli1">
+            <div class="row">
+              <div class="col-xs-6 col-xs-offset-3 ">
+                <span >确认密码：</span><input type="password" class="divinputmima">
+              </div>
+              <div id="mymima1"></div>
+              <div class="divmimainputxian1"></div>
+            </div>
+            <div class="row"></div>
+          </div>
+
+          <div class="xr_nichengdiv5">
+            <div class="row">
+              <div class="col-xs-2 col-xs-offset-4 text-right">
+                <div>
+                  <button type="button" class="mybtn btn-yes" onclick="xr_passwordtrue()">确定</button>
+                </div>
+              </div>
+              <div class="col-xs-2  text-left">
+                <button type="button" class="mybtn btn-no">取消</button>
+
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!---------------------------订单模块---------------------------------->
+      <div class=" col-md-9 col-xs-8 xr_rightcontent" id="xr_mydingdan">
+
+        <div class="xr_contentheader">
+          <div class="row ">
+            <div class="col-sm-2 text-center col-xs-offset-1 " id="xr_all" onclick=xr_alldindan()>
+              全部订单
+            </div>
+            <div class="col-sm-2 text-center" id="xr_payfor" onclick=xr_payfor()>
+              已出行
+            </div>
+            <div class="col-sm-2 text-center" id="xr_nopay" onclick=xr_nopay()>
+              待付款
+            </div>
+            <div class="col-sm-2 text-center" id="xr_nogo" onclick=xr_nogo()>
+              待出行
+            </div>
+            <div class="col-sm-2 text-center " id="xr_close" onclick=xr_close()>
+              已退款
+            </div>
+            <div class="xr_xuanzhongxian" id="xr_xuanzhongxian">
+            </div>
+          </div>
+        </div>
+        <div class="xr_contentheaderxian">
+        </div>
+        <div class="xr_xunxhongxianxia" >
+          <!-------------------------全部订单--------------------------------------->
+          <div class="xr_sectiontwo xr_sect">
+            <div class="xr_anniu xr_anniuuuu">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1 allsearchymright" onclick="allserpre()">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 allsearchymleft" onclick="allsernex()">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!-----------------------已出行订单------------------------------------------------>
+          <div class="xr_sectiontwotwo">
+            <!--这才是第二个-->
+            <!--第三个-->
+            <!--按钮-->
+            <div class="xr_anniu xr_anniuxr">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1 xr_anniuxrright " onclick=pre()>
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 xr_anniuxrleft"  onclick=nex()>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!------------------------------代付款---------------------->
+          <div class="xr_throwthrow">
+            <!--这才是第二个-->
+            <div class="xr_anniu xr_nopayadd">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4" id="pagesize">
+                  <div class="xranniulin xr_anniucolor1" onclick="nopayprepage()" >
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 xr_xxxxxx" onclick="nopaynexpage()">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!----------------------带出行-------------------->
+          <div class="xr_fourfour" id="nononogogogo">
+
+
+            <!--这才是第二个-->
+
+
+            <div class="xr_anniu xr_nogoshuju">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 xr_nogopage">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--已退款------------------------------------->
+          <div class="xr_fivefive">
+
+            <!--这才是第二个-->
+
+
+            <div class="xr_anniu xr_xxyiquxiao">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 xr_wuxiao">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--------------收藏模块---------------------->
+
+      <div class="xr_rightcontent1 col-md-9 col-xs-8 ">
+        <div class="xr_contentheader">
+          <div class="row">
+            <div class="col-xs-4 text-center col-xs-offset-4" id="xr_myshoucang">
+              我的收藏
+            </div>
+            <div class="xr_xuanzhongxian11222">
+            </div>
+          </div>
+        </div>
+        <div class="shoucangtu">
+          <div class="shoucantuneirong1">
+            <div class="row" id="collect">
+
+            </div>
+          </div>
+          <!--反野-->
+          <div class="xr_anniu5">
+            <div class="row">
+              <div class="col-xs-4 col-xs-offset-5">
+                <div class="xranniulin xr_anniucolor1">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+                <div class="xr_anniu1 xr_anniucolor xr_anniuziticolor">
+                  1
+                </div>
+                <div class="xranniulin xr_anniucolor1">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-------------- 我的评价----------------------->
+      <div class="xr_rightcontent2 col-md-9 col-xs-8 ">
+
+
+        <div class="xr_contentheader">
+          <div class="row ">
+
+
+            <div class="col-sm-3 text-center col-sm-offset-3" id="xr_yespingjia" onclick=xr_yespingjia()>
+              已评价
+            </div>
+            <div class="col-sm-3 text-center" id="xr_nopingjia" onclick=xr_nopingjia()>
+              未评价
+            </div>
+
+            <div class="xr_xuanzhongxianxian" id="xr_xuanzhongxianxan">
+            </div>
+          </div>
+
+        </div>
+        <div class="xr_contentheaderxian"></div>
+        <div class="xr_xunxhongxianxia" >
+          <!-----------------------已评价------------------------------------------------>
+          <div class="xr_sectiontwotwopingjia">
+            <div class="xr_sectiontwo1">
+              <div class="xr_sectiontwo1header">
+                <!--第一个订单-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-4 xr_ziti">-->
+                <!--已评价1-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 col-xs-offset-6 text-right ">-->
+                <!--<i class="fa fa-trash xr_ziti" aria-hidden="true"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+              </div>
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="../images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    已评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>查看评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--这才是第二个-->
+            <div class="xr_sectiontwo1 xr_margin">
+
+              <div class="xr_sectiontwo1header">
+
+                <!--<div class="row">-->
+                <!--<div class="col-xs-4 xr_ziti">-->
+                <!--已评价2-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 col-xs-offset-6 text-right ">-->
+                <!--<i class="fa fa-trash xr_ziti" aria-hidden="true"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+              </div>
+
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="../images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    已评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>查看评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="xr_sectiontwo1 xr_margin">
+
+              <div class="xr_sectiontwo1header">
+
+                <!--<div class="row">-->
+                <!--<div class="col-xs-4 xr_ziti">-->
+                <!--已评价2-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 col-xs-offset-6 text-right ">-->
+                <!--<i class="fa fa-trash xr_ziti" aria-hidden="true"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+              </div>
+
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    已评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>查看评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="xr_anniu">
+              <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor xr_anniuziticolor">
+                    1
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor1">
+                    2
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor1">
+                    3
+                  </div>
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!------------------------------weipingjia---------------------->
+          <div class="xr_throwthrowpingjia">
+            <div class="xr_sectiontwo1">
+
+              <div class="xr_sectiontwo1header">
+                <!--第一个订单-->
+                <!--<div class="row">-->
+                <!--<div class="col-xs-4 xr_ziti">-->
+                <!--未评价1-->
+                <!--</div>-->
+                <!--<div class="col-xs-2 col-xs-offset-6 text-right ">-->
+                <!--<i class="fa fa-trash xr_ziti" aria-hidden="true"></i>-->
+                <!--</div>-->
+                <!--</div>-->
+              </div>
+
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    未评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>去评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!--这才是第二个-->
+            <div class="xr_sectiontwo1 xr_margin">
+
+              <div class="xr_sectiontwo1header">
+
+
+              </div>
+
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    未评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>去评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="xr_sectiontwo1 xr_margin">
+
+              <div class="xr_sectiontwo1header">
+
+              </div>
+
+              <div class="xr_sectiontherr">
+                <div class="xr_sectiontherrone">
+                  <div class="row text-center">
+                    <div class="col-xs-2">
+                      订单号
+                    </div>
+                    <div class="col-xs-2">
+                      产品图
+                    </div>
+                    <div class="col-xs-2 ">
+                      出行日期
+                    </div>
+                    <div class="col-xs-2" >
+                      支付金额
+                    </div>
+                    <div class="col-xs-2 ">
+                      状态
+                    </div>
+                    <div class="col-xs-2">
+                      操作
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_sectionfour">
+                <div class="row text-center xr_divxrpadding" >
+                  <div class="col-xs-2">
+                    12345678
+                  </div>
+                  <div class="col-xs-2 xr_imge">
+                    <img src="images/timg.jpg" width="100%">
+                  </div>
+                  <div class="col-xs-2">
+                    1993.09.09
+                  </div>
+                  <div class="col-xs-2">
+                    ￥5000.00
+                  </div>
+                  <div class="col-xs-2">
+                    未评价
+                  </div>
+                  <div class="col-xs-2">
+                    <span>去评价</span>
+
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="xr_quxiaodingdan">
+                <div class="row  xr_quxiaodingdanziti">
+                  <div class="col-xs-1 col-xs-offset-11 text-left ">
+                    <i class="fa fa-trash xr_ziti" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="xr_anniu">
+              <div class="row">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor xr_anniuziticolor">
+                    1
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor1">
+                    2
+                  </div>
+                  <div class="xr_anniu1 xr_anniucolor1">
+                    3
+                  </div>
+                  <div class="xranniulin xr_anniucolor1">
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-------------- 我的签证----------------------->
+      <div class="xr_rightcontent3 col-md-9 col-xs-8 ">
+
+
+        <div class="xr_contentheader">
+          <div class="row ">
+
+
+            <div class="col-sm-3 text-center col-sm-offset-3" id="xr_yesbanli" onclick="xr_yesqianzheng()" >
+              已付款
+            </div>
+            <div class="col-sm-3 text-center" id="xr_nobanli" onclick="xr_noqianzheng()">
+              未付款
+            </div>
+
+            <div class="xr_xuanzhongxianxian" id="xr_xuanzhongxianxanbanliqianzhen">
+            </div>
+          </div>
+
+        </div>
+        <div class="xr_contentheaderxian xr_qianzheng"></div>
+        <div class="xr_xunxhongxianxia" >
+          <!-----------------------已办理------------------------------------------------>
+          <div class="xr_sectiontwotwoqianzheng xr_banqianzy">
+
+            <div class="xr_anniu xr_anniuu">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1 yibanliright" onclick="preagenum()">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1 yibanlileft" onclick="nextpagenum()">
+                    <i class="fa fa-angle-right " aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <!------------------------------未办理---------------------->
+          <div class="xr_throwthrownobanli xr_weibanliqianzheng">
+
+
+            <!--这才是第二个-->
+
+
+            <div class="xr_anniu xr_aniuniu">
+              <div class="row text-center">
+                <div class="col-xs-4 col-xs-offset-4">
+                  <div class="xranniulin xr_anniucolor1 yibanlileftxxrr1" onclick="weibanlipreabe()">
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  </div>
+                  <div class="xranniulin xr_anniucolor1  yibanlirightxxrr" onclick="weibanlinexabe()">
+                    <i class="fa fa-angle-right " aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="xr_updatesuccess">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 text-center">
+      <span class="ziti">修改成功!</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6 text-center">
+      <div class="xr_success" onclick="xr_yicang()">确认</div>
+    </div>
+  </div>
+</div>
+<div class="xr_tuikuansuccess">
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-10 text-center xr_tuikuan ">
+
+      <span class="xr_ziticolor">
+          是否退款?
+    </span>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-offset-2 col-xs-8 text-center">
+      <span class="xr_success"  style="margin-right:10%" onclick="mytuikuan()">
+        是
+      </span>
+      <span class="xr_no"  onclick="mynotuikuan()">
+        否
+      </span>
+
+   </div>
+  </div>
+</div>
+
+
+
+<div class="xr_bigxiangqing">
+  <div class="container-fluid">
+<div class="row ">
+  <span class="col-xs-4 xr_xiangqmargininheight">
+    订单信息
+  </span>
+  <span class="col-xs-2 xr_xiangqmargininheight col-xs-offset-6 text-right" onclick="closexiangqing()" style="font-size: 20px">
+    ×
+  </span>
+
+</div>
+    <div class="row">
+      <div class="col-xs-12 "></div>
+    </div>
+    <div class="row ">
+<div class="col-xs-4 xr_xiangqmargin">
+  <span>
+  订单号：
+</span>
+  <span id="xr_number">
+
+  </span>
+</div>
+    </div>
+    <div class="row ">
+<div class="col-xs-6 xr_xiangqmargin">
+<span>
+  下单时间：
+</span>
+  <span>
+  2018-12-13
+  </span>
+  <span>
+    15:04:33
+  </span>
+</div>
+    </div>
+<div class="row ">
+<div class="col-xs-5 xr_xiangqmargin">
+
+
+
+</div>
+</div>
+<div class="row ">
+  <div class="col-xs-6 xr_xiangqmargin">
+    <span>
+      当前订单状态：
+    </span>
+    <span class="xr_red" id="dingdanzhuangtai">
+
+    </span>
+
+
+  </div>
+</div>
+    <div class="xr_xiangqmargin">
+      <table class="table table-bordered xr_center">
+        <tr>
+      <td>
+      订单名称
+       </td>
+          <td>
+            出发日期
+          </td>
+
+
+
+          <td>
+            订单价格
+          </td>
+        </tr>
+        <tr>
+<td id="dingdanname">
+
+</td>
+
+          <td id="gotime">
+
+          </td>
+
+
+          <td class="xr_red" id="dingdanprice">
+
+          </td>
+        </tr>
+      </table>
+    </div>
+
+
+</div>
+</div>
+
+<%-include("foot.ejs")%>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/xr_person.js"></script>
+</body>
+</html>

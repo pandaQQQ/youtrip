@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fz-bg{
+    background-color:#EAEBFF;
+}
+.myLinear{
+    height: 70px;
+}
+.container-fluid{
+    width: 87%;
+    margin:0 6.5%;
+    margin-bottom: 50px;
+    background-color: white;
+    border-radius: 10px;
+
+}
+.fz-top{
+    width: 87%;
+    margin:0 6.5%;
+    padding: 20px 0;
+}
+.fz-title{
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    color: green;
+    border-bottom: 1px dashed black;
+}
+.fz-title1{
+    width: 96%;
+    margin: 0 2%;
+}
+.fz-title1>h2{
+    line-height: 2em;
+}
+.fz-title1>p{
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+.fz-link{
+    color:#FF9900;
+}
+.myLinear{
+    background-color: #EAEBFF;
+}
+.fz-nav{
+    margin: 0;
+    width: 100%;
+    background-color: rgba(167, 152, 101, 0.6);
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/font/font-awesome.css"/>
+  <title></title>
+</head>
+<body>
+<!--=============================右侧固定导航===============================-->
+<div class="fixedNav">
+  <div class="onlineIcon">
+    <i class="fa fa-commenting" aria-hidden="true"></i>
+  </div>
+  <div class="lcfBackUp" onclick="lcfBackTop()">
+    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </div>
+</div>
+<script>
+    /*========================回到顶部============================*/
+    function lcfBackTop() {
+        var backInterval = setInterval(function () {
+            window.scrollTo(0,window.scrollY-20);
+            if(window.scrollY<=0){
+                clearInterval(backInterval)
+            }
+        },5)
+    }
+</script>
+</body>
+</html>

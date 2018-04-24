@@ -1,0 +1,477 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+/*===================================导航条================================*/
+/*设置边框包裹logo*/
+.container-fluid .navbar{
+    background-color: inherit;
+    padding:0 0 0 6.5%;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    min-height: 74px;
+    z-index: 999;
+    position: fixed;
+}
+/*调整菜单位置*/
+.navbar-collapse{
+    padding-top: 1.6%;
+    margin-left: 9%;
+    padding-right: 0;
+    color: white;
+    width: 91%;
+}
+.navbar-collapse .myNav{
+    color: white;
+    width: 100%;;
+}
+.navbar-collapse .myNav>li{
+    margin-left: 2.5%;
+}
+.navbar-collapse .myNav>li:first-child{
+    margin-left:0;
+}
+.navbar-collapse .navbar-nav>li>a{
+    font-size: 1.1em;
+}
+.navbar-collapse .navbar-nav>li>a:link,.navbar-collapse .navbar-nav>li>span>a:link{
+    color: white;
+    text-decoration: none;
+}
+.navbar-collapse .navbar-nav>li>a:visited,.navbar-collapse .navbar-nav>li>span>a:visited{
+    color: white;
+    text-decoration: none;
+}
+.navbar-collapse .navbar-nav>li>a:hover,.navbar-collapse .navbar-nav>li>span>a:hover{
+    color:#a79865;
+    text-decoration: none;
+}
+.navbar-collapse .navbar-nav>li>a:active,.navbar-collapse .navbar-nav>li>span>a:active{
+    color: white;
+    text-decoration: none;
+}
+.navbar-collapse .navbar-nav .lcfLogin{
+    padding: 1.3% 0 2% 0;
+    font-size: 1.1em;
+    margin-left:8%;
+    cursor: pointer;
+}
+.navbar-brand{
+    padding: 0;
+    height: 70px;
+}
+.navbar-brand>img{
+    height: 75px;
+    margin-top: 3%;
+}
+.navbar-toggle{
+    background-color: white;
+    border: none;
+    margin-top: 4.5%;
+}
+.navbar-header .navbar-toggle .icon-bar{
+    background-color:#a79865;
+}
+/*下拉菜单打开后没有边框*/
+.navbar-collapse{
+    border:none;
+    color: white;
+}
+
+/*=====================================页脚========================*/
+.footer{
+    padding: 2% 0 2% 0;
+    background-color: #a79865;
+}
+.col-lg-1,.col-md-1,.col-sm-1{
+    padding: 0;
+    margin: 0;
+}
+.col-lg-6,.col-md-7,.col-sm-6{
+    padding: 0;
+    margin: 0;
+}
+.footer .footerLogo{
+    margin-left: 5.5%;
+}
+.footerLogo>img{
+    height: 85px;
+    margin-top: 16%;
+}
+.footerul{
+    margin: 2% 0 0 3%;
+    font-size: 1em;
+    color: #ffffff;
+}
+.footer .footerul #horizontal>li{
+    float: left;
+    margin-left: 5%;
+    cursor: pointer;
+}
+.footer .footerul #horizontal>li>a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer .footerul #horizontal>li>a:hover,.footer .footerul #horizontal>li>ul>li>a:hover{
+    color: #d6ad65;
+}
+.footer .footerul #horizontal>li>ul>li>a{
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer .footerul #horizontal>li>ul>li{
+    margin-top: 15%;
+}
+.footerText{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+.footer .searchNum{
+    margin:2% 0 0 1%;
+}
+.footer .searchNum:last-child{
+    margin-left: 3.5%;
+}
+.searchNum>img{
+    height: 110px;
+}
+.searchNum>p{
+    text-align: center;
+    font-size: 0.9em;
+    color:white;
+    width: 100%;
+    margin-top: 15%;
+}
+
+/*========================按钮公共样式1============================*/
+.design-tabTrip .awayTake{
+    margin-top: 6%;
+}
+.awayTake .awayTakeBtn{
+    width: 198px;
+    margin-left: 43%;
+    height: 48px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 50px;
+    background-color: #a79865;
+    overflow: hidden;
+    border: none;
+    transition: all .2s linear;
+}
+.awayTakeBtn p{
+    width: 200px;
+    position: absolute;
+    line-height: 50px;
+    transition: all .1s linear;
+}
+.awayTake .awayTakeBtn:hover{
+    background-color: rgb(137, 123, 79);
+    transition: all .2s linear;
+}
+/*========================按钮公共样式2============================*/
+.ShareBtn{
+    width: 198px;
+    margin:5% 0 5% 43%;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    line-height: 50px;
+    border: solid 1px #a79865;
+    background-color: inherit;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.ShareBtn>p>a{
+    color: rgb(51, 51, 51);
+    font-size: 1.1em;
+}
+.ShareBtn .ShareBtn:hover{
+    border: none;
+}
+.ShareBtn p{
+    width: 200px;
+    position: absolute;
+    line-height: 50px;
+    transition: all .1s linear;
+}
+.ShareBtn .ShareDiv{
+    width: 50px;
+    height: 200px;
+    position: absolute;
+    left: -51px;
+    top: -151px;
+    background-color: #a79865;
+    opacity: 0;
+    transition: all .2s linear;
+    transform-origin: bottom right;
+}
+.ShareBtn:hover .ShareDiv{
+    transform: rotate(90deg);
+    opacity: 1;
+}
+.ShareBtn:hover p>a{
+    color: white;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/*==========================左侧固定导航=============================*/
+.fixedNav{
+    position: fixed;
+    top: 520px;
+    z-index: 22;
+    font-size: 1.6em;
+    right: 20px;
+    width: 50px;
+    text-align: center;
+    height: 100px;
+    color: rgb(255, 255, 255);
+}
+.onlineIcon{
+    width: 45px;
+    height: 35px;
+    border-radius: 3px;
+    line-height: 35px;
+    background-color: #615839;
+    cursor: pointer;
+}
+.lcfBackUp{
+    width: 45px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 3px;
+    line-height: 35px;
+    background-color: #615839;
+    cursor: pointer;
+}
+.fixedNav .lcfBackUp .icon-xiangshang{
+    font-size: 1.3em;
+}
+.fixedSay{
+    position: fixed;
+    width: 600px;
+    height: 350px;;
+    top: 150px;
+    left: 370px;
+    z-index: 23;
+    background-color: #615839;
+}
+.fixed-text{
+    width: 98%;
+    height: 96%;
+    margin: 1% 1%;
+    background-color: white;
+}
+
+/*===================================媒体查询1================================*/
+/*设置在满足(min-width: 768px) and (max-width: 1237px)条件情况下LOGO居中*/
+@media (min-width: 768px) and (max-width: 1237px) {
+    .bannerLogo>img{
+        height: 200px;
+    }
+    /*向下滑*/
+    .downArrow {
+        top:65%;
+        left: 45%;
+    }
+
+    /*========================You Trip旅行者说========================*/
+    .lcfYouTripimg .colImg .tripDecrible>img{
+        width: 10%;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p{
+        width: 17%;
+        display: inline-block;
+        margin-left: 0;
+        font-size: 0.88em;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p:last-child{
+        width: 30%;
+    }
+    .lcfYouTripimg .colImg>p{
+        font-size: 0.5em;
+    }
+    .lcfYouTripShare>div{
+        width: 17%;
+        font-size: 1em;
+    }
+    .lcfYouTripShare .ShareBtn,.lcfcaseTitle .ShareBtn{
+        margin-left: 40%;
+    }
+    .awayTake .awayTakeBtn{
+        margin-left: 40%;
+    }
+    /*=================导航======================*/
+    .container-fluid .navbar{
+        padding:0;
+    }
+    .navbar-collapse{
+        width: 90%;
+        float: left;
+        margin-left: 0;
+    }
+    .navbar-collapse .navbar-nav>li>a{
+        font-size: 1em;
+    }
+    .navbar-brand,.navbar-header{
+        width: 10%;
+        float: left;
+    }
+    .navbar-collapse .navbar-nav .lcfLogin{
+        display: none;
+    }
+
+    /*================页脚==================*/
+    .footer .footerLogo{
+        margin-left: 4.5%;
+    }
+    .footerul{
+        margin: 2% 0 0 1%;
+        font-size: 0.8em;
+    }
+    .footer .footerul>p{
+        font-size: 1em;
+        text-align: center;
+        margin-top: 4%;
+    }
+    .footer .searchNum{
+        margin-left: 3%;
+    }
+    .footer .searchNum:last-child{
+        margin-left: 3%;
+    }
+    .searchNum>img{
+        height: 90px;
+    }
+    .searchNum>p{
+        font-size: 0.5em;
+        width: 110%;
+    }
+}
+
+/*===================================媒体查询器2================================*/
+/*设置在满足(min-width: 500px) and (max-width: 760px)条件情况下*/
+@media (min-width: 500px) and (max-width: 768px) {
+    /*===================客户案例===============*/
+    .caseTitle{
+        margin-top: 3%;
+    }
+    .customerCase{
+        margin-top: 0;
+    }
+    .case1Top .case1Text>p{
+        margin-top: 10%;
+    }
+    .awayTake .awayTakeBtn,.lcfYouTripShare .ShareBtn,.lcfcaseTitle .ShareBtn{
+        margin-left: 37%;
+    }
+    /*========================You Trip旅行者说========================*/
+    .lcfYouTripimg .colImg .tripDecrible>img{
+        width: 16%;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p{
+        width: 40%;
+        display: block;
+        margin-top: 5%;
+        font-size: 0.88em;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p:last-child{
+        width: 60%;
+    }
+    .lcfYouTripimg .colImg>p{
+        font-size: 0.5em;
+    }
+    .lcfYouTripShare>div{
+        width: 30%;
+        font-size: 1em;
+        margin:5% 0 0 35%;
+    }
+
+    /*=================导航======================*/
+    .navbar-collapse .navbar-nav>li{
+        height: 60px;
+        font-size: 1em;
+    }
+    .navbar-collapse .navbar-nav .lcfLogin{
+        display: none;
+    }
+    .navbar-collapse .navbar-nav .lcfContact{
+        display: none;
+    }
+    .container-fluid .navbar{
+        padding-left: 3.5%;
+    }
+    /*======================banner=========================*/
+    .bannerLogo>img{
+        height: 200px;
+    }
+    /*向下滑*/
+    .downArrow {
+        top:55%;
+        left: 45%;
+    }
+    /*=================页脚==================*/
+    .footer .footerLogo{
+        margin-left: 40%;
+    }
+    .footerul{
+        margin-left: 2%;
+        font-size: 0.8em;
+    }
+    .footerul>ul>li{
+        margin-left: 3%;
+    }
+    .footer .footerul>p{
+        font-size: 1em;
+        margin-right: 3%;
+        margin-top: 4%;
+    }
+    .searchNum{
+        width: 17%;
+        float: left;
+    }
+    .footer .searchNum{
+        margin-left: 30%;
+    }
+    .footer .searchNum:last-child{
+        margin-left: 5%;
+    }
+    .searchNum>img{
+        height: 92px;
+    }
+    .searchNum>p{
+        font-size: 0.5em;
+        width: 110%;
+        margin-top: 5%;
+    }
+}
+
+.yiru:hover{
+    background-color: rgba(29, 29, 29, 0.86);
+    transition:all .2s linear;
+    color: white;
+    cursor: pointer;
+}

@@ -1,0 +1,352 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+section{
+    width: 87%;
+    margin:0 6.5%;
+}
+
+@font-face {
+    font-family: "myfont";
+    src:url("../images/fz-imge/fz-icon/iconfont.eot");
+    src:url("../images/fz-imge/fz-icon/iconfont.woff");
+}
+.fz-banner{
+    margin: 0;
+}
+.myLinear{
+    width: 100%;
+    margin: 0;
+    height: 80px;
+}
+.fz-mymin{
+    background-color:#EAEBFF;
+}
+.fz-top{
+    border-bottom: solid 0.5px rgba(142, 137, 118, 0.29) ;
+}
+.fz-top-p{
+
+    margin-top: 20px;
+}
+.one7{
+    font-family: "myfont";
+}
+.one8{
+    font-family: "myfont";
+    font-size: 20px;
+}
+.one9{
+    font-family: "myfont";
+    font-size: 20px;
+    color: #f1934b;
+
+}
+.fz-min{
+    padding-top: 70px;
+    width: 100%;
+}
+.fz-min-le{
+    float: left;
+    width: 50%;
+    font-size:2em;
+}
+
+.fz-min-span{
+    width: 45%;
+    float: left;
+}
+.one{
+    width: 20%;
+}
+.one>img{
+    width: 30px;
+    height:  30px;
+    border-radius: 30px;
+}
+.fz-min-span li{
+    float: left;
+    list-style: none;
+    line-height:4em;
+}
+
+
+.fz-show{
+    height: 415px;
+}
+.fz-myimg{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.fz-myimg>img{
+    height: 315px;
+    width: 50%;
+    position: absolute;
+    margin: 50px 25%;
+}
+.fz-box{
+    padding: 25px 0;
+    position: relative;
+    border-top: solid 0.5px rgba(142, 137, 118, 0.29);
+    border-bottom: solid 0.5px rgba(142, 137, 118, 0.29);
+}
+.fz-box>div{
+    float: left;
+}
+.pre{
+    width: 5%;
+    line-height: 116px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.nex{
+    width: 5%;
+    line-height: 116px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.fz-lshow{
+    width: 1040px;
+    overflow: hidden;
+}
+.fz-lubo{
+    width: 200%;
+    transition: all .4s linear;
+}
+.fz-lubo>div{
+     height: 120px;
+     width: 200px;
+     float: left;
+     margin: 0 30px;
+ }
+.fz-lubo>div>img{
+    width: 100%;
+    height: 100%;
+}
+.fz-text>p{
+    line-height: 2em;
+    width: 96%;
+    margin: 20px 2%;
+}
+.fz-geshi{
+    position: relative;
+}
+.fz-com{
+    width: 96%;
+    margin: 20px 2%;
+}
+.pin{
+    width: 96%;
+    margin: 20px 2%;
+    height: 100px;
+    border: 1px solid rgba(128,128,128,.5);
+    background-color: white;
+}
+.fz-one-btn{
+    margin-right: 2%;
+    width: 80px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.1em;
+    background-color: #a79865;
+    overflow: hidden;
+    border: none;
+    transition: all .2s linear;
+}
+.fz-one-btn:hover{
+    background-color: rgb(137, 123, 79);
+}
+.fz-bottom>div{
+    float: left;
+}
+.fz-input{
+    width: 30%;
+    margin-right: 2%;
+}
+.fz-input>input{
+    height: 30px;
+    width: 100%;
+}
+.fz-bottom{
+    width: 96%;
+    margin: 0 0 20px 2% ;
+    height: 50px;
+    position: relative;
+}
+.Ri{
+    position: absolute;
+    right: 0;
+}
+.fz-say{
+    width: 100%;
+    height: 100%;
+    border: 0px solid red;
+}
+.fz-geshi>div{
+    width: 96%;
+    margin: 20px 2%;
+}
+.fz-pinjia{
+    margin-top: 20px;
+}
+.fz-pinjia>p{
+    font-size: 16px;
+}
+.fz-a{
+    color: inherit;
+    text-decoration: none;
+}
+.fz-ri{
+ float: right;
+}
+.fz-com-com{
+    padding: 20px 60px;
+    outline: solid 0.5px rgba(142, 137, 118, 0.29);
+    height: 280px;
+    margin-top: 20px;
+}
+.fz-com-com>div{
+    float: left;
+    width: 50%;
+    height: 80px;
+    padding:5px 50px ;
+}
+.fz-le{
+    width: 20%;
+    height: 100%;
+    background-size: cover;
+}
+.fz-com-com>div>div{
+    float: left;
+}
+.fz-img-ri{
+    width: 80%;
+    height: 100%;
+}
+.fz-img-ri>div{
+    float: left;
+}
+.one1{
+    background: url("../images/fz-imge/fz-60.png")no-repeat center center;
+}
+.one2{
+    background: url("../images/fz-imge/fz-61.png")no-repeat center center;
+}
+.one3{
+    background: url("../images/fz-imge/fz-62.png")no-repeat center center;
+}
+.one4{
+    background: url("../images/fz-imge/fz-63.png")no-repeat center center;
+}
+.one5{
+    background: url("../images/fz-imge/fz-64.png")no-repeat center center;
+}
+.one6{
+    background: url("../images/fz-imge/fz-65.png")no-repeat center center;
+}
+.fz-img-bg{
+    margin-top: 8%;
+    width: 60%;
+    height: 40%;
+    background:url("../images/fz-imge/fz-66.png")no-repeat ;
+    background-position: 0 -207px;
+}
+.five{
+    background-position: 0 -159px;
+}
+.fz-img-te{
+    width: 20%;
+    height: 40%;
+    margin-top: 8%;
+    line-height: 28px;
+}
+.fz-tuijian{
+    width: 100%;
+}
+.fz-title{
+    font-size: 24px;
+    padding: 10px 0;
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    color: #666;
+    border-bottom: 1px dashed #666;
+}
+.fz-title1{
+    font-size: 20px;
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+    color: #666;
+}
+.fz-mytui{
+    width: 100%;
+    height: 430px;
+}
+.fz-mytui>div{
+    float: left;
+    width: 25%;
+    height: 100%;
+    padding:0 10px;
+}
+.fz-mytui>div>div{
+    height: 100%;
+    border-radius: 10px ;
+    background-color: white;
+}
+.fz-mytui>div>div>img{
+    height: 60%;
+    width: 100%;
+}
+.fz-title2{
+    width: 100%;
+    height: 30%;
+    border-bottom:1px dashed #666 ;
+}
+.fz-title3{
+    width: 100%;
+    height: 10%;
+    padding: 10px 0;
+}
+.fz-title2-top{
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+}
+.fz-title2-content{
+    font-size: 12px;
+    width: 80%;
+    margin-left: 10%;
+}
+.fz-title2-content>span{
+
+    padding: 5px 5px;
+    display: inline-block;
+    border: 1px solid rgba(142, 137, 118, 0.5);
+    float: left;
+    margin: 0 10px;
+    color:rgba(142, 137, 118, 0.5) ;
+    border-radius: 5px;
+}
+.fz-title3>div{
+    float: left;
+    line-height: 20px;
+}
+.fz-title3-1{
+    color: #f1934b;
+    padding-left: 10px;
+}
+.fz-title3-2{
+    font-size: 20px;
+    color: #f1934b;
+}
+.fz-title3-3{
+    width: 65%;
+}

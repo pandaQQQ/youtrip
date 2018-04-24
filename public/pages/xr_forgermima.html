@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!--如果检测到浏览器是ie就强制使用ie的兼容模式(edge版本)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--屏幕如果缩放按照1比1缩放-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--以上三个必放-->
+    <link rel="stylesheet" href="../css/xr_forgetmima.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../font/font-awesome.min.css">
+    <link rel="stylesheet" href="../font/font-awesome.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
+    <link rel="stylesheet" href="../css/homePublic.css">
+    <title>验证码</title>
+</head>
+<body>
+<section class="xr_sectionone">
+    <div class="container-fluid">
+        <div class="xr_denlutu ">
+            <div class="row text-center">
+                <div class="col-xs-offset-4 col-xs-offset-4">
+                    <img src="../images/logo.png" width="100%">
+                </div>
+            </div>
+        </div>
+        <div class="xt_inputmargintop"></div>
+        <div class="xr_inputweizhi">
+            <div class="row ">
+                <div class="col-xs-offset-4 col-xs-4">
+                    <span class="xr_inputuser"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <input type="text" class="xr_input" id="xr_inn" placeholder="请输入已注册手机号或邮箱">
+                    <span class="xr_spancolor"></span>&nbsp;
+                    <div class="xr_inputborder"></div>
+                </div>
+            </div>
+            <div class="xt_inputmargintop">
+                <div class="row ">
+                    <div class="col-xs-offset-4 col-xs-4">
+                        <span class="xr_inputuser"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                        <span>
+                            <input type="password" class="xr_inputone" placeholder="请输入6位验证码">
+                        </span>
+                        <span class="xr_sendyanzhengma" onclick=" xr_searchyaniphone()">获取验证码</span>
+                        &nbsp;
+                        <div class="xr_inputborder"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="xt_inputmargintop xt_inputmargintop1">
+                <div class="row">
+                    <div class="col-xs-offset-4 col-xs-4 xr_yanzhengmacolor1 text-left">
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-xs-offset-4 col-xs-4 xr_yanzhengmacolor">
+                      验证码已发送，请注意查收，将在
+                    <span id="xr_addzero" class="xr_miaocolor"></span><span class="xr_miaocolor" id="xr_miao"></span>
+                        秒后失效
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="xt_inputmargintop xr_iputright">
+            <div class="row">
+                <div class="col-xs-4 col-xs-offset-4 text-center">
+                    <div class="xr_inputweizhi xr_denluziti xr_denluzitidenlu">
+                       <span>提</span> <span>&nbsp;</span> <span>交</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/xr_forgetmima.js"></script>
+</body>
+</html>

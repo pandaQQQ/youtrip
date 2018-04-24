@@ -1,0 +1,435 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+li{
+    list-style:none;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+.col-lg-1,.col-md-1,.col-sm-1, .col-lg-2,.col-md-2,.col-sm-2, .col-lg-3,.col-md-3,.col-sm-3, .col-lg-4,.col-md-4,.col-sm-4, .col-lg-5,.col-md-5,.col-sm-5, .col-lg-6,.col-md-6,.col-sm-6, .col-lg-7,.col-md-7,.col-sm-7, .col-lg-8,.col-md-8,.col-sm-8, .col-lg-9,.col-md-9,.col-sm-9, .col-lg-10,.col-md-10,.col-sm-10, .col-lg-11,.col-md-11,.col-sm-11, .col-lg-12,.col-md-12,.col-sm-12{
+    padding: 0;
+    margin: 0;
+}
+#NAV{
+    background-color: #63532d;
+    position: inherit;
+}
+
+.lcfContentTitle{
+    margin: 2% 0 0 6.5%;
+    padding: 1% 0 1% 0;
+    width: 87%;
+}
+.panelChip>span>a{
+    color: #333333;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+.panelChip>span:last-child{
+    color: #a79865;
+    font-size: 1.1em;
+}
+.panelChip>span>a:hover{
+    color: #a79865;
+}
+
+/*===========================面包屑========================*/
+.orderContent{
+    margin-left: 6.5%;
+    padding: 2% 10% 3% 3%;
+    width: 87%;
+}
+.orderTitle{
+    font-size: 1.9em;
+    margin-bottom: 3%;
+}
+
+.orderFormTitle{
+    font-size: 1.6em;
+    color: #985f0d;
+    border-bottom: solid 1px rgba(205, 205, 205, 0.45);
+}
+
+.orderForm>p{
+    float: left;
+    padding: 1% 2%;
+    font-size: 1.15em;
+    color: #333333;
+}
+.orderpeople>p{
+    margin-top:1%;
+    padding-left: 1%;
+}
+.orderpeople>p>span:first-child{
+    font-size: 1.1em;
+    color: #333333;
+}
+.orderpeople>p>span:last-child{
+    font-size: 1em;
+    color: #985f0d;
+}
+
+.orderForm{
+    margin-bottom:1%;
+}
+.orderForm .orderInput{
+    height: 35px;
+    width: 22%;
+    float: left;
+    margin-left: 5%;
+    border: solid 1px rgba(205, 205, 205, 0.45);
+}
+.orderInput>input{
+    height: 33px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    box-shadow: none;
+    background-color: inherit;
+    padding-left: 13%;
+}
+
+.orderInput>select{
+    height: 33px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    padding-left: 13%;
+    font-size: 1em;
+    background-color: inherit;
+}
+.orderForm .orderContact{
+    width: 35%;
+}
+.orderContact>input{
+    padding-left: 9%;
+}
+
+.orderInput>input{
+    height: 33px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    box-shadow: none;
+    background-color: inherit;
+    padding-left: 13%;
+}
+
+.lcfresadult{
+    width: 8%;
+    margin:1% 1% 1% 1%;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 30px;
+    height: 30px;
+}
+.lcfadult{
+    width: 5%;
+    margin:1% 1% 1% 0;
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 30px;
+    height: 30px;
+}
+
+.lcfNumber{
+    margin:1% 1% 1% 1%;
+}
+.lcfNumber>div{
+    width: 80%;
+    height: 30px;
+    border: solid 1px #a79865;
+}
+.lcfNumber>div>div{
+    float: left;
+}
+.lcfNumber>div .number{
+    width: 40%;
+    height: 28px;
+    border-left: solid 1px #a79865;
+    border-right: solid 1px #a79865;
+}
+.lcfNumber>div .number>input{
+    width: 100%;
+    height: 28px;
+    color: #ff380e;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    line-height: 30px;
+}
+.number>input[type=text]:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.lcfNumber>div .numBotton{
+    width: 30%;
+    height: 30px;
+    line-height: 28px;
+    text-align: center;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.lcfNumber>div .numBotton:last-child{
+    font-size: 1.6em;
+    color: #464646;
+}
+
+.addpeople{
+    padding-left: 1%;
+    padding-bottom: 5%;
+}
+.addpeople>div{
+    padding:2.5% 3% 0 0;
+}
+.addpeople>div>div:first-child{
+    padding-top:2%;
+    font-size: 1em;
+}
+.addvisitor{
+    margin-right: 5%;
+    margin-top: 3%;
+}
+.addvisitor:nth-child(1),.addvisitor:nth-child(2){
+    margin-top: 0;
+}
+
+.visitor1{
+    margin-bottom: 3%;
+}
+.visitor1>div:first-child{
+    float: left;
+    width: 25%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1em;
+    color: #333333;
+}
+.visitor1 .orderInput1{
+    height: 40px;
+    width: 70%;
+    float: left;
+    margin-left: 5%;
+    border: solid 1px rgba(205, 205, 205, 0.45);
+}
+.orderInput1>input{
+    height: 38px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    box-shadow: none;
+    background-color: inherit;
+    padding-left: 13%;
+}
+.orderInput1>select{
+    height: 38px;
+    width: 100%;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    padding-left: 13%;
+    font-size: 1em;
+    background-color: inherit;
+}
+
+.visitor1 .orderFile{
+    height: 40px;
+    width:70%;
+    margin-left: 5%;
+}
+.txt{
+    height:40px;
+    border:1px solid #cdcdcd;
+    width:100%;
+}
+.btn {
+    background-color: rgba(237, 237, 237, 0.62);
+    border: 1px solid rgba(205, 205, 205, 0.45);
+    height: 33px;
+    width: 35%;
+    margin-top: 3%;
+    border-radius: inherit;
+}
+.file{
+    position:absolute;
+    top:52px;
+    height:24px;
+    filter:alpha(opacity:0);
+    opacity: 0;
+    width:34%;
+}
+
+.youji{
+    margin-top: 5%;
+}
+
+
+.takeMoney{
+    margin-top: 1%;
+}
+.yiwaixian{
+    margin-top:2%;
+    margin-left: 0;
+    font-size: 1.1em;
+    color: #333333;
+}
+.orderContainer .takeMoney2 .ywfree{
+    float: left;
+    width: 100%;
+    padding-left: 1%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.1em;
+    color: #333333;
+}
+.ywfree .insurancxePrice{
+    margin-left: 9%;
+}
+.insurancxePrice>span{
+    color: red;
+}
+
+.takeMoney>p:last-child{
+    width: 14%;
+}
+.takeMoney>p>span:first-child{
+    color: red;
+}
+.takeMoney1>p>span>a{
+    color: #e50000;
+}
+.takeMoney1>p{
+    width: 40%;
+}
+.takeMoney1>p>span{
+    margin-left: 5%;
+}
+.takeMoney1>p .agree{
+    margin-left: 0;
+}
+.orderBotton{
+    width: 20%;
+    margin-left:25%;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    background-color: #a79865;
+}
+.orderBotton>a{
+    color: white;
+    text-decoration: none;
+}
+
+input[type=checkbox]{
+    /*同样，首先去除浏览器默认样式*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-left: 26%;
+    top:5px ;
+    border-radius: 2px;
+    border: solid 1px #9c7a13;
+    cursor: pointer;
+    position: relative;
+    background: transparent;
+    outline: none;
+}
+input[type=checkbox]:after{
+    content: '√';
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #464646;
+    text-align: center;
+    line-height: 18px;
+    opacity: 0;
+}
+input[type=checkbox]:checked:after{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    opacity: 1;
+}
+
+.orderForm .secdiv{
+    height: 35px;
+    width: 75%;
+    float: left;
+    margin-left: 5%;
+}
+select{
+    width: 220px;
+    height: 35px;
+    margin-left: 4%;
+    line-height: 35px;
+    padding-left: 3%;
+    color: #333333;
+    font-size: 1em;
+    border: solid 1px rgba(205, 205, 205, 0.45);
+    outline: none;
+}
+select:first-child{
+    margin-left: 0;
+}
+.orderForm .orderaddress{
+    height: 35px;
+    width: 55%;
+    float: left;
+    margin-left: 5%;
+    border: solid 1px rgba(205, 205, 205, 0.45);
+}
+.orderaddress>input{
+    height: 33px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    box-shadow: none;
+    background-color: inherit;
+    padding-left: 5%;
+}
+.insurance{
+    display: none;
+}
+.antiFee{
+    display: none;
+}
+
+/*=====================================页脚========================*/
+.footer{
+    padding: 2% 0 2% 0;
+    background-color: #a79865;
+}
+.footerText{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+
+
+
+
+

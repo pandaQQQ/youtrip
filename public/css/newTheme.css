@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding:0;
+}
+.app{
+        /*background-image:url("../images/bg.png");*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+    height:100%;
+}
+
+.ImageAll{
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     overflow: hidden;
+     position: relative;
+     height:100%;
+     transition:all .5s ease-out;
+ }
+
+.myLogo{
+    width: 100%;
+    height:600px;
+    position: relative;
+    color: #e8e8e8;
+    background-image: url("../images/DjTheme/customCasePic1.jpg");
+}
+.djZt{
+    text-align: center;
+    margin-top:10%;
+}
+.contentNow{
+    background-color: rgba(255,255,255,.4);
+    color:#333333;
+    width:87%;
+    padding:0;
+    position: relative;
+    /*background-image: url("../images/DjTheme/pattern-white.png") ;*/
+}
+/*.myImg{*/
+
+    /*background-image: url("../images/DjTheme/1.jpg") ;*/
+/*}*/
+.rowHeight{
+    width: 100%;
+    height:500px;
+    margin-left:0;
+}
+.col-sm-5,.col-sm-6{
+    margin:0;
+}
+.solid{
+    width: 40px;
+       background-color: black;
+    border: 2px solid black;
+    margin:20px 0;
+}
+.textBox{
+    font-size:1.2em;
+    line-height:40px;
+}
+.mybtn{
+    margin-top: 20px;
+    transition: all .3s ease-out;
+}
+.mybtnOne{
+    float:right;
+}
+
+.rowHeight:hover .mybtn{
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.ccs{
+    width: 80%;
+    margin:0 auto;
+}
+
+.myLogo:hover {
+
+}
+.newContent{
+    width: 100%;
+    margin-left: 0;
+    position: relative;
+}
+
+.DjDiv1{
+    height:800px;
+    background-color: white;
+    background-image:url("../images/DjTheme/customBg.jpg");
+    /*!*display: none;*!*/
+    /*-webkit-animation:moverhover 5s ease-in-out ;*/
+    /*animation:moverhover 5s ease-in-out;*/
+    /*margin: 40px;*/
+
+}
+.DjDiv2{
+    height:800px;
+    background-color: red;
+    background-image:url("../images/DjTheme/JapanSite-1.jpg");
+    /*!*display: none;*!*/
+    -webkit-animation:moverhover 5s ease-in-out ;
+    animation:moverhover 5s ease-in-out ;
+    margin: 40px;
+/*}*/}
+.DjDiv3{
+
+    height:400px;
+    background-color: yellow;
+    background-image:url("../images/DjTheme/JapanSite-1.jpg");
+    /*!*display: none;*!*/
+    /*-webkit-animation:moverhover 5s ease-in-out ;*/
+    /*animation:moverhover 5s ease-in-out ;*/
+    /*margin: 40px;*/
+}
+.DjDiv4{
+
+    height:400px;
+    background-color: blue;
+    background-image:url("../images/DjTheme/customCasePic1.jpg");
+    /*!*display: none;*!*/
+    /*-webkit-animation:moverhover 5s ease-in-out ;*/
+    /*animation:moverhover 5s ease-in-out ;*/
+    /*margin: 40px;*/
+}
+.DjDiv5{
+    width:800px;
+    height: 600px;
+    position: absolute;
+    top:600px;
+    left: 25%;
+    background-color:rgba(255,255,255,.9);
+    /*!*display: none;*!*/
+    /*-webkit-animation:moverhover 5s ease-in-out ;*/
+    /*animation:moverhover 5s ease-in-out ;*/
+    /*margin: 40px;*/
+}
+.DjText{
+    width:50%;
+    margin:0 auto;
+}
+.DjText h2,p,.five{
+    font-size:1.5em;
+    color: white;
+    text-align:center;
+    line-height: 40px;
+}
+
+.five h2{
+    color: #333;
+    margin:0 auto;
+    font-size:1.3em;
+    text-align: right;
+}
+
+.tab-frame{
+    color:#333;
+    width: 100%;
+    height:90%;
+}
+.tab div{
+    margin-top: 50px;
+    color:#333;
+    font-size: 1.5em;
+    line-height: 150%;
+}
+
+div.tab-frame input {
+    display:none
+}
+div.tab-frame label {
+    display:block;
+    float:left;
+    padding:5px 10px;
+    cursor:pointer
+}
+div.tab-frame input:checked+label {
+    background:red;
+    color:white;
+    cursor:default
+}
+div.tab-frame div.tab {
+    display:none;
+    padding:5px 10px;
+    clear:left
+}
+div.tab-frame input:nth-of-type(1):checked~.tab:nth-of-type(1),div.tab-frame input:nth-of-type(2):checked~.tab:nth-of-type(2),div.tab-frame input:nth-of-type(3):checked~.tab:nth-of-type(3) {
+    display:block;
+}
+
+
+
+
+
+
+/*图片的弹窗 star*/
+
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius:5px;
+    cursor:pointer;
+    transition:0.3s;
+}
+#myImg:hover {
+    opacity:0.7;
+}
+/* The Modal (background) */
+
+.modal {
+    display:none;
+    /* Hidden by default */
+    position:fixed;
+    /* Stay in place */
+    z-index:1;
+    /* Sit on top */
+    padding-top:100px;
+    /* Location of the box */
+    left:0;
+    top:0;
+    width:100%;
+    /* Full width */
+    height:100%;
+    /* Full height */
+    overflow:auto;
+    /* Enable scroll if needed */
+    background-color:rgb(0,0,0);
+    /* Fallback color */
+    background-color:rgba(0,0,0,0.9);
+    /* Black w/ opacity */
+}
+/* Modal Content (Image) */
+
+.modal-content {
+    margin:auto;
+    display:block;
+    width:80%;
+    max-width:700px;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+
+#caption {
+    margin:auto;
+    display:block;
+    width:80%;
+    max-width:700px;
+    text-align:center;
+    color:#ccc;
+    padding:10px 0;
+    height:150px;
+}
+/* Add Animation - Zoom in the Modal */
+
+.modal-content,#caption {
+    -webkit-animation-name:zoom;
+    -webkit-animation-duration:0.6s;
+    animation-name:zoom;
+    animation-duration:0.6s;
+}
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform:scale(0)
+    }
+    to {
+        -webkit-transform:scale(1)
+    }
+}@keyframes zoom {
+     from {
+         transform:scale(0)
+     }
+     to {
+         transform:scale(1)
+     }
+ }/* The Close Button */
+.close {
+    position:absolute;
+    top:15px;
+    right:35px;
+    color:#f1f1f1;
+    font-size:40px;
+    font-weight:bold;
+    transition:0.3s;
+}
+.close:hover,.close:focus {
+    color:#bbb;
+    text-decoration:none;
+    cursor:pointer;
+}
+/* 100% Image Width on Smaller Screens */
+
+@media only screen and (max-width:700px) {
+    .modal-content {
+        width:100%;
+    }
+}
+
+
+
+
+
+
+
+
+/*end */
+
+
+
+
+

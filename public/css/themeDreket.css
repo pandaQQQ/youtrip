@@ -1,0 +1,185 @@
+*{
+    margin:0;
+    padding:0;
+}
+.app{
+    color:#333;
+}
+
+/*面包屑的位置*/
+.app .food{
+    width: 100%;
+    height:50px;
+    margin-top: 100px;
+}
+
+.scroll-box {
+    width:100%;
+    height:400px;
+    /*border:2px solid #000;*/
+    /*margin:20px auto;*/
+    overflow:hidden;
+    position: absolute;
+    left:0;
+    color: white;
+    font-size:1.2em;
+    background-color: rgba(204, 204, 204, 0.3);
+}
+.scroll-box ul {
+    list-style:none;
+    width:100%;
+    height:100%;
+}
+.scroll-box ul li {
+    width:100%;
+    height:40px;
+    box-sizing:border-box;
+    line-height:40px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+/*这是什么主题的标题*/
+.header{
+    width:85%;
+    height:40px;
+    /*background-color:rgba(255,255,255,.1);*/
+    line-height:150%;
+    margin:0 auto;
+    overflow: hidden;
+}
+
+
+/*设置屏幕的宽度87%/*/
+
+.allHW{
+    width:87%;
+    height:400px;
+    margin-left:6.5%;
+}
+.top{
+    width: 100%;
+    height:400px;
+    margin-top: 20px;
+    overflow: hidden;
+    background-color:rgba(255,255,255,.3);
+}
+
+
+/*这个是主题详情的代表图展示*/
+.lunbo{
+    width: 100%;
+    height:100%;
+    background-image: url("../images/DjTheme/2.jpg");
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center center;
+    position: relative;
+   
+}
+
+
+.textJs{
+    width: 90%;
+    height:400px;
+    margin-left: 30px;
+    /*border:1px dashed ;*/
+    /*background-color: red;*/
+    text-align: center;
+    line-height: 150%;
+    background-color: rgba(255,255,255,.4);
+
+}
+
+/*中间的线*/
+.daj{
+    margin-top:40px;
+    text-align: center;
+}
+
+.xian1,.xian2{
+    height:2px;
+    border-bottom:2px dashed #313131;
+    background-color:#313131;
+    margin-top: 8px;
+}
+
+
+/*轮播的板块*/
+.chajian{
+    width: 100%;
+    height:540px;
+    margin:40px auto;
+    position: relative;
+}
+
+.chajian #wrapper{
+    width: 100%;
+    margin-top: 20px;
+    background-color:rgba(255,255,255,.7);
+    /*margin-left: 40px;*/
+}
+
+
+
+/*行程的板块*/
+
+ .app .xingCheng{
+    width: 100%;
+    height: 400px;
+    margin-top: 40px;
+    background-color:rgba(255,255,255,.7);
+}
+.app .like .ZJ-recommended {
+    margin-top: 20px;
+}
+.ZJ-recommended .lcfItinerary{
+    margin:0;
+}
+
+.app .like{
+    width: 100%;
+    height:440px;
+    background-color:rgba(255,255,255,.7);
+    margin-top:20px;
+    margin-bottom: 20px;
+    overflow:hidden;
+}
+
+.app #mycollapse .nav{
+    width: 100%;
+    height:70px;
+    margin-top:0;
+    background-color:rgba(255,255,255,.0);
+}
+
+.app .design-tab{
+    border-style: none;
+}
+.app #navbar{
+    background-color:rgba(167, 152, 101, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

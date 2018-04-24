@@ -1,0 +1,360 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 100%;
+    /*background-color: silver;*/
+}
+
+.ZJ-body{
+    width: 87%;
+    margin: 0 6.5% 0 6.5%;
+}
+@font-face {font-family: "iconfont";
+    src: url('../font/font_gpskpct7hczbyb9/iconfont.eot'); /* IE9*/
+    src: url('../font/font_gpskpct7hczbyb9/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/font_gpskpct7hczbyb9/iconfont.woff') format('woff'), /* chrome, firefox */
+    url('../font/font_gpskpct7hczbyb9/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/font_gpskpct7hczbyb9/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+
+
+.iconfont {
+    font-family:"iconfont" !important;
+}
+/*禁用选中文本*/
+.ZJ-forbid{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+.mag{
+    margin-top: 20px;
+}
+
+.ceshi{
+    height: 100px;
+    outline: 1px solid red
+}
+
+.ZJ-clear{
+    clear: both;
+}
+/*======================浮动=================*/
+.ZJ-FLeft{
+    float: left;
+}
+.ZJ-FRight{
+    float: right;
+}
+
+/*==============================定位=================*/
+.ZJ-relative{
+    position: relative;
+}
+.ZJ-absolute{
+    position: absolute;
+}
+
+/*======================0间距==============================*/
+.ZJ-padding0{
+    padding: 0;
+}
+.ZJ-margin0{
+    margin: 0;
+}
+
+/*=======================上下行间距======================*/
+.ZJ-shop-row{
+    padding:15px 0 15px 0;
+}
+
+/*============================大号字体介绍=================*/
+.MainTitle{
+    font-size: 2.1em;
+    color: #333333;
+}
+
+
+/*=======================第二号字体介绍==========================*/
+.SecondSubtitle{
+    font-size: 1.2em;
+    color: #333333;
+}
+
+.SecondSubtitle2{
+    font-size: 1.7em;
+    color: #333333;
+    line-height: 60px;
+}
+
+
+/*==================================小标题字体===============*/
+.SmallTitle{
+    font-size: 1.1em;
+    color: #333333;
+}
+
+.SmallTitle2{
+    font-size: 1.2em;
+    color: #333333;
+}
+
+
+/*==========================图文介绍字体=========================*/
+.imgTitle{
+    font-size: 0.9em;
+    color: #333333;
+
+}
+
+.ZJ-def{
+    background-color: #a17648;
+    color: white;
+    border: 1px solid #a17648;
+}
+/*=================================第三号字体=====================*/
+.SmallTitle3{
+    font-size: 2.1em;
+    color:  #a17648
+
+}
+
+/*===================线条==================================*/
+.ZJ-line {
+    border: .5px solid rgba(180, 175, 154, 0.2);
+}
+
+/*==========================按钮栏========================*/
+.ZJ-btn{
+    padding: 30px 0 30px 0;
+
+}
+.ZJ-btn>.awayTakeBtn{
+    height: 40px;
+    padding: 0;
+}
+.ZJ-btn>.awayTakeBtn>p{
+    height: 40px;
+    padding: 0;
+    line-height: 40px;
+}
+/*========================菜单公共样式================*/
+.ZJ-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.ZJ-menu>li{
+    margin: 0 5px 0 5px;
+}
+.ZJ-menuArticle{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.ZJ-F-menu>li{
+    display: inline-block;
+}
+/*=======================商品公共样式==================*/
+.ZJ-list{
+    padding: 70px 0 0 0;
+    width: 100%
+}
+
+.ZJ-ling{
+    line-height: 35px;
+}
+/*====================================阴影=============================*/
+/*.ZJ-show{*/
+    /*box-shadow: 3px 3px 5px #888888;*/
+/*}*/
+/*=======================按钮公共样式=====================*/
+/*.awayTake{*/
+    /*padding: 65px 0 0 0;*/
+/*}*/
+.ZJ-awayTake>div>p>a{
+    color: white;
+    text-decoration: none;
+}
+
+.ZJ-awayTake>div>a:hover{
+    text-decoration: none;
+}
+
+.ZJ-awayTake>div:hover{
+    cursor: pointer;
+}
+
+/*========================按钮背景颜色=======================*/
+.bg{
+    background-color: #a17648;;
+    color: white;
+}
+
+/*==========================轮播图的文字大小及颜色设置==================*/
+.ZJ-title{
+    font-size: 2.5em;
+    color: white;
+}
+
+/*===================================头像图片=======================*/
+.ZJ-HeadPortrait{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.ZJ-HeadPortrait>img{
+    width: 110%;
+}
+.ZJ-recommended{
+     border: 1px solid rgba(255, 255, 255, 0);
+     margin-top: 10px;
+     margin-bottom: 120px;
+ }
+
+/*===========================商品详情头部=========================*/
+/*轮播图部分*/
+.ZJ-detailsTU1>.ZJ-detailsTitle>div{
+    padding: 15px 0 15px 0;
+    line-height: 30px;
+    /*详情介绍的半框及间距*/
+}
+/*介绍部分的间距*/
+.ZJ-detailsTitle{
+    padding-left: 25px;
+}
+.ZJ-detailsTU1>.ZJ-detailsTitle>div:nth-of-type(3)>ul>li{
+    line-height: 20px;
+    padding: 0 5px 0 0;
+    margin: 10px 10px 5px 0;
+    /*套餐包含的列表设置*/
+}
+
+.ZJ-detailsTU1>.ZJ-detailsTitle>div:nth-of-type(3)>ul>li>span:nth-of-type(1){
+    display: inline-block;
+    background-color: #a17648;;
+    width: 20px;
+    text-align: center;
+    color: white;
+    border: 1px solid rgb(85, 83, 87);
+    /*套餐标签图标设置*/
+
+}
+.ZJ-detailsTU1>.ZJ-detailsTitle>div:nth-of-type(3)>ul>li>span:nth-of-type(2){
+    display: inline-block;
+    border: 1px solid rgb(85, 83, 87);
+    border-left: 0;
+    padding: 0 5px 0 5px;
+    /*套餐标签文字设置*/
+}
+.ZJ-detailsTU1>.ZJ-detailsTitle>div:nth-of-type(4)>div{
+    display: inline-block;
+}
+
+.ZJ-detailsTU1>.ZJ-detailsTitle .ZJ-awayTake{
+    margin: 0;
+    right: 0;
+    /*top: 10px;*/
+    /*按钮样式*/
+}
+
+/*====================================以下公共样式商品详情版样========================*/
+
+
+.ZJ-trip{
+    margin-top: 50px;
+}
+.ZJ-trip li{
+    font-size: 1.1em;
+    line-height: 30px;
+}
+
+/*.ZJ-money .awayTakeBtn{*/
+    /*right: 10px;*/
+/*}*/
+
+.ZJ-trip .ZJ-detailsT{
+    font-size: 1.3em;
+    font-weight: bold;
+    border-left: 4px solid #333333;
+    padding: 0 20px 0 20px;
+    margin-top: 50px ;
+    /*顶部字体*/
+}
+
+.ZJ-round{
+    padding: 50px 0 0 0;
+    /*左边*/
+}
+.ZJ-details{
+    padding: 40px  0 0 0;
+    /*右边*/
+}
+
+.ZJ-detailsCost>div:nth-of-type(2),
+.ZJ-detailsReservation>div:nth-of-type(2),
+.ZJ-detailsSigned>div:nth-of-type(2){
+    padding:25px 0 0 8.4%;
+    /*费用的第二row间距*/
+}
+.ZJ-round>p{
+    width: 45px;
+    height:45px;
+    border-radius: 50%;
+    line-height: 45px;
+    color: white;
+    font-size: 1em;
+    background-color: rgb(193, 142, 81);
+    margin-left: 30%;
+    z-index: 2;
+    /*圆形部分D1*/
+}
+
+.ZJ-round>div{
+    width: 1px;
+    height: 100px;
+    border: 1px solid #333333;
+    left: 50%;
+    z-index: 1;
+}
+
+.ZJ-details h3{
+    margin-bottom: 20px;
+    /*右边*/
+}
+.ZJ-details .ZJ-detailsArticle{
+    padding: 5px 0 5px 0;
+}
+
+
+.ZJ-details .ZJ-detailsImg img{
+    width: 40%;
+    padding: 15px 5px 10px 0;
+}
+.ZJ-details>.row{
+    padding-bottom: 25px;
+}
+
+.ZJ-money .awayTake{
+    right: 0;
+    padding: 0;
+}
+.ZJ-money .awayTake>.awayTakeBtn{
+    right:0;
+    margin-left: 0;
+
+}
+/*====================================以上公共样式商品详情版样========================*/
+#ZJ_tripCase{
+    margin-top: 100px;
+}
+

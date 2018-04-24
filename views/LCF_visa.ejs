@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!---->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <link rel="stylesheet" href="css/homePublic.css">
+  <link rel="stylesheet" href="css/LCF_visa.css"/>
+  <title>签证</title>
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+  <!--============================navbar:导航条 ======================================-->
+    <%-include("head.ejs")%>
+
+  <!--============================banner ======================================-->
+  <div class="row visaBanner">
+    <div class="row svisaText">
+      开启You Trip之旅
+    </div>
+    <div class="row svisaText1">
+      轻松办签证  |  <span>方便快捷的签证全身体验</span>
+    </div>
+  </div>
+
+  <!--=============================右侧固定导航===============================-->
+    <%-include("left_nav.ejs")%>
+
+  <!--======================热门签证｜Hot Visa=============-->
+  <div class="row lcfHotVisa lcfTitleOne">
+    签证｜Visa
+  </div>
+  <div class="row lcfHotCountriesImg hotVisa waterfull" id="waterfull">
+      <%for(var i=0;i<visaCountry.length;i++){%>
+    <div class="col-lg-2 col-md-3 col-sm-2 visaimg item">
+      <img src="<%=visaCountry[i].v_imgSrc%>" alt="">
+      <div class="imgBotttom">
+        <div><a href="/LCF_visaDetails?id=<%=visaCountry[i].id%>"><%=visaCountry[i].c_countryname%>个人旅游签证（<%=visaCountry[i].vp_place%>办理）</a></div>
+        <p><%=visaCountry[i].v_price%>/人起</p>
+        <div class="imgBotttomCircle">
+          <img src="<%=visaCountry[i].v_imgLogo%>" alt="">
+        </div>
+      </div>
+    </div>
+      <%}%>
+  </div>
+  <!-- loading按钮自己通过样式调整 -->
+  <!--<div id="imloading" >-->
+    <!--I'm Loading.....-->
+  <!--</div>-->
+  <!--=============================快速出签===========================-->
+  <div class="row lcfHotCRemark">
+    <div class="col-lg-5 col-md-5 col-sm-5 quick">
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <img src="images/lcfImg/visa/visa_case1.png" alt="">
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-10 quickText">
+        <p>快速出签</p>
+        <p>安心签证，说走就走，坚守等待时间，快速出签快速帮助客户办理签证业务</p>
+      </div>
+    </div>
+    <div class="col-lg-5 col-md-5 col-sm-5 quick">
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <img src="images/lcfImg/visa/visa_case2.png" alt="">
+      </div>
+      <div class="col-lg-10 col-md-10 col-sm-10 quickText">
+        <p>清晰流程</p>
+        <p>根据客户需求，制定清晰流程，避免在游玩时出现不必要的麻烦，想您所想，轻松自在去放心玩</p>
+      </div>
+    </div>
+  </div>
+  <!--=========================服务保障===================-->
+  <div class="row lcfService">
+    <div class="col-lg-4 col-md-4 col-sm-4 lcfServiceImg1">
+      <div class="menBan">
+        <p>安全 Security</p>
+        <p></p>
+        <p>指定签证专员1对1审核材料，全程顺丰快递寄送全力保障您的资料安全</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 lcfServiceImg2">
+      <div class="menBan">
+        <p>专业 Major</p>
+        <p></p>
+        <p>9年签证业务团队，多家领事馆办签资源过签率99%</p>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-4 col-sm-4 lcfServiceImg3">
+      <div class="menBan">
+        <p>服务 Service</p>
+        <p></p>
+        <p>全程材料指导提供，个性化签证解决方案；面试技巧讲解，专人陪同送签</p>
+      </div>
+    </div>
+  </div>
+  <!--===========================页脚================================-->
+    <%-include("foot.ejs")%>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ajax.js"></script>
+<script type="text/javascript" src="js/jquerylanjia/jQueryColor.js"></script>
+<!--这个插件是瀑布流主插件函数必须-->
+<script type="text/javascript" src="js/jquerylanjia/jquery.masonry.min.js"></script>
+<!--这个插件只是为了扩展jquery的animate函数动态效果可有可无-->
+<script type="text/javascript" src="js/jquerylanjia/jQeasing.js"></script>
+<script src="js/LCF_visa.js"></script>
+</body>
+</html>

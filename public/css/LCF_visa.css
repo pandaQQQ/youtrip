@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+.col-lg-1,.col-md-1,.col-sm-1, .col-lg-2,.col-md-2,.col-sm-2, .col-lg-3,.col-md-3,.col-sm-3, .col-lg-4,.col-md-4,.col-sm-4, .col-lg-5,.col-md-5,.col-sm-5, .col-lg-6,.col-md-6,.col-sm-6, .col-lg-7,.col-md-7,.col-sm-7, .col-lg-8,.col-md-8,.col-sm-8, .col-lg-9,.col-md-9,.col-sm-9, .col-lg-10,.col-md-10,.col-sm-10, .col-lg-11,.col-md-11,.col-sm-11, .col-lg-12,.col-md-12,.col-sm-12{
+    padding: 0;
+    margin: 0;
+}
+/*================================banner======================*/
+.visaBanner{
+    width: 100%;
+    background: url("../images/lcfImg/visa/details/banner_visa.jpg") no-repeat;
+    background-size: cover;
+    padding-top: 15.5%;
+    padding-bottom: 15%;
+}
+.visaBanner .svisaText{
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.visaBanner .svisaText1{
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.86);
+    text-align: center;
+    margin-top:1%;
+    letter-spacing: 5px;
+}
+.visaBanner .svisaText1>span{
+    color: rgba(255, 255, 255, 0.53);
+}
+
+/*===================标题公共样式====================*/
+.lcfTitleOne{
+    float: left;
+    color: #333333;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+    margin-bottom: 5%;
+}
+/*============================五大洲====================*/
+.lcfHotVisa{
+    margin: 7% 0 3.5% 6.5%;
+    width: 87%;
+    text-align: center;
+}
+.lcfHotCountriesImg{
+    margin: 3% 0 0 6%;
+    width: 87%;
+}
+.lcfHotCountriesImg .visaimg{
+    width: 23.5%;
+    background-color: white;
+    float: left;
+    position: relative;
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+    cursor: pointer;
+    transition:all .2s linear;
+}
+.lcfHotCountriesImg .visaimg>img{
+    width: 100%;
+    height: 220px;
+    transition:all .2s linear;
+}
+.lcfHotCountriesImg .visaimg:hover>img{
+    opacity: 0.9;
+    transition:all .2s linear;
+}
+.visaimg .imgBotttom{
+    padding: 8% 0 16% 6%;
+}
+.visaimg:hover{
+    background-color: rgba(29, 29, 29, 0.86);
+    z-index: 22;
+    transition:all .2s linear;
+}
+.visaimg .imgBotttom>p{
+    font-size: 1.3em;
+    width: 40%;
+    color: #333333;
+    float: left;
+}
+.lcfHotCountriesImg .visaimghover:hover .imgBotttom>p{
+    color: white;
+}
+.hotVisa .visaimg:hover .imgBotttom>p,.hotVisa .visaimg:hover  .imgBotttom>div{
+    color: white;
+}
+.hotVisa .visaimg .imgBotttom>p{
+    font-size: 0.9em;
+}
+.hotVisa .visaimg .imgBotttom>div>a{
+    color: #333333;
+    font-size: 1.1em;
+}
+.visaimg:hover .imgBotttom>div>a{
+    color: white;
+}
+.hotVisa .visaimg .imgBotttom>div:first-child{
+    margin-bottom: 5%;
+}
+
+.imgBotttomCircle{
+    width: 25px;
+    height: 25px;
+    overflow: hidden;
+    margin-left: 43%;
+    float: left;
+    border-radius: 50%;
+}
+.imgBotttomCircle>img{
+    width: 25px;
+    height: 25px;
+}
+
+.visaimg:nth-child(2) .redCircle{
+    background-color:darkred;
+    width: 20px;
+    height: 20px;
+    margin-left: 43%;
+}
+#canCircle,#jnaCircle{
+    width: 26px;
+    height: 25px;
+    margin-left: 42%;
+    background: url("../images/lcfImg/visa/visalogo/can.jpg") no-repeat;
+    background-size: cover;
+    background-position: 48%;
+}
+
+
+
+
+.lcfHotCRemark{
+    margin: 5% 0 0 6.5%;
+    width: 87%;
+}
+.quick{
+    width: 45%;
+    padding: 3% 5% 3% 5%;
+    background-color: rgba(248, 248, 248, 0.4);
+}
+.quick:last-child{
+    margin-left: 10%;
+}
+.quick .quickText>p{
+    margin-left: 5%;
+    font-size: 1.5em;
+    color: #333333;
+}
+.quick .quickText>p:last-child{
+    font-size: 1.1em;
+    line-height: 150%;
+}
+
+
+
+.lcfService{
+    margin: 6% 0 5% 6.5%;
+    width: 87%;
+}
+.lcfService>div{
+    width: 32%;
+    margin-left: 2%;
+    height: 220px;
+}
+.lcfService>div:first-child{
+    margin-left: 0;
+}
+.lcfServiceImg1{
+    background: url("../images/lcfImg/visa/details/visa_feature1.jpg") no-repeat;
+    background-size: contain;
+}
+.lcfServiceImg2{
+    background: url("../images/lcfImg/visa/details/visa_feature2.jpg") no-repeat;
+    background-size: contain;
+}
+.lcfServiceImg3{
+    background: url("../images/lcfImg/visa/details/visa_feature3.jpg") no-repeat;
+    background-size: contain;
+}
+
+.menBan{
+    height: 215px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    transition: all 0.5s linear;
+}
+.menBan:hover{
+    background-color: rgba(0, 0, 0, 0.32);
+    transition: all 0.5s linear;
+}
+.lcfService .menBan>p{
+    text-align: center;
+    left: 5%;
+    right: 5%;
+    top: 20%;
+    color: white;
+    font-size: 1.5em;
+    position: absolute;
+}
+.lcfService .menBan>p:nth-child(2){
+    top: 40%;
+    height: 2px;
+    width: 30px;
+    left: 45%;
+    background-color: white;
+}
+.lcfService .menBan>p:last-child{
+    top: 50%;
+    font-size: 1.05em;
+}
+
+/*=====================================页脚========================*/
+.footer{
+    padding: 2% 0 2% 0;
+    background-color: #a79865;
+}
+.footerText{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}

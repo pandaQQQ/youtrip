@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>定制旅行</title>
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script async="" src="http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;num=5&amp;output=json&amp;q=http%3A%2F%2Frss.cnn.com%2Frss%2Fedition.rss&amp;hl=en&amp;callback=jQuery110209046796949893003_1513592899002&amp;_=1513592899003"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" type="text/css" href="../css/calander/htmleaf-demo.css">-->
+  <link rel="stylesheet" type="text/css" href="../css/calander/bootstrap-datepicker3.css">
+  <link rel="stylesheet" href="../font/font_3j0pmgjj9pl7syvi/iconfont.css">
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <link rel="stylesheet" href="../css/customOne.css">
+</head>
+<body>
+<%-include("left_nav.ejs")%>
+<!--============================navbar:导航条 ======================================-->
+<div class="container-fluid">
+    <%-include("head.ejs")%>
+</div>
+<!-------------------------模态框----------------------------->
+<div style="padding:100px" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content customOneModal"  style="width:350px;height:90px">
+      <span>您的需求已提交，我们会在1到2个工作日内和您电话确认</span>
+    </div>
+  </div>
+</div>
+<div class="container-fluid">
+  <!--============================navbar:导航条 ======================================-->
+  <div class="pic-title">
+    <div class="pic-titleIn">
+      <span class="customOneTitleBig">个性定制&nbsp;非凡体验</span><br>
+      <span class="customOneTitleSmall">专业团队&nbsp;一对一规划行程</span>
+    </div>
+  </div>
+  <!------------------------需求标题------------------------------>
+  <div class="rational_customTitleTop">
+    <div class="rational_customTitleIn">
+      <span class="rational_customTitleWordBig">您的需求我们实现</span><br>
+      <span class="rational_customTitleWordSmall">Your needs we achieve</span>
+      <div class="rational_customTitleLine"></div>
+    </div>
+  </div>
+  <!--------------------------步骤轴------------------------------>
+  <div class="container customItemStepOut">
+    <div class="row customItemStepin">
+      <div class="col-lg-4 col-mid-4 col-sm-4 customItemStepinContent">
+        <div id="stepBar1" class="customItemStepinLine1 timeBarLineActive"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum1" class="customItemStepinCircle timeBarCircleActive">
+            <span id="stepBarNumWord1" class="timeBarWordActive" style="color:white">1</span>
+          </div>
+          <span class="customItemStepinContent">基本信息</span>
+        </div>
+      </div>
+      <div class="col-lg-4 col-mid-4 col-sm-4 customItemStepinContent">
+        <div id="stepBar2" class="customItemStepinLine1"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum2" class="customItemStepinCircle">
+            <span id="stepBarNumWord2">2</span>
+          </div>
+          <span class="customItemStepinContent">特色定制</span>
+        </div>
+      </div>
+      <div class="col-lg-4 col-mid-4 col-sm-4 customItemStepinContent">
+        <div id="stepBar3" class="customItemStepinLine1"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum3" class="customItemStepinCircle">
+            <span id="stepBarNumWord3">3</span>
+          </div>
+          <span class="customItemStepinContent">联系人信息</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------step1基本信息----------------------------->
+  <div class="container primaryMsgOut stepOuter">
+    <!------------------出行人数--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-6 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>出游人数</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-6 customItemStepinContentRight">
+        <div class="row customItemStepPeopleOut">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 customItemStepPeopleLeft">
+            <div class="customItemAdult">
+              <div class="customItemAdultNum">
+                <div class="customItemAdultNumLeft" id="selNum1">
+                  <span>-</span>
+                </div>
+                <input class="customItemAdultNumCenter" id="selNum2" type="text" value="1">
+                <div class="customItemAdultNumRight" id="selNum3">
+                  <span>+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------人均预算--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-6 customItemStepinContentLeft">
+        <span class="customItemStepinLable">人均预算</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-6 customItemStepinContentRight">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="Personbudget"><span class="money">1000~5000元</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="Personbudget"><span class="money">5001~10000元</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="Personbudget"><span class="money">10001~20000元</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="Personbudget"><span class="money">20000以上</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------出行时间--------------------->
+    <div class="row primaryMsgIn primaryMsgIn2">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-6 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>出发时间</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-6 customItemStepinContentRight">
+        <!----------------------------日历--------------------------------------->
+        <div class="form-group per-budget calenderbox">
+          <input data-provide="datepicker" class="form-control  box-style boxHeight datebox" placeholder="点击选择日期">
+        </div>
+      </div>
+    </div>
+    <!------------------目的地--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-6 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>目的地</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-6 customItemStepinContentRight">
+        <div id="customItemStepinPlaceOut">
+          <div id="customItemStepinPlaceIn">
+            <input onclick="openTab()" id="customItemStepinCountry" type="text" class="form-control  box-style boxHeight"  placeholder="目的地" readonly>
+            <div id="customItemStepinCountry-tab">
+              <!------------------------ 导航区 ---------------------------------->
+              <ul class="nav nav-tabs customItemStepinCountryTab" role="tablist" >
+                <li role="presentation" class="active"><a href="#wyHot" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">热门</a></li>
+                <li role="presentation"><a href="#wyEurope" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">欧洲</a></li>
+                <li role="presentation"><a href="#wyAustralasia" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">澳洲</a></li>
+                <li role="presentation"><a href="#wyAmerica" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">美洲</a></li>
+                <li role="presentation"><a href="#wySoutheast-asia" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">东南亚</a></li>
+                <li role="presentation"><a href="#wyMiddle-east" role="tab" data-toggle="tab" style="color:rgb(102,102,102)">中东</a></li>
+                <li role="presentation" class="country-close"  onclick="closeTab()">×</li>
+              </ul>
+              <!------------------------ 面板区 ---------------------------------->
+              <div class="tab-content word" id="customItemStepSelcountry">
+                <div role="tabpanel" class="tab-pane active" id="wyHot">
+                  <span>澳大利亚</span>
+                  <span>日本</span>
+                  <span>韩国</span>
+                  <span>马尔代夫</span>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="wyEurope">
+                  <span>英国</span>
+                  <span>法国</span>
+                  <span>俄罗斯</span>
+                  <span>意大利</span>
+                  <span>德国</span>
+                  <span>西班牙</span>
+                  <span>瑞士</span><br>
+                  <span>冰岛</span>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="wyAustralasia">
+                  <span>澳大利亚</span>
+                  <span>新西兰</span>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="wyAmerica">
+                  <span>英国</span>
+                  <span>加拿大</span>
+                  <span>墨西哥</span>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="wySoutheast-asia">
+                  <span>日本</span>
+                  <span>韩国</span>
+                  <span>马尔代夫</span>
+                  <span>泰国</span>
+                  <span>新加坡</span>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="wyMiddle-east">
+                  <span>迪拜</span>
+                  <span>以色列</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-------------------下一步---------------------->
+    <div class="container myBtnStep2Out">
+      <div class="row">
+        <div class="myBtnStep2" onclick="step1Next()">
+          <p>下一步</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------step2基本信息----------------------------->
+  <div class="container primaryMsgStep2 stepOuter">
+    <!------------------酒店星级--------------------->
+    <div class="row primaryMsgIn primaryMsgStep2border">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable">酒店星级</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="Personbudget"><span class="hotelType">舒适型</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="Personbudget"><span class="hotelType">高档型</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="Personbudget"><span class="hotelType">豪华型</span>
+              <div class="PersonbudgetYes"><span>√</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------出游主题--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable">出游主题</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <div class="row customerTheme">
+          <div class="col-lg-9 col-mid-8 col-sm-6 col-xs-12 customerThemeRight">
+            <div class="row">
+              <div class="col-lg-3 customerThemeCheck">
+                <div class="customerThemeCheckContent customerThemeCheckMsg">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">休闲</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerThemeCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">观光</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerThemeCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">会议</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerThemeCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">购物</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------其他需求--------------------->
+    <div class="row primaryMsgIn primaryMsgNote">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable">其他需求</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <div class="row customerTheme">
+          <div class="col-lg-9 col-mid-8 col-sm-6 col-xs-12 customerThemeRight">
+            <div class="row">
+              <div class="col-lg-3 customerThemeCheck customerOtherCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">签证</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerOtherCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">用餐</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerOtherCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">酒店</div>
+                </div>
+              </div>
+              <div class="col-lg-3 customerThemeCheck customerOtherCheckMsg">
+                <div class="customerThemeCheckContent">
+                  <div class="customerThemeCheckSquare">
+                    <div class="customerThemeCheckYes">√</div>
+                  </div>
+                  <div class="customerThemeCheckWord">机票</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------------------备注--------------------->
+    <div class="row primaryMsgIn primaryMsgNote">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable">备注</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <textarea id="notes" class="form-control  box-styleText" rows="5" placeholder="比如：您喜欢或者不喜欢的景点或项目，有哪些方面得我疑问..."></textarea>
+      </div>
+    </div>
+    <div class="container myBtnStep2Out">
+      <div class="row myBtnStep2In">
+        <div class="myBtnStep2 myBtnStep2Two" onclick="step2pre()">
+          <p>上一步</p>
+        </div>
+        <div class="myBtnStep2 myBtnStep2Two" onclick="step2Next()">
+          <p>下一步</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------step3基本信息----------------------------->
+  <div class="container primaryMsgStep3 stepOuter">
+    <!------------------联系人--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>联系人</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <input id="nameMsg"  type="text" class="form-control  box-style boxHeight step3Tel"  placeholder="请输入联系人姓名">
+      </div>
+    </div>
+    <!------------------手机号--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>手机号</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <input id="telMsg" type="text" class="form-control  box-style boxHeight step3Tel"  placeholder="请输入手机号码">
+      </div>
+    </div>
+    <!------------------电子邮箱--------------------->
+    <div class="row primaryMsgIn">
+      <div class="col-lg-2 col-mid-3 col-sm-6 col-xs-12 customItemStepinContentLeft">
+        <span class="customItemStepinLable"><span class="customItemStepinLableIm">*</span>电子邮箱</span>
+      </div>
+      <div class="col-lg-10 col-mid-9 col-sm-6 col-xs-12 customItemStepinContentRight">
+        <input id="emailMsg" type="text" class="form-control  box-style boxHeight step3Tel"  placeholder="请输入您的邮箱">
+      </div>
+    </div>
+    <!-------------------下一步---------------------->
+    <div class="container myBtnStep2Out ">
+      <div class="row myBtnStep2In">
+        <div class="myBtnStep2 myBtnStep2Two" onclick="step3pre()">
+          <p>上一步</p>
+        </div>
+        <div class="myBtnStep2 myBtnStep2Two"">
+        <p type="button" onclick="submitReq()"  data-toggle="modal" data-target=".bs-example-modal-sm">提交信息</p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--===========================页脚================================-->
+<div class="container-fluid">
+    <%-include("foot.ejs")%>
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="../js/calander/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="../js/calander/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/customOne.js"></script>
+<script>
+    window.onscroll = function() {/*窗口滚动*/
+        var navbar = document.getElementsByClassName("navbar-default")[0];
+        var onlineIcon = document.getElementsByClassName("onlineIcon")[0];
+        var lcfBackUp = document.getElementsByClassName("lcfBackUp")[0];
+        var scrlength =parseInt(document.documentElement.scrollTop||document.body.scrollTop);/*获取窗口当前的滚动位置*/
+        if (scrlength>450){
+            // console.log("窗口当前的滚动位置大",scrlength)
+            var colorRgba ="rgba(167,152,101, 0.6)"
+            navbar.style.backgroundColor=colorRgba;
+            // $(".navbar-default").css("background-color","rgba(167, 167, 167, 0.49)")
+        }else if (scrlength<450){
+            navbar.style.backgroundColor="inherit";
+        }
+
+        if (scrlength>180){
+            onlineIcon.style.backgroundColor="#615839"
+            lcfBackUp.style.backgroundColor="#615839"
+        }else if (scrlength<180){
+            onlineIcon.style.backgroundColor="#a79865"
+            lcfBackUp.style.backgroundColor="#a79865"
+        }
+    }
+    sessionStorage.myhref=location.href;
+</script>
+</body>
+</html>

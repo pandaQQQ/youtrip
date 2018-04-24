@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!---->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>You Trip旅行首页</title>
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .lcfLogin>span{
+      float: left;
+    }
+    .lcfLogin .username:hover{
+      color:#a79865;
+    }
+    .lcfLogin .username{
+      display: inline-block;
+      padding-right: 15px;
+    }
+    #register{
+      display: inline-block;
+    }
+    #return{
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <!--<div class="navdiv"></div>-->
+  <!--============================navbar:导航条 ======================================-->
+  <nav class="row navbar navbar-default" id="NAV">
+    <div class="navbar-header"><!--导航条头-->
+      <a class="navbar-brand" href="/LCF_YouTripHome"><!--导航条LOGO-->
+        <img src="/images/logo.png" alt="" class="center-block"/><!--center-block：图片居中-->
+      </a>
+      <!--导航条缩小后控制按钮-->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mycollapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse text-center" id="mycollapse">
+      <ul class="nav navbar-nav myNav">
+        <li><a href="/customOne">定制旅行</a></li>
+        <li><a href="/journey">甄选行程</a></li>
+        <li><a href="/customCase">客户案例</a></li>
+        <li><a href="fz-youtrip/1">You Trip社区</a></li>
+        <li><a href="/LCF_visa">签证</a></li>
+        <li><a href="/fz-aboutMe">关于我们</a></li>
+        <li><a href="/fz-problem">帮助中心</a></li>
+        <li class="lcfLogin">
+          <span class="username">登录</span>&nbsp;&nbsp;&nbsp;
+          <span id="register">|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/register">注册</a></span>
+          <span id="return">|&nbsp;&nbsp;&nbsp;&nbsp;<a href="/login">退出</a></span>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script>
+    $.ajax({
+        url:"/getLoginUsername.do",
+        success:function(data){
+            if(data.length>0&&data!=''){
+                $(".username").html(data)
+                $("#register").css("display","none")
+                $("#return").css("display","inline-block")
+            }else{
+                $(".username").html('登录')
+                $("#register").css("display","block")
+                $("#return").css("display","none")
+            }
+        }
+    })
+
+    $("#return").click(function () {
+        $(".username").html("登录")
+        $("#register").css("display","inline-block")
+        $("#return").css("display","none")
+    })
+    $(".username").click(function (obj) {
+        var uname = document.getElementsByClassName("username")[0].innerText;/*账号*/
+        if(uname!="登录"){
+            location.href='xr_personmesg?uname='+uname
+        }else{
+            location.href="/login"
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/public/css/xr_person.css" line="221" mnemonic="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" readonly="true" id="ebfb1aff-a2dd-45e0-a92a-b6b6af6a372a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia/jQueryColor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia/jQeasing.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia/css3-mediaqueries.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquerylanjia/jquery.masonry.min.js" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\dj_themeDao.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ZJ-case.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\theme.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\xr_reseach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\orderSuccess.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\xr-reseach.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\dj_themeCRM.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\customCase.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\xr_updateDao.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\xr_id.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ZJ-goods.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\views\DJ_theme.ejs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\login.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\dj_themeDaoCRM.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\views\ordermsg.ejs" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\themeDreket.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ZJ-details.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\newTheme.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\xr_seachid.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\xr_upadepassword.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ordermsg.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ZJ-CaseDetails.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\xr_paswordupate.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\register.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\ZJ-journey.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\birthday.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\orderMsg.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\xr_ipdao.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\xr_personmesge.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\dj_theme.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\routes\djFileRouter.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\xr_myphone.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\pages\customOne.html" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\xr_newpassword.js" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\fz-community.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-Team.ejs" afterPath="$PROJECT_DIR$/views/fz-Team.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/WY_case.ejs" afterPath="$PROJECT_DIR$/views/WY_case.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/xr_person.css" afterPath="$PROJECT_DIR$/public/css/xr_person.css" />
+      <change type="MOVED" beforePath="C:\Users\hf\Desktop\三阶段项目\controller\ZJ_shops.js" afterPath="$PROJECT_DIR$/controller/ZJ_shopsController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/wyOrderMsg.ejs" afterPath="$PROJECT_DIR$/views/wyOrderMsg.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/LCF_YouTripHome.js" afterPath="$PROJECT_DIR$/public/js/LCF_YouTripHome.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fz-Team.css" afterPath="$PROJECT_DIR$/public/css/fz-Team.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/lcfFileRouter.js" afterPath="$PROJECT_DIR$/routes/lcfFileRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/xr_person.js" afterPath="$PROJECT_DIR$/public/js/xr_person.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fz-community.css" afterPath="$PROJECT_DIR$/public/css/fz-community.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/LCF_visaDetails.css" afterPath="$PROJECT_DIR$/public/css/LCF_visaDetails.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ZJ-jour.js" afterPath="$PROJECT_DIR$/public/js/ZJ-jour.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/xr_personmesg.ejs" afterPath="$PROJECT_DIR$/views/xr_personmesg.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/xr_controoler.js" afterPath="$PROJECT_DIR$/controller/xr_controoler.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/left_nav.ejs" afterPath="$PROJECT_DIR$/views/left_nav.ejs" />
+      <change type="MOVED" beforePath="C:\Users\hf\Desktop\三阶段项目\public\js\xr_zhuce.js" afterPath="$PROJECT_DIR$/public/js/register.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-youtrip.ejs" afterPath="$PROJECT_DIR$/views/fz-youtrip.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/xr_payfor.html" afterPath="$PROJECT_DIR$/public/pages/xr_payfor.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/yemadao.js" afterPath="$PROJECT_DIR$/dao/yemadao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/zjFileRouter.js" afterPath="$PROJECT_DIR$/routes/zjFileRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-commounity.ejs" afterPath="$PROJECT_DIR$/views/fz-commounity.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/ZJ-public.js" afterPath="$PROJECT_DIR$/public/js/ZJ-public.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/lcf_visaController.js" afterPath="$PROJECT_DIR$/controller/lcf_visaController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/lcf_visaDao.js" afterPath="$PROJECT_DIR$/dao/lcf_visaDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/head.ejs" afterPath="$PROJECT_DIR$/views/head.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ZJ_journey.ejs" afterPath="$PROJECT_DIR$/views/ZJ_journey.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/LCF_visa.ejs" afterPath="$PROJECT_DIR$/views/LCF_visa.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/xr_forgetmima.js" afterPath="$PROJECT_DIR$/public/js/xr_forgetmima.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/register.ejs" afterPath="$PROJECT_DIR$/views/register.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fz-aboutMe.css" afterPath="$PROJECT_DIR$/public/css/fz-aboutMe.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/xr_forgermima.html" afterPath="$PROJECT_DIR$/public/pages/xr_forgermima.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/indexFileRouter.js" afterPath="$PROJECT_DIR$/routes/indexFileRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/homePublic.js" afterPath="$PROJECT_DIR$/public/js/homePublic.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/xr_pay.js" afterPath="$PROJECT_DIR$/public/js/xr_pay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-problem.ejs" afterPath="$PROJECT_DIR$/views/fz-problem.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ZJ_goods.ejs" afterPath="$PROJECT_DIR$/views/ZJ_goods.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/xrFileRouter.js" afterPath="$PROJECT_DIR$/routes/xrFileRouter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-aboutMe.ejs" afterPath="$PROJECT_DIR$/views/fz-aboutMe.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/LCF_visaDetails.js" afterPath="$PROJECT_DIR$/public/js/LCF_visaDetails.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/customOne.js" afterPath="$PROJECT_DIR$/public/js/customOne.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/orderSuccess.css" afterPath="$PROJECT_DIR$/public/css/orderSuccess.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/LCF_visa.js" afterPath="$PROJECT_DIR$/public/js/LCF_visa.js" />
+      <change type="MOVED" beforePath="C:\Users\hf\Desktop\三阶段项目\dao\ZJ_shops.js" afterPath="$PROJECT_DIR$/dao/ZJ_shopsDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/customOne.css" afterPath="$PROJECT_DIR$/public/css/customOne.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/LCF_visaOrder.css" afterPath="$PROJECT_DIR$/public/css/LCF_visaOrder.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/mailController.js" afterPath="$PROJECT_DIR$/controller/mailController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/LCF_visaOrder.js" afterPath="$PROJECT_DIR$/public/js/LCF_visaOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/LCF_visaOrder.ejs" afterPath="$PROJECT_DIR$/views/LCF_visaOrder.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ZJ_details.ejs" afterPath="$PROJECT_DIR$/views/ZJ_details.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/xr_denglu.css" afterPath="$PROJECT_DIR$/public/css/xr_denglu.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dao/xr_zhuceDao.js" afterPath="$PROJECT_DIR$/dao/xr_zhuceDao.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/homePublic.css" afterPath="$PROJECT_DIR$/public/css/homePublic.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/pages/xr_newwpassword.html" afterPath="$PROJECT_DIR$/public/pages/xr_newwpassword.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/fz-recruitment.css" afterPath="$PROJECT_DIR$/public/css/fz-recruitment.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.ejs" afterPath="$PROJECT_DIR$/views/login.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/LCF_visaDetails.ejs" afterPath="$PROJECT_DIR$/views/LCF_visaDetails.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/fz-recruitment.ejs" afterPath="$PROJECT_DIR$/views/fz-recruitment.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controller/xr_yema.js" afterPath="$PROJECT_DIR$/controller/xr_yema.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/wyOrderSuccess.ejs" afterPath="$PROJECT_DIR$/views/wyOrderSuccess.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/wyCustomOne.ejs" afterPath="$PROJECT_DIR$/views/wyCustomOne.ejs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/LCF_YouTripHome.ejs" afterPath="$PROJECT_DIR$/views/LCF_YouTripHome.ejs" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="三阶段项目" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="EJS File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>weichaxunyema</find>
+      <find>weibanli</find>
+      <find>xr_dingdan</find>
+      <find>searchall</find>
+      <find>xr_payfor</find>
+      <find>xr_nopay</find>
+      <find>searchalredygo</find>
+      <find>出行</find>
+      <find>我的</find>
+      <find>巴黎埃菲尔铁塔十日游</find>
+      <find>mysoucang</find>
+      <find>shoucantuneirong1</find>
+      <find>shoucangtu</find>
+      <find>collectimg</find>
+      <find>data[i].vr_area</find>
+      <find>back</find>
+      <find>修改面</find>
+      <find>xr_success</find>
+      <find>xr_updatesuccess</find>
+      <find>ziti</find>
+      <find>确认</find>
+      <find>确定</find>
+      <find>xr_nichengdiv1</find>
+      <find>my</find>
+      <find>xr_yicang</find>
+      <find>dingdanbianhao</find>
+      <find>console</find>
+      <find>xr_dingdanmingcheng</find>
+      <find>aleader.do</find>
+      <find>orderContact</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>lcfImg</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/views/LCF_visaOrder.ejs" />
+        <option value="$PROJECT_DIR$/public/js/personCenter.js" />
+        <option value="$PROJECT_DIR$/routes/personCenter.js" />
+        <option value="$PROJECT_DIR$/public/css/LCF_visaOrder.css" />
+        <option value="$PROJECT_DIR$/public/css/personCenter.css" />
+        <option value="$PROJECT_DIR$/views/personCenter.ejs" />
+        <option value="$PROJECT_DIR$/routes/indexFileRouter.js" />
+        <option value="$PROJECT_DIR$/views/LCF_visaDetails.ejs" />
+        <option value="$PROJECT_DIR$/views/ZJ_details.ejs" />
+        <option value="$PROJECT_DIR$/public/js/ZJ-jour.js" />
+        <option value="$PROJECT_DIR$/public/css/fz-community.css" />
+        <option value="$PROJECT_DIR$/views/fz-aboutMe.ejs" />
+        <option value="$PROJECT_DIR$/public/js/LCF_YouTripHome.js" />
+        <option value="$PROJECT_DIR$/views/fz-commounity.ejs" />
+        <option value="$PROJECT_DIR$/views/fz-problem.ejs" />
+        <option value="$PROJECT_DIR$/views/fz-recruitment.ejs" />
+        <option value="$PROJECT_DIR$/views/fz-Team.ejs" />
+        <option value="$PROJECT_DIR$/views/fz-youtrip.ejs" />
+        <option value="$PROJECT_DIR$/public/js/LCF_visa.js" />
+        <option value="$PROJECT_DIR$/public/js/LCF_visaDetails.js" />
+        <option value="$PROJECT_DIR$/public/js/orderMsg.js" />
+        <option value="$PROJECT_DIR$/views/WY_case.ejs" />
+        <option value="$PROJECT_DIR$/views/wyOrderMsg.ejs" />
+        <option value="$PROJECT_DIR$/public/js/homePublic.js" />
+        <option value="$PROJECT_DIR$/public/js/ZJ-public.js" />
+        <option value="$PROJECT_DIR$/views/ZJ_journey.ejs" />
+        <option value="$PROJECT_DIR$/views/login.ejs" />
+        <option value="$PROJECT_DIR$/public/pages/xr_forgermima.html" />
+        <option value="$PROJECT_DIR$/public/js/xr_forgetmima.js" />
+        <option value="$PROJECT_DIR$/controller/mailController.js" />
+        <option value="$PROJECT_DIR$/public/pages/xr_newwpassword.html" />
+        <option value="$PROJECT_DIR$/views/head.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/dao/yemadao.js" />
+        <option value="$PROJECT_DIR$/dao/xr_zhuceDao.js" />
+        <option value="$PROJECT_DIR$/controller/xr_controoler.js" />
+        <option value="$PROJECT_DIR$/routes/xrFileRouter.js" />
+        <option value="$PROJECT_DIR$/views/xr_personmesg.ejs" />
+        <option value="$PROJECT_DIR$/public/css/xr_person.css" />
+        <option value="$PROJECT_DIR$/public/css/customOne.css" />
+        <option value="$PROJECT_DIR$/views/wyCustomOne.ejs" />
+        <option value="$PROJECT_DIR$/public/js/customOne.js" />
+        <option value="$PROJECT_DIR$/views/wyOrderSuccess.ejs" />
+        <option value="$PROJECT_DIR$/controller/lcf_visaController.js" />
+        <option value="$PROJECT_DIR$/public/js/xr_person.js" />
+        <option value="$PROJECT_DIR$/public/js/LCF_visaOrder.js" />
+        <option value="$PROJECT_DIR$/public/js/xr_pay.js" />
+        <option value="$PROJECT_DIR$/controller/xr_yema.js" />
+        <option value="$PROJECT_DIR$/public/pages/xr_payfor.html" />
+        <option value="$PROJECT_DIR$/views/register.ejs" />
+        <option value="$PROJECT_DIR$/public/css/xr_denglu.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="三阶段项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="三阶段项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="三阶段项目" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="C:/Program Files/nodejs/node.exe" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="recentsLimit" value="5" />
+    <property name="JavaScriptLanguageLevel" value="ES6" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\youtrip\youtrip\public\images" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\youtrip\youtrip\public\js" />
+      <recent name="D:\youtrip\youtrip\public\css" />
+      <recent name="D:\youtrip\youtrip\public\js\jquerylanjia" />
+      <recent name="D:\youtrip\youtrip\public\images" />
+      <recent name="D:\youtrip\youtrip\public\font" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.youtrip">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="JsTestDriver-test-runner" factoryName="JsTestDriver">
+      <setting name="configLocationType" value="CONFIG_FILE" />
+      <setting name="settingsFile" value="" />
+      <setting name="serverType" value="INTERNAL" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="false" name="youtrip" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="C:/Program Files/nodejs/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.youtrip" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\hf\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ebfb1aff-a2dd-45e0-a92a-b6b6af6a372a" name="Default" comment="" />
+      <created>1520580266015</created>
+      <option name="number" value="Default" />
+      <updated>1520580266015</updated>
+      <workItem from="1520580267362" duration="3620000" />
+      <workItem from="1520759915331" duration="639000" />
+      <workItem from="1520918582589" duration="174000" />
+      <workItem from="1520924122027" duration="4334000" />
+      <workItem from="1520945183973" duration="575000" />
+      <workItem from="1520954225374" duration="116000" />
+      <workItem from="1520992482111" duration="6033000" />
+      <workItem from="1521026856202" duration="1810000" />
+      <workItem from="1521190293633" duration="8331000" />
+      <workItem from="1521257478221" duration="1443000" />
+      <workItem from="1521264956414" duration="17660000" />
+      <workItem from="1521351212042" duration="16552000" />
+      <workItem from="1521422339866" duration="13238000" />
+      <workItem from="1521507615927" duration="9190000" />
+      <workItem from="1521549465733" duration="1224000" />
+      <workItem from="1521680949420" duration="3633000" />
+      <workItem from="1521765899180" duration="11299000" />
+      <workItem from="1521868473071" duration="46000" />
+      <workItem from="1521889282012" duration="1208000" />
+      <workItem from="1522024758573" duration="33528000" />
+      <workItem from="1522111594843" duration="35852000" />
+      <workItem from="1522198965662" duration="41787000" />
+      <workItem from="1522286463738" duration="63340000" />
+      <workItem from="1522728913893" duration="10491000" />
+      <workItem from="1522810242799" duration="4696000" />
+      <workItem from="1523114640100" duration="530000" />
+      <workItem from="1523174594323" duration="866000" />
+      <workItem from="1523270565323" duration="14456000" />
+      <workItem from="1523326834056" duration="5954000" />
+      <workItem from="1523369273916" duration="2071000" />
+      <workItem from="1523405913859" duration="12323000" />
+      <workItem from="1523442037984" duration="17159000" />
+      <workItem from="1523493173448" duration="31279000" />
+      <workItem from="1523547063092" duration="607000" />
+      <workItem from="1523586621541" duration="15533000" />
+      <workItem from="1523661920775" duration="7807000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="411483000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1875" sideWeight="0.4917647" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2630719" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4248366" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1376488" sideWeight="0.5082353" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3289689" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="16" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/views/head.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="93" column="34" selection-start-line="93" selection-start-column="34" selection-end-line="93" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/register.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/ZJ_shopsDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="206" column="29" selection-start-line="206" selection-start-column="29" selection-end-line="206" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/ZJ_shopsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="40" selection-start-line="139" selection-start-column="40" selection-end-line="139" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/zjFileRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/xr_denglu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/ZJ-jour.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="176" column="69" selection-start-line="176" selection-start-column="40" selection-end-line="176" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/LCF_YouTripHome.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/LCF_YouTripHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="64" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/xr_zhuceDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="4" selection-start-line="139" selection-start-column="4" selection-end-line="139" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/LCF_visa.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="47" selection-start-line="9" selection-start-column="47" selection-end-line="9" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/xr_controoler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/LCF_visa.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/xr_person.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="404" column="6" selection-start-line="404" selection-start-column="6" selection-end-line="404" selection-end-column="6" />
+          <folding>
+            <element signature="e#1#35#0" expanded="false" />
+            <element signature="e#40#67#0" expanded="false" />
+            <element signature="e#76#171#0" expanded="false" />
+            <element signature="e#181#276#0" expanded="false" />
+            <element signature="e#287#382#0" expanded="false" />
+            <element signature="e#392#487#0" expanded="false" />
+            <element signature="e#497#592#0" expanded="false" />
+            <element signature="e#604#699#0" expanded="false" />
+            <element signature="e#841#893#0" expanded="false" />
+            <element signature="e#906#1072#0" expanded="false" />
+            <element signature="e#1083#1182#0" expanded="false" />
+            <element signature="e#1187#1244#0" expanded="false" />
+            <element signature="e#1251#1277#0" expanded="false" />
+            <element signature="e#1280#1327#0" expanded="false" />
+            <element signature="e#1338#1384#0" expanded="false" />
+            <element signature="e#1398#1466#0" expanded="false" />
+            <element signature="e#1477#1501#0" expanded="false" />
+            <element signature="e#1520#1573#0" expanded="false" />
+            <element signature="e#1596#1633#0" expanded="false" />
+            <element signature="e#1651#1775#0" expanded="false" />
+            <element signature="e#1791#1907#0" expanded="false" />
+            <element signature="e#1930#2024#0" expanded="false" />
+            <element signature="e#2034#2094#0" expanded="false" />
+            <element signature="e#2111#2133#0" expanded="false" />
+            <element signature="e#2154#2197#0" expanded="false" />
+            <element signature="e#2227#2314#0" expanded="false" />
+            <element signature="e#2331#2375#0" expanded="false" />
+            <element signature="e#2384#2423#0" expanded="false" />
+            <element signature="e#2432#2571#0" expanded="false" />
+            <element signature="e#2588#2635#0" expanded="false" />
+            <element signature="e#2653#2705#0" expanded="false" />
+            <element signature="e#2729#2778#0" expanded="false" />
+            <element signature="e#2797#2846#0" expanded="false" />
+            <element signature="e#6316#6396#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/customOne.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="569" column="0" selection-start-line="569" selection-start-column="0" selection-end-line="569" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/wyCustomOne.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/xr_personmesg.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/wyOrderSuccess.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="28" selection-start-line="108" selection-start-column="28" selection-end-line="108" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/customOne.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="84" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/lcfFileRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/LCF_visaOrder.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="250" column="70" selection-start-line="250" selection-start-column="58" selection-end-line="250" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/lcf_visaController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="31" selection-start-line="116" selection-start-column="31" selection-end-line="116" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/LCF_visaOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="664" column="93" selection-start-line="664" selection-start-column="93" selection-end-line="664" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/xr_pay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="32" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/xr_person.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="979" column="52" selection-start-line="979" selection-start-column="52" selection-end-line="979" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/lcf_visaDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="181" column="54" selection-start-line="181" selection-start-column="48" selection-end-line="181" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/xrFileRouter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="37" selection-start-line="43" selection-start-column="37" selection-end-line="43" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/xr_yema.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="22" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dao/yemadao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="37" selection-start-line="221" selection-start-column="37" selection-end-line="221" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-14.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-39.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-ceo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-cto.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-qz-2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-79.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-75.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/fz-imge/fz-38.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/xr_forgetmima.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="39" selection-start-line="63" selection-start-column="39" selection-end-line="63" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pages/xr_payfor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="66" column="29" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pages/xr_forgermima.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="75" column="14" selection-start-line="75" selection-start-column="14" selection-end-line="75" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/register.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="41" selection-start-line="76" selection-start-column="41" selection-end-line="76" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/xr_3.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/bannerbg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/joinUs.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/bannerYouTrip.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="100" column="65" selection-start-line="100" selection-start-column="65" selection-end-line="100" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/newimg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/xr_denglu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="54" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/new.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -1,0 +1,854 @@
+.row{
+    margin: 0;
+}
+.container-fluid{
+    /*background: url("");*/
+}
+
+/* ============左边文化类分类菜单 ===============*/
+.fontICON{
+    font-size: 1.3em;
+    /*字体图标设置*/
+
+}
+
+.ZJ-menu>li{
+    background-color: white;
+    /*height: 35px;*/
+    width: 10%;
+    /*line-height: 35px;*/
+    padding: 3px 0 5px 0;
+    float: left;
+    color: #a17648;
+    /*单独每个菜单设置*/
+}
+
+/*.ZJ-menu>li>span{*/
+    /*display:block;*/
+    /*!*字体图标和文件介绍设置*!*/
+/*}*/
+
+.ZJ-menu>li>span:first-child{
+    margin: 8px 0 5px 0;
+    /*字体图标和文字介绍的间距设置*/
+}
+
+.ZJ-menu>.bg{
+    background-color: #a17648;
+    color: white;
+    /*默认选中菜单栏的样式*/
+}
+
+.shop{
+    /*overflow: hidden;*/
+    padding: 20px 10px 0 10px;
+    /*列表块的溢出影藏*/
+}
+
+.shop .ZJ-sp-img{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    /*列表块中图片盒子的设置*/
+}
+
+.shop img{
+    width: 100%;
+    /*列表块中图片高度的设置*/
+}
+
+.shop>div>h3{
+    margin: 0;
+    padding:18px 0 0 0;
+    /*列表块中标签标题的设置*/
+}
+/*.shop h3 a{*/
+    /*font-size: 1.1em;*/
+    /*color: #333333;*/
+    /*!*列表块中标签标题的设置*!*/
+/*}*/
+/*.shop h3 a:hover{*/
+    /*color: #a17648;;*/
+    /*text-decoration: none;*/
+    /*!*列表块中标签标题的设置*!*/
+/*}*/
+
+.ZJ-sp-title{
+    background-color: rgba(228, 228, 228, 0.41);
+    height: 120px;
+    /*列表块中的标签块设置*/
+}
+.ZJ-sp-title>h3{
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+.ZJ-Y{
+    /*阴影设置*/
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5)
+}
+
+.ZJ-Y .ZJ-sp-img{
+
+}
+
+.ZJ-sp-label{
+    margin-top: 15px;
+    /*标签设置*/
+}
+#ZJ_countryBox .ZJ-sp-label>p{
+    padding: 0 10px 0 10px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.ZJ-sp-label>div{/*标签样式公共样式*/
+    line-height: 20px;
+    border:1px solid #a1a1a1;
+    border-radius:5px;
+    color: rgba(142, 137, 118, 0.9);
+    display: inline-block;
+    font-size: .9em;
+    margin: 0 5px 0 5px;
+    padding: 0 5px 0 5px;
+}
+.ZJ-list .awayTakeBtn{
+    left: 50%;
+    margin-left: -100px;
+    margin-bottom: 60px;
+    margin-top: 40px;
+}
+/*==========================以上是甄选行程的全部样式设置==========================*/
+
+/*==========================以下是目的地的全部样式设置==========================*/
+/*=============轮播图设置=========================*/
+.ZJ-title~p{
+     color: white;
+    /*轮播图文字颜色*/
+ }
+.ZJ-ban{
+    width: 100%;
+    overflow: hidden;
+}
+.ZJ-ban>div>img{
+    width: 100%;
+}
+.ZJ-ban>div>.awayTakeBtn{
+    bottom: 70px;
+    left: 50%;
+    margin-left: -100px;
+
+    /*按钮位置设置*/
+}
+.ZJ-ban>.ZJ-awayTake{
+    padding: 0;
+}
+.ZJ-ban>div>div>a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.ZJ-ban>div>img~div{
+    width: 500px;
+    top: 38%;
+    left: 50%;
+    margin-left: -240px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    /*顶部文字介绍位置设置*/
+}
+
+
+/*======菜单栏==========*/
+#ZJ-GoodsLeftMenu>li{
+    width: 15%;
+}
+#ZJ-GoodsRightMenu>li{
+    width: 15%;
+    margin-bottom: 50px ;
+}
+
+
+/*=====================商品样式设置==========================*/
+.ZJ-GoodsImg{
+    height:260px;
+    overflow: hidden;
+    /*background-image: url("../images/ZJ/stop/yidali2 (1).jpg");*/
+}
+
+.ZJ-GoodsImg>img{
+    display: inline-block;
+    width: 100%;
+}
+
+.ZJ-GoodsLabel{
+    background-color: rgba(228, 228, 228, 0.41);
+}
+
+.ZJ-GoodsLabel h3{
+    margin: 0;
+    padding: 10px 0 10px 0;
+    height: 30px;
+    overflow: hidden;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+/*.ZJ-GoodsLabel>div:nth-of-type(1)>p{*/
+    /*display: inline-block;*/
+    /*padding-right: 3px;*/
+    /*font-size: 0.9em;*/
+/*}*/
+
+
+.ZJ-GoodsLabel>.ZJ-sp-label>div{
+    margin: 5px 5px 5px 5px;
+    /*标签间距*/
+}
+
+.ZJ-GoodsLabel .ZJ-sp-label{
+    margin: 10px 0 10px 0;
+    height: 30px;
+    overflow: hidden;
+    /*标签盒子*/
+}
+/*.ZJ-menu{*/
+    /*padding-bottom: 70px;*/
+    /*!*菜单栏和商品的间距*!*/
+/*}*/
+
+.ZJ-price{
+    border-top: 2px dashed rgba(118, 118, 118, 0.7);
+}
+
+.ZJ-price>span{
+    display: inline-block;
+    padding: 10px 10px 10px 0 ;
+
+}
+
+.ZJ-price>span>span:nth-of-type(1){
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(118, 118, 118, 0.7);
+    line-height: 30px;
+}
+
+.ZJ-goods h3 a:hover{
+    color: #a17648;
+    text-decoration: none;
+}
+
+.ZJ-goods .awayTakeBtn{
+    left: 50%;
+    margin-left: -100px;
+    margin-top: 40px;
+}
+/*===============================第三个页面商品详情页=====================*/
+
+/*======================最佳旅行-======================*/
+.ZJ-detailsTU2{
+    background-color: rgba(204, 204, 204, 0.11);
+    margin: 20px 0 10px 0;
+}
+.ZJ-yuan>div h3{
+    margin: 0;
+    /*标题设置*/
+}
+
+.ZJ-yuan ul{
+    width: 100%;
+    height: 120px;
+}
+.ZJ-yuan>div>ul>li{
+    text-align: center;
+    font-size: 1.2em;
+    width: 23%;
+    height: 100%;
+    /*margin:0 10px 25px 0;*/
+    /*圆的间距设置*/
+}
+
+.ZJ-yuan>div>ul>li>div{
+    border: 1px solid #a17648;
+    border-radius: 50%;
+    width: 65px;
+    height: 65px;
+    line-height: 63px;
+    /*圆的设置*/
+}
+
+.ZJ-yuan>div:nth-of-type(2){
+    line-height: 35px;
+    font-size: 1.2em;
+    color: #333333;
+    padding: 55px 0 0 25px ;
+    /*介绍部分的排版*/
+}
+
+.ZJ-hr{
+    height:120px;
+    border: .5px solid rgba(180, 175, 154, 0.2);
+    position: absolute;
+    right: -1%;
+    bottom: 10px;
+}
+.ZJ-BrightSpot{
+    padding: 0 0 10px 0;
+    background-color: rgba(204, 204, 204, 0.11);
+    margin: 0 0 010px 0;
+    /*亮点介绍的间距*/
+}
+
+/*设计师*/
+
+.ZJ-designer{
+    background-color: rgba(204, 204, 204, 0.11);
+}
+.ZJ-designer>div{
+    border: 1px solid rgba(204, 204, 204, 0);
+    height: 250px;
+}
+
+.ZJ-designer>div .ZJ-hr{
+    height: 160px;
+}
+.ZJ-designer .ZJ-HeadPortrait{
+    margin-left: 33%;
+}
+
+.ZJ-HeadPortrait~p,.ZJ-HeadPortrait~h3{
+    padding: 10px 0 0 0;
+}
+
+
+/*========================行程======================*/
+/*导航栏*/
+.ZJ-detailsMenu{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.2em;
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.7);
+    margin-bottom: 10px;
+}
+.ZJ-detailsMenu>div:nth-of-type(1){
+    border-bottom: 2px solid #333333;
+}
+.ZJ-detailsMenu>div>p{
+    display: inline-block;
+    font-weight: bold;
+    height: 30px;
+    width: 100%;
+    border-right: 1px solid rgba(204, 204, 204, 0.7);
+    line-height: 30px;
+}
+.ZJ-detailsMenu>div:last-child>p{
+    border-right: 2px solid rgba(255, 255, 255, 0);
+}
+
+.ZJ-details .awayTakeBtn{
+    left: 50%;
+    margin-left: -100px;
+}
+/*=================================轮播图设置=========================*/
+/*上面图片设置*/
+.ZJ-detailsBan1{
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+.ZJ-detailsBan1>.fz-myimg{
+    width: 100%;
+}
+.ZJ-detailsBan1>.fz-myimg>img{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.ZJ-detailsTU1 .ZJ-detailsBan2{
+    width: 100%;
+    height: 120px;
+}
+/*下面图片设置*/
+.ZJ-detailsTU1 .fz-box{
+    padding: 0;
+    width: 100%;
+}
+
+.ZJ-detailsBan2 .fz-lshow{
+    width: 100%;
+    height: 100%;
+}
+/*向左向右箭头设置*/
+.ZJ-detailsBan2 .pre{
+    left: 0;
+    height: 100%;
+    line-height: 120px;
+    font-size: 2.1em;
+}
+.ZJ-detailsBan2 .nex{
+     right: 0;
+    height: 100%;
+    line-height: 120px;
+    font-size: 2.1em;
+ }
+.ZJ-detailsBan2 .fz-lubo>div{
+    margin: 0 2.5px 0 2.5px;
+}
+/*==========================第4个页面给顾客评价页面========================*/
+.ZJ-case .ZJ-caseImg img{
+    width: 100%;
+}
+
+.ZJ-caseTU1{
+    height: 380px;
+    overflow: hidden;
+}
+.ZJ-caseTU1 h3{
+    font-size: 1.3em;
+}
+.ZJ-caseTU1>div:nth-of-type(2) p{
+    padding: 10px 0 10px 0;
+}
+
+.ZJ-case .ZJ-awayTake>.awayTakeBtn{
+    float: right;
+    margin-top: -55px;
+    padding: 0;
+}
+.ZJ-case .ZJ-awayTake>.awayTakeBtn>p{
+    height: 40px;
+    line-height: 40px;
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+.ZJ-detailsTU1{
+    margin: 10px 0 30px 0;
+}
+.ZJ-case1>div:nth-of-type(1){
+padding: 0 25px 0 25px;
+}
+.ZJ-detailsTU2 .ZJ-hr{
+    height: 180px;
+}
+.ZJ-detailsTU2 h3{
+    margin: 0;
+}
+.ZJ-detailsTU2>div>div>p{
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.ZJ-detailsTU2 div>ul{
+    line-height: 30px;
+    padding: 10px 0 0 0;
+}
+
+.ZJ-detailsTU2>div:nth-of-type(2){
+    line-height: 35px;
+    padding-left: 25px;
+}
+
+.ZJ-detailsTU3>div>div>img{
+    display: inline-block;
+    padding: 10px;
+    width: 25%;
+}
+/*==============================第5个页面行程一览===========================*/
+.ZJ-CaseDetailsTu1 .ZJ-detailsArticle>div{
+    height: 200px;
+    overflow: hidden;
+    padding: 0 0 0 10px;
+    /*background-color: silver;*/
+}
+.ZJ-CaseDetailsTu1 .ZJ-detailsArticle>div>div{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.ZJ-CaseDetailsTu1 .ZJ-detailsArticle div>img{
+    width: 100%;
+}
+.ZJ-CaseDetailsTu1 .ZJ-detailsArticle p{
+    width: 50%;
+    height: 100%;
+    padding: 0 10px 0 10px;
+    line-height: 30px;
+    margin: 0;
+    background-color: rgba(192, 192, 192, 0.27);
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(1)>div,
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div
+{
+    width: 100%;
+    height: 350px;
+    padding: 0 0 0 10px;
+    overflow: hidden;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(1){
+    padding: 0;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(1) img{
+    width: 100%;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2){
+    background-color: rgba(192, 192, 192, 0.27);
+    padding: 0 0 0 10px;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div>p{
+    line-height: 30px;
+    font-size: 1.2em;
+    padding-top: 10px;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div>div{
+    height: 200px;
+    margin-top: 20px;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div>div>div{
+    display: inline-block;
+    padding: 30px 0 0 0;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div>div>div:nth-of-type(1){
+    padding: 70px 0 0 0;
+    font-size: 1.2em;
+}
+.ZJ-CaseDetailsTu2 .ZJ-detailsArticle:nth-of-type(2)>div>div>div:nth-of-type(2){
+    width: 40%;
+    height: 180px;
+    overflow: hidden;
+    bottom: -20px;
+    right: 10px;
+}
+
+
+p>a{
+     color: white;
+     text-decoration: none;
+ }
+p>a:hover{
+    color: white;
+    text-decoration: none;
+}
+
+.name{
+    /*商品详情页名字的设置*/
+    line-height: 35px;
+    margin: 0;
+}
+.ZJ-money>div:first-child>span>a{
+    /*商品详情页价格设置的起价说明标签设置*/
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.1em;
+  }
+
+.ZJ-money>div:first-child>span:last-child{
+    /*商品详情页的收藏按钮*/
+    color: #a17648;
+    right: 15px;
+    top: 50%;
+    margin-top: -6%;
+}
+
+.ZJ-money>div:first-child>span:last-child:hover{
+    /*商品详情页的立即收藏按钮鼠标移入*/
+    color: #82613c;
+    cursor: pointer;
+}
+.ZJ-money>p>span:first-child{
+    /*商品详情页的温馨提示*/
+    color: #949494;
+}
+
+/* ------------------商品详情页价钱表格样式设置-----------------*/
+
+/*表格头部的设置*/
+.extraService>div{
+    margin-bottom: 30px;
+}
+.extraService>div:nth-of-type(1){
+    background-color: rgba(204, 204, 204, 0.29);
+    line-height: 25px;
+    margin-right: 10px;
+}
+.ZJ-care{
+    font-size: 12px;
+    color: #b48552;
+}
+
+.extraService p{
+    color: rgba(23, 120, 145, 0.79);
+    font-weight: bold;
+}
+.extraService p:hover{
+    cursor: pointer;
+    color: #b48552;
+}
+
+.ZJ-article{
+    padding: 0 20px 0 0;
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+/*保险详情设置*/
+.ZJ-article>article{
+    padding: 10px 0 10px 10px;
+    background-color: rgba(204, 204, 204, 0.32);
+    line-height: 25px;
+    display: none;
+}
+.ZJ-article>article>p{
+    color: #333333;
+    font-weight: lighter;
+}
+.ZJ-article>article>p:hover{
+    color: #333333;
+
+}
+/*表格价格样式设置*/
+.ZJ-money2{
+    color: #b48552;
+    font-weight: bold;
+}
+/*更多意外险*/
+.ZJ-claimsman1{
+    margin-bottom: 20px;
+}
+.ZJ-claimsman2{
+    margin-left: 20px;
+}
+
+
+
+/*========================商品详情页表单=================*/
+.information{
+    border:3px #b48552 solid;
+;
+}
+.information>form{
+    border-bottom: 1px solid rgba(204, 204, 204, 0.3);
+    /*margin-bottom: 25px;*/
+    line-height: 80px;
+}
+
+
+.information form>div{
+    display: inline-block;
+    padding-left: 5px;
+
+}
+
+
+/*表单的按钮设置*/
+.information form>div:nth-of-type(4)>div{
+    display:inline-block;
+}
+.information .awayTake .awayTakeBtn{
+    width: 150px;
+    height: 40px;
+    margin: 0;
+ }
+.information .awayTake{
+    margin-top: 20px;
+    right: 20px;
+}
+.information .awayTake .awayTakeBtn p{
+   width: 100%;
+    line-height: 40px;
+}
+/*时间表单*/
+.ZJ-time{
+    display: inline-block;
+    width: 15%;
+}
+.form-group{
+    margin: 0;
+}
+#ZJ_date{
+    width: 100%;
+}
+.form-group{
+    margin-bottom: -10px;
+}
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control{
+    background-color: white;
+}
+
+.input-group>.form-control{
+    padding: 6px 10px;
+    height: 30px;
+}
+.input-group-addon{
+    padding: 6px 10px;
+    background-color: white;
+    color: #b48552;
+    border-radius: 0;
+}
+.input-group-addon:hover{
+    color: #84623f;
+;
+}
+/*加减表单*/
+.ZJ-count{
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    font-size: 0;
+}
+.ZJ-count-btn{
+    font-size: 14px ;
+    display: inline-block;
+    padding: 6px 8px;
+    line-height: 1;
+    border: 1px solid #ccc;
+    background-color:white;
+    color: #b48552;
+    font-weight: normal;
+    text-align: center;
+}
+.ZJ-count-btn:hover{
+    color: #936c45;
+}
+.ZJ-count>div:nth-of-type(2){
+    background-color: white;
+    display: inline-block;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 1;
+    color: #b48552;
+    padding: 7px 10px 6px 10px;
+}
+
+@media screen and (max-width: 1300px){
+    .ZJ-count>div:nth-of-type(2){
+        /*background-color: coral;*/
+        padding:8px 10px 6px 10px;
+    }
+}
+
+/*======中屏隐藏=======*/
+.hiddenIn{
+    text-align: center;
+    height: 80px;
+    line-height: 30px;
+}
+.hiddenIn2{
+    display: none;
+    padding-top: 20px;
+}
+.hiddenIn .awayTake .awayTakeBtn{
+    width: 150px;
+    height: 35px;
+    margin: 0;
+}
+.hiddenIn .awayTake{
+    left: 50%;
+    margin-left: -75px;
+    top: 25%;
+}
+.hiddenIn .awayTake .awayTakeBtn p{
+    width: 100%;
+    line-height: 35px;
+}
+
+/*=====表单中价钱设置=====*/
+.moneyIn{
+    font-size: 18px;
+    font-weight: bold;
+    color: #b48552;
+    margin-left: -60px;
+}
+
+/*=======表单资源图标=======*/
+.ZJ-CSP{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #b48552;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+input[type=checkbox]{
+    margin-left: 0;
+    top: -5px;
+}
+
+/*地图设置*/
+#container{
+    border: 3px solid #b48552;
+    height: 300px;
+    margin: 20px 0 0 0 ;
+}
+
+/*轮播*/
+#ZJ_lun>div:first-child{
+    border: 2px solid #b48552;
+    height: 350px;
+    overflow: hidden;
+}
+#ZJ_lun>div:first-child img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+#ZJ_lun>div:last-child{
+    height: 125px;
+    overflow: hidden;
+    position: relative;
+}
+#ZJ_lun>div:last-child>div{
+    width: 150%;
+    height: 80%;
+    margin: 2% 0 0 0 ;
+}
+#ZJ_lun>div:last-child>div>div{
+    float: left;
+    overflow: hidden;
+    margin: 0 5px 0 0;
+    width: 150px;
+    height: 100%;
+ }
+#ZJ_lun>div:last-child>div>div>img{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#ZJ_lun>div:last-child>span{
+    color:white;
+    position: absolute;
+    font-weight: 900;
+    font-size: 40px;
+    top: 50%;
+    margin-top: -30px;
+    z-index: 99;
+}
+#ZJ_lun>div:last-child>span:hover{
+    cursor: pointer;
+}
+#ZJ_lun>div:last-child>span:first-child{
+    right: 0.5%;
+}
+
+.ZJ-yin{
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+.yiru>h3>a{
+    color: #191919;
+}
+
+.yiru:hover>h3>a{
+    color: #fcfcfc;
+}

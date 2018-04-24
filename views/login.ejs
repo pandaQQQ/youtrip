@@ -1,0 +1,130 @@
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+
+  <!--如果检测到浏览器是ie就强制使用ie的兼容模式(edge版本)-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!--屏幕如果缩放按照1比1缩放-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--以上三个必放-->
+  <link rel="stylesheet" href="css/xr_denglu.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="font/font-awesome.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/homePublic.css">
+  <title>登录</title>
+</head>
+<body>
+<section class="xr_sectionone">
+  <div class="container-fluid">
+    <div class="xr_denlutu ">
+      <div class="row text-center">
+        <div class="col-xs-offset-4 col-xs-offset-4">
+          <img src="../images/logo.png" width="100%">
+        </div>
+      </div>
+    </div>
+    <div class="xt_inputmargintop"></div>
+    <div class="xr_inputweizhi">
+      <div class="row ">
+        <div class="col-xs-offset-4 col-xs-4">
+          <span class="xr_inputuser"><i class="fa fa-user" aria-hidden="true"></i></span>
+          <input type="text" class="xr_input" placeholder="请输入注册手机号或邮箱" name="username">
+          <span id="xr_mistakemeg"></span>&nbsp;
+          <div class="xr_inputborder"></div>
+        </div>
+      </div>
+      <div class="xt_inputmargintop">
+        <div class="row ">
+          <div class="col-xs-offset-4 col-xs-4">
+            <span class="xr_inputuser"><i class="fa fa-lock" aria-hidden="true"></i></span>
+            <input type="password" class="xr_input" placeholder="请输入密码">
+            <span id="xr_mistakepass"></span>&nbsp;
+            <div class="xr_inputborder"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="xt_inputmargintop">
+      <div class="row text-center">
+        <div class="col-xs-4 col-xs-offset-4">
+          <div class="xr_denluziti">
+            <span> 没有账户 ?</span>
+            <span onclick="xr_lijizhuce()" class="xr_span2">立即注册</span>
+            <span>&nbsp;</span>
+            <span>|</span>
+            <span>&nbsp;</span>
+            <span onclick="xr_forgetpassword()" class="xr_span2">忘 记 密 码 ?</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="xt_inputmargintop xr_iputright">
+      <div class="row">
+        <div class="col-xs-4 col-xs-offset-4 text-center">
+          <div class="xr_inputweizhi xr_denluziti xr_denluzitidenlu" onclick="xr_lijidenlu()">
+            <span>登</span> <span>&nbsp;</span> <span>录</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+    var xr_user,xr_password
+    function xr_forgetpassword(){
+        location.href="../pages/xr_forgermima.html"
+    }
+    function xr_lijizhuce(){
+        location.href="/register"
+    }
+    function xr_lijidenlu(){
+        var xr_phone= /^1[3|4|5|8|7][0-9]\d{8}$/
+        var xr_emali=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
+        var xr_seapassword=/^[A-Za-z0-9]{6,}$/
+        xr_user=$(".xr_input").eq(0).val()
+        xr_password=$(".xr_input").eq(1).val()
+        var a=xr_phone.test(xr_user)
+        var b=xr_emali.test(xr_user)
+        var c=xr_seapassword.test(xr_password)
+        if((a||b)&&c){
+            document.getElementById("xr_mistakemeg").innerHTML=""
+            document.getElementById("xr_mistakepass").innerHTML=""
+            ajax("post","/login.do","xr_user="+xr_user+"&xr_password="+xr_password,function(){
+                var newdata=JSON.parse(xhr.responseText)
+                if(newdata.length>0){
+                    var gethref=sessionStorage.getItem("myhref");
+                    console.log(gethref)
+                    if(gethref!=""&&gethref!=null&&gethref!=undefined){
+                        window.location.href=gethref
+                    }else if(gethref==''||gethref==undefined||gethref==null){
+                        location.href="/LCF_YouTripHome"
+                    }
+                }
+            })
+        }else{
+            if(a||b){
+                document.getElementById("xr_mistakemeg").innerHTML=""
+            }else{
+                document.getElementById("xr_mistakemeg").innerHTML="账户输入错误！"
+                console.log(document.getElementsByClassName("xr_input")[0])
+            }
+            if(c){
+                document.getElementById("xr_mistakepass").innerHTML=""
+            }else{
+                document.getElementById("xr_mistakepass").innerHTML="密码输入错误！"
+            }
+        }
+    }
+
+
+
+
+</script>
+</body>
+</html>

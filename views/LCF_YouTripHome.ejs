@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!---->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/homePublic.css"/>
+  <link rel="stylesheet" href="/css/LCF_YouTripHome.css"/>
+  <link rel="stylesheet" href="/font/font-awesome.css"/>
+  <link rel="stylesheet" href="/font/homefont/iconfont.css">
+
+  <title>You Trip旅行首页</title>
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+  <div class="navdiv"></div>
+  <!--============================navbar:导航条 ======================================-->
+    <%-include("head.ejs")%>
+  <!--============================banner:banner视频 ======================================-->
+  <div class="row lcfBanner">
+    <video loop="loop" autoplay="autoplay" poster="<%=homebasic[0].h_bannerbg%>" id="player">
+      <source src="<%=homebasic[0].h_vido%>" type="video/mp4"/>
+    </video>
+    <!--播放暂停-->
+    <div class="play" onclick="play()"></div>
+    <div class="bannerLogo">
+      <img src="<%=homebasic[0].h_bannerlogo%>" alt="">
+    </div>
+  </div>
+  <!--=============================右侧固定导航===============================-->
+    <%-include("left_nav.ejs")%>
+  <!--======================向下箭头=======================-->
+  <div class="row downArrow" onclick="lcfDown()">
+    <span class="mouse-img">
+      <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </span>
+  </div>
+
+  <div class="row" id="lcfcontent">
+    <!--==================================热门目的地===================================-->
+    <div class="row lcfDesTitle lcfTitleOne">热门目的地&nbsp;|&nbsp;Destination</div>
+    <div class="row lcfDestination">
+      <div class="row lcfDestination1">
+        <%for(let i=0;i<destination.length;i++){%>
+        <div class="col-lg-2 col-md-4 col-sm-5">
+          <div class="row lcfDestinationImg1">
+            <img src="<%=destination[i].c_imgSrcsmall%>" alt="">
+            <div class="menbanText">
+              <a href="/details.do?id=<%=destination[i].id%>">查看行程</a>
+            </div>
+          </div>
+          <div class="row"><%=destination[i].c_countryname%>|<%=destination[i].s_destination%></div>
+        </div>
+        <%}%>
+      </div>
+    </div>
+
+    <!--=========================客户案例=====================-->
+    <div class="row caseTitle lcfTitleOne">客户案例&nbsp;|&nbsp;Customer case</div>
+    <div class="row customerCase">
+      <%for(let j=0;j<customerCase.length;j++){%>
+      <div class="row case1">
+        <div class="row case1Top">
+          <div class="col-lg-3 col-md-3 col-sm-3 case1Text">
+            <p><%=customerCase[j].c_countryname%></p>
+            <p><%=customerCase[j].t_name%></p>
+          </div>
+          <div class="col-lg-8 col-md-8 col-sm-8 case1img">
+            <img src="<%=customerCase[j].si_imgSrc%>" alt="">
+          </div>
+        </div>
+        <div class="row caseMiddle">
+          <img src="/images/douhao1.png" alt="">
+          <p class="textStr"><%=customerCase[j].ev_evaluation%></p>
+          <img src="/images/douhao2.png" alt="">
+        </div>
+        <div class="row caseBottom">
+          <div class="row caseBottomText">
+            <p>
+              天数：<span><%=customerCase[j].s_day%></span>
+            </p>
+            <p>
+              人数：<span><%=customerCase[j].or_peopleTotal%></span>
+            </p>
+            <p><a href="/case.do?id=<%=customerCase[j].id%>">详情&nbsp;></a></p>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <div class="row lcfcaseTitle">
+      <div class="ShareBtn">
+        <p>
+          <a href="/customCase">更多案例分享</a>
+        </p>
+      </div>
+    </div>
+
+    <!--==================================You Trip旅行者说===================================-->
+    <div class="row lcfYouTrip lcfTitleOne">You Trip&nbsp;|&nbsp;旅行者说</div>
+    <div class="row lcfYouTripimg">
+      <%for(let i=0;i<youTrip.length;i++){%>
+      <div class="colImg row">
+        <img src="images/fz-imge/<%=youTrip[i].t_shareimgs.split(',')[1]%>" alt="">
+        <div class="tripDecrible">
+          <div>
+            <img src="<%=youTrip[i].t_imgSrc%>" alt="">
+          </div>
+          <p><a onclick="mychuan(<%=i%>)" href="/fz-commounity"><%=youTrip[i].t_nickname%></a></p>
+          <p>
+            天数：<span><%=youTrip[i].s_day%></span>
+          </p>
+          <p>
+            人数：<span><%=youTrip[i].s_teamNumber%></span>
+          </p>
+          <p>
+            ￥<span><%=youTrip[i].s_price%></span>元/人
+          </p>
+        </div>
+        <p class="textStr"><%=youTrip[i].t_text%></p>
+      </div>
+      <%}%>
+    </div>
+    <div class="row lcfYouTripShare">
+      <div class="ShareBtn">
+        <p><a href="fz-youtrip/1">更多心得分享</a></p>
+      </div>
+    </div>
+
+    <!--=============================================关键数字================-->
+    <div class="row keyNumber lcfTitleOne">关键数字&nbsp;|&nbsp;Key Number</div>
+    <div class="row keyNumbercontent">
+      <div class="row icondiv ">
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor1">
+            <span class="icon iconfont">&#xe663;</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor2">
+          <span class="icon iconfont">&#xe632;</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor3">
+          <span class="icon iconfont">&#xe64b;</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor4">
+          <span class="icon iconfont">&#xe625;</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor5">
+          <span class="icon iconfont">&#xe676;</span>
+        </div>
+      </div>
+      <div class="row icondiv">
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor1">
+            <span><%=shops[0].shopSum%>+</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor2">
+          <span><%=user[0].userSum%>+</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor3">
+          <span><%=order[0].orderSum%>+</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor4">
+          <span><%=sumcountry[0].coSum%>+</span>
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor5">
+          <span><%=designer[0].designerSum%>+</span>
+        </div>
+      </div>
+      <div class="row icondiv">
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor1">
+            线路数量
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor2">
+            会员数量
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor3">
+           成交量
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor4">
+          国家数量
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 iconcolor5">
+          定制师
+        </div>
+      </div>
+    </div>
+
+    <!--加入我们-->
+    <div class="row joinUs">
+        <div class="row joinUscolor">
+            You Trip团队
+        </div>
+      <div class="row joinUsfont">
+        <div class="row">
+          You Trip团队，专注搭建可以让旅行者直接联系目的地旅行社的 定制旅行平台
+        </div>
+        <div class="row">
+          <div class="joinBtn"><a href="/fz-recruitment">了解我们</a></div>
+        </div>
+      </div>
+    </div>
+    <!--===========================页脚================================-->
+      <%-include("foot.ejs")%>
+  </div>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/LCF_YouTripHome.js"></script>
+</body>
+</html>

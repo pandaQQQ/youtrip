@@ -1,0 +1,654 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+.col-lg-1,.col-md-1,.col-sm-1, .col-lg-2,.col-md-2,.col-sm-2, .col-lg-3,.col-md-3,.col-sm-3, .col-lg-4,.col-md-4,.col-sm-4, .col-lg-5,.col-md-5,.col-sm-5, .col-lg-6,.col-md-6,.col-sm-6, .col-lg-7,.col-md-7,.col-sm-7, .col-lg-8,.col-md-8,.col-sm-8, .col-lg-9,.col-md-9,.col-sm-9, .col-lg-10,.col-md-10,.col-sm-10, .col-lg-11,.col-md-11,.col-sm-11, .col-lg-12,.col-md-12,.col-sm-12{
+    padding: 0;
+    margin: 0;
+}
+
+/*=========================banner==========================*/
+.lcfBanner{
+    padding: 0;
+}
+.lcfBanner>video{
+    width: 100%;
+}
+/*暂停与播放*/
+.lcfBanner .play{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.lcfBanner .bannerLogo{
+    position: absolute;
+    top: 20%;
+    left: 42%;
+}
+.bannerLogo>img{
+    height: 400px;
+}
+
+/*=====================热门目的地=======================*/
+.lcfTitleOne{
+    float: left;
+    color: #464646;
+    font-size: 2.1em;
+    letter-spacing: 1px;
+    margin-bottom: 5%;
+}
+.lcfDesTitle{
+    margin:3% 0 0 6.5%;
+    width: 87%;
+    text-align: center;
+}
+.lcfDestination{
+    margin: 9% 0 4% 6.5%;
+    width: 87%;
+    padding: 4% 5% 3% 5%;
+    background-color: rgba(248, 248, 248, 0.55);
+}
+.lcfDestination1>div{
+    margin:0 0 4% 11%;
+    width:16%;
+    cursor: pointer;
+}
+.lcfDestination1>div:first-child,.lcfDestination1>div:nth-child(5){
+    margin-left: 3%;
+}
+.lcfDestination1>div>div:last-child{
+    margin:4% 0 0 14%;
+    color: #333333;
+    width: 60%;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+.lcfDestination1>div>div .menbanText{
+    position: absolute;
+    width: 135px;
+    height: 135px;
+    top: 0;
+    text-align: center;
+    line-height: 135px;
+    border-radius: 135px;
+    display: none;
+    background-color: rgba(191, 121, 17, 0.63);
+}
+.lcfDestination1>div>div .menbanText>a{
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+}
+.lcfDestination1>div>div:hover .menbanText{
+    display: block;
+}
+.lcfDestination1>div>div .menbanText>a:hover{
+    text-decoration: underline ;
+}
+.lcfDestinationImg1{
+    width: 135px;
+    height: 135px;
+    border-radius:135px;
+    overflow: hidden;
+}
+.lcfDestinationImg1>img{
+    width: 135px;
+    height: 135px;
+}
+
+/*========================客户案例===========================*/
+.caseTitle{
+    margin:3% 0 2% 6.5%;
+    width: 87%;
+    text-align: center;
+}
+.customerCase{
+    margin-left: 6.5%;
+    width: 87%;
+    color: #333333;
+}
+.customerCase .case1{
+    width: 29%;
+    margin:2% 0 0 3%;
+    float: left;
+    background-color: rgba(248, 248, 248, 0.4);
+}
+.customerCase .case1:first-child{
+    margin-left: 4%;
+}
+.case1 .case1Top{
+    width: 100%;
+}
+.case1Top .case1Text>p{
+    font-size: 0.9em;
+    margin:20% 0 0 30%;
+    width: 100%;
+}
+.case1Text>p:first-child{
+    font-size: 1.2em;
+    margin-top: 45%;
+}
+.case1Top .case1img{
+    width: 43%;
+    float: left;
+    margin: 7% 0 0 24%;
+}
+.case1Top .case1img>img{
+    width: 100%;
+}
+.case1 .caseMiddle{
+    width: 100%;
+    font-size:0.9em;
+    letter-spacing: 1px;
+    padding: 5% 5% 5% 5%;
+}
+.caseMiddle>img{
+    width: 19px;
+    height: 18px;
+    margin-bottom: 3%;
+}
+.caseMiddle>img:last-child{
+    float: right;
+    margin-right: 5%;
+}
+.case1 .caseBottom{
+    width: 100%;
+    font-size:12px;
+    letter-spacing: 1px;
+    padding: 3% 5% 10% 5%;
+}
+.caseBottom .caseBottomText>p{
+    float: left;
+    width: 24%;
+}
+.caseBottom .caseBottomText>p:last-child{
+    float: right;
+    width: 22%;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1em;
+}
+.caseBottom .caseBottomText>p:last-child:hover{
+    text-decoration: underline;
+    color: #a79865;
+    font-weight: 400;
+}
+.case1:hover{
+    box-shadow: 0 0 2px 2px rgba(178, 178, 178, 0.54);
+}
+
+
+
+/*=====================Traveller said旅行者说=======================*/
+.lcfYouTrip{
+    margin: 0 0 5% 6.5%;
+    width: 87%;
+    text-align: center;
+}
+.lcfYouTripimg{
+    margin: 3% 0 0 6.5%;
+    width: 87%;
+}
+.lcfYouTripimg .colImg{
+    margin-left: 2%;
+    float: left;
+    width: 31.8%;
+    background-color: rgba(248, 248, 248, 0.55);
+}
+.lcfYouTripimg .colImg:first-child{
+    margin-left:0.5%;
+}
+.lcfYouTripimg .colImg>img{
+    width: 100%;
+}
+.lcfYouTripimg .colImg .tripDecrible>div{
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.lcfYouTripimg .colImg .tripDecrible{
+    margin-top:3%;
+}
+.lcfYouTripimg .colImg .tripDecrible>div>img{
+    width: 200%;
+}
+.lcfYouTripimg .colImg .tripDecrible>p{
+    width: 17%;
+    display: inline-block;
+    margin-left: 2%;
+    font-size: 1em;
+    color: #333333;
+}
+.lcfYouTripimg .colImg .tripDecrible>p>a{
+    color: #985f0d;
+}
+.lcfYouTripimg .colImg .tripDecrible>p:last-child{
+    width: 25%;
+}
+.lcfYouTripimg .colImg>p{
+    line-height: 180%;
+    margin-top: 4%;
+    font-size: 0.9em;
+}
+.colImg:hover{
+    box-shadow: 0 0 2px 2px rgba(178, 178, 178, 0.54);
+}
+.lcfYouTripShare{
+    margin-left:6.5%;
+    width: 87%;
+}
+.lcfcaseTitle{
+    margin: 0 0 2% 6.5%;
+    width: 87%;
+}
+.lcfYouTripShare .ShareBtn,.lcfcaseTitle .ShareBtn{
+    width: 198px;
+    margin-left: 42%;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    line-height: 48px;
+    border: solid 1px #a79865;
+    background-color: inherit;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.ShareBtn>p>a{
+    color: rgb(51, 51, 51);
+    font-size: 1.1em;
+}
+.ShareBtn:hover{
+    border: none;
+    background-color:  #a79865;
+    transition: all .2s linear;
+}
+.ShareBtn p{
+    width: 200px;
+    position: absolute;
+    line-height: 50px;
+    transition: all .1s linear;
+}
+.ShareBtn:hover p>a{
+    color: white;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+/*关键数字*/
+.keyNumber{
+    margin:1% 0 2% 6.5%;
+    width: 87%;
+    text-align: center;
+}
+.keyNumbercontent{
+    margin: 7% 0 7% 7%;
+    width: 87%;
+    background-color: rgba(248, 248, 248, 0.55);
+}
+.keyNumbercontent .icondiv{
+    text-align: center;
+    margin-bottom: 2%;
+}
+.icondiv>div{
+    margin-left: 3%;
+}
+.icondiv>div .iconfont{
+    font-size: 60px;
+}
+.icondiv:nth-child(2)>div{
+    font-size: 30px;
+}
+.icondiv:nth-child(3)>div{
+    font-size: 20px;
+}
+.iconcolor1{
+     color:#5EB95E;
+ }
+.iconcolor2{
+     color: #fecd1a;
+ }
+.iconcolor3{
+    color: #AC92EC;
+}
+.iconcolor4{
+    color: #fc4d5c;
+}
+.iconcolor5{
+    color: #EC87C0;
+}
+
+.joinUs{
+    padding: 7% 0 7% 0;
+    width: 100%;
+    background: url("../images/joinUs.jpg") no-repeat;
+    background-size: cover;
+    background-color: #a79865;
+}
+.joinUs .joinUscolor{
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.joinUs .joinUsfont{
+    border-radius: 5px;
+    width: 45%;
+    padding: 0 3%;
+    color: white;
+    text-align: center;
+    letter-spacing: 1px;
+    margin:0 auto;
+}
+.joinUsfont>div:first-child{
+    margin-top: 8%;
+    font-size: 18px;
+    line-height: 40px;
+}
+.joinUsfont>div:nth-child(2){
+    margin: 10% 0 10% 0;
+    font-size: 14px;
+}
+.joinUsfont>div:nth-child(2) .joinBtn{
+    width: 198px;
+    margin: auto;
+    height: 48px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    line-height: 48px;
+    background-color:  #a79865;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.joinBtn>a{
+    color: rgb(255, 255, 255);
+    font-size: 1.1em;
+}
+    /*=====================================页脚========================*/
+.footer{
+    padding: 2% 0 2% 0;
+    background-color: #a79865;
+}
+.footerText{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}
+
+/*=====================右侧固定导航====================*/
+.fixedNav{
+    position: fixed;
+    top: 83%;
+    z-index: 22;
+    font-size: 1.6em;
+    right: 20px;
+    width: 50px;
+    text-align: center;
+    height: 100px;
+    color: rgb(255, 255, 255);
+}
+.onlineIcon{
+    width: 45px;
+    height: 35px;
+    border-radius: 3px;
+    line-height: 35px;
+    background-color: #a79865;
+    cursor: pointer;
+}
+.lcfBackUp{
+    width: 45px;
+    height: 35px;
+    margin-top: 20px;
+    border-radius: 3px;
+    line-height: 35px;
+    background-color: #a79865;
+    cursor: pointer;
+}
+.fixedNav .lcfBackUp .icon-xiangshang{
+    font-size: 1.3em;
+}
+
+/*向下滑*/
+.downArrow {
+    width: 60px;
+    height: 90px;
+    position: absolute;
+    top:85%;
+    left: 50%;
+    color: #b1a86c;
+    overflow: hidden;
+}
+.downArrow .mouse-img{
+    display: inline-block;
+    position: absolute;
+    top: -55px;
+    color: #b1a86c;
+    animation: scrollMove 3s linear infinite;
+}
+.downArrow .mouse-img .fa-angle-down{
+    font-size: 80px;
+}
+@keyframes scrollMove {
+    from {
+        top: -55px;
+        opacity: 1;
+    }
+    to {
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+.navdiv{
+    display: none;
+    width: 800px;
+    position: fixed;
+    height: 630px;
+    background-color: rgba(77, 77, 77, 0.76)
+}
+
+/*===================================媒体查询1================================*/
+/*设置在满足(min-width: 768px) and (max-width: 1237px)条件情况下LOGO居中*/
+@media (min-width: 768px) and (max-width: 1237px) {
+    .bannerLogo>img{
+        height: 200px;
+    }
+    /*向下滑*/
+    .downArrow {
+        top:65%;
+        left: 45%;
+    }
+
+    /*========================You Trip旅行者说========================*/
+    .lcfYouTripimg .colImg .tripDecrible>img{
+        width: 10%;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p{
+        width: 17%;
+        display: inline-block;
+        margin-left: 0;
+        font-size: 0.88em;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p:last-child{
+        width: 30%;
+    }
+    .lcfYouTripimg .colImg>p{
+        font-size: 0.5em;
+    }
+    .lcfYouTripShare>div{
+        width: 17%;
+        font-size: 1em;
+    }
+    .lcfYouTripShare .ShareBtn,.lcfcaseTitle .ShareBtn{
+        margin-left: 40%;
+    }
+    .awayTake .awayTakeBtn{
+        margin-left: 40%;
+    }
+    /*=================导航======================*/
+    .container-fluid .navbar{
+        padding:0;
+    }
+    .navbar-collapse{
+        width: 90%;
+        float: left;
+        margin-left: 0;
+    }
+    .navbar-collapse .navbar-nav>li>a{
+        font-size: 1em;
+    }
+    .navbar-brand,.navbar-header{
+        width: 10%;
+        float: left;
+    }
+    .navbar-collapse .navbar-nav .lcfLogin{
+        display: none;
+    }
+
+    /*================页脚==================*/
+    .footer .footerLogo{
+        margin-left: 4.5%;
+    }
+    .footerul{
+        margin: 2% 0 0 1%;
+        font-size: 0.8em;
+    }
+    .footer .footerul>p{
+        font-size: 1em;
+        text-align: center;
+        margin-top: 4%;
+    }
+    .footer .searchNum{
+        margin-left: 3%;
+    }
+    .footer .searchNum:last-child{
+        margin-left: 3%;
+    }
+    .searchNum>img{
+        height: 90px;
+    }
+    .searchNum>p{
+        font-size: 0.5em;
+        width: 110%;
+    }
+}
+
+/*===================================媒体查询器2================================*/
+/*设置在满足(min-width: 500px) and (max-width: 760px)条件情况下*/
+@media (min-width: 500px) and (max-width: 768px) {
+    /*===================客户案例===============*/
+    .caseTitle{
+        margin-top: 3%;
+    }
+    .customerCase{
+        margin-top: 0;
+    }
+    .case1Top .case1Text>p{
+        margin-top: 10%;
+    }
+    .awayTake .awayTakeBtn,.lcfYouTripShare .ShareBtn,.lcfcaseTitle .ShareBtn{
+        margin-left: 37%;
+    }
+    /*========================You Trip旅行者说========================*/
+    .lcfYouTripimg .colImg .tripDecrible>img{
+        width: 16%;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p{
+        width: 40%;
+        display: block;
+        margin-top: 5%;
+        font-size: 0.88em;
+    }
+    .lcfYouTripimg .colImg .tripDecrible>p:last-child{
+        width: 60%;
+    }
+    .lcfYouTripimg .colImg>p{
+        font-size: 0.5em;
+    }
+    .lcfYouTripShare>div{
+        width: 30%;
+        font-size: 1em;
+        margin:5% 0 0 35%;
+    }
+
+    /*=================导航======================*/
+    .navbar-collapse .navbar-nav>li{
+        height: 60px;
+        font-size: 1em;
+    }
+    .navbar-collapse .navbar-nav .lcfLogin{
+        display: none;
+    }
+    .navbar-collapse .navbar-nav .lcfContact{
+        display: none;
+    }
+    .container-fluid .navbar{
+        padding-left: 3.5%;
+    }
+    /*======================banner=========================*/
+    .bannerLogo>img{
+        height: 200px;
+    }
+    /*向下滑*/
+    .downArrow {
+        top:55%;
+        left: 45%;
+    }
+    /*=================页脚==================*/
+    .footer .footerLogo{
+        margin-left: 40%;
+    }
+    .footerul{
+        margin-left: 2%;
+        font-size: 0.8em;
+    }
+    .footerul>ul>li{
+        margin-left: 3%;
+    }
+    .footer .footerul>p{
+        font-size: 1em;
+        margin-right: 3%;
+        margin-top: 4%;
+    }
+    .searchNum{
+        width: 17%;
+        float: left;
+    }
+    .footer .searchNum{
+        margin-left: 30%;
+    }
+    .footer .searchNum:last-child{
+        margin-left: 5%;
+    }
+    .searchNum>img{
+        height: 92px;
+    }
+    .searchNum>p{
+        font-size: 0.5em;
+        width: 110%;
+        margin-top: 5%;
+    }
+}
+

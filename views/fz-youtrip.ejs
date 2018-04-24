@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>youtrip</title>
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="../font/font-awesome.css">
+  <link rel="stylesheet" href="../font/font_icon/iconfont.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="../css/fakeLoader.css">
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <link rel="stylesheet" href="../css/fz-youtrip.css">
+</head>
+<style>
+
+</style>
+<body>
+<section class="fz-myNavigation">
+    <%-include("left_nav.ejs")%>
+  <div class="fz-topNav">
+      <%-include("head.ejs")%>
+  </div>
+  <p>分享让你我更快乐</p>
+</section>
+<div class="fz-bg">
+  <section class="fz-min">
+    <div class="le">
+      <%for(var i=0;i<mydata.length;i++){%>
+      <div class="container-fluid">
+        <div class="row fz-leone">
+          <div class="container-fluid fz-border">
+            <div class="row fz-leone-pad">
+              <div class="col-lg-6 text-left fz-le">
+                <%=mydata[i].t_title%>
+              </div>
+              <div class="col-lg-6 text-right fz-le">
+                <span class="one1">&#xe62a;</span> <%=mydata[i].destion%>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="fz-leone-pad">
+              <ul>
+                <li class="one">
+                  <img src="../<%=mydata[i].t_imgSrc%>">
+                    <%=mydata[i].t_nickname%>
+                </li>
+                <li class="two"><span class="one2">&#xe672;</span><%=mydata[i].s_day%>天</li>
+                <li class="two"><span class="one2">&#xe62f;</span>6人</li>
+                <li class="two"><span class="one2">&#xe61b;</span><%=mydata[i].s_price%>元/人</li>
+                <li class="three text-right"><%=mydata[i].t_date%></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row fz-text fz-leone-pad">
+              <p><%=mydata[i].t_text%></p>
+              <div class="fz-button" onclick="mychuan(<%=i%>)"><a href="/fz-commounity">更多详情</a></div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="row fz-img">
+              <img src="../images/fz-imge/<%=mydata[i].t_shareimgs.split(',')[0]%>">
+              <img src="../images/fz-imge/<%=mydata[i].t_shareimgs.split(',')[1]%>">
+              <img src="../images/fz-imge/<%=mydata[i].t_shareimgs.split(',')[2]%>">
+            </div>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <div class="ri">
+      <div class="ri-fz">
+        <div class="fz-top">
+          想了解更多?
+        </div>
+        <div class="fz-ri-sou">
+          <div>乌兰巴托</div>
+          <div>卢克索神庙</div>
+          <div>吉萨金字塔</div>
+          <div>尼罗河</div>
+          <div>摩洛哥</div>
+          <div>死海</div>
+          <div>毛里求斯</div>
+          <div>游船</div>
+          <div>澳大利亚</div>
+          <div>狮身人面像</div>
+          <div>突尼斯</div>
+          <div>约旦</div>
+          <div>蓝色小镇</div>
+          <div>迪拜</div>
+          <div>金字塔</div>
+          <div>阿斯旺高水坝</div>
+        </div>
+      </div>
+
+    </div>
+    <div class="container-fluid yema">
+      <div class="row fz-bottom">
+        <div class="fz-bottom-btn">
+          <div class="pre" >&#xf0343;</div>
+          <div class="fz-yema" >
+            <ul class="fz-yemay">
+            <%for(var j=1;j<=totalCount;j++){%>
+                 <li>
+                   <a href="<%=j%>"><%=j%></a>
+                 </li>
+            <%}%>
+            </ul>
+            <div id="sum">总共<%=totalCount%></div>
+          </div>
+          <div class="nex" >&#xf0344;</div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+      <%-include("foot.ejs")%>
+</div>
+<script src="../js/fakeLoader.js"></script>
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/jquery-1.11.0.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/ajax.js"></script>
+<script>
+/*分页*/
+window.onscroll = function() {/*窗口滚动*/
+    var navbar = document.getElementsByClassName("navbar-default")[0];
+    var onlineIcon = document.getElementsByClassName("onlineIcon")[0];
+    var lcfBackUp = document.getElementsByClassName("lcfBackUp")[0];
+    var scrlength =parseInt(document.documentElement.scrollTop||document.body.scrollTop);/*获取窗口当前的滚动位置*/
+    if (scrlength>150){
+        var colorRgba ="rgba(167,152,101, 0.6)"
+        navbar.style.backgroundColor=colorRgba;
+    }else if (scrlength<150){
+        navbar.style.backgroundColor="inherit";
+    }
+    if (scrlength>180){
+        onlineIcon.style.backgroundColor="#615839"
+        lcfBackUp.style.backgroundColor="#615839"
+    }else if (scrlength<180){
+        onlineIcon.style.backgroundColor="#a79865"
+        lcfBackUp.style.backgroundColor="#a79865"
+    }
+}
+$("#fakeloader").fakeLoader();
+function  mychuan(obj) {
+    ajax("post","/onclick.do","id="+obj,function(){
+        var mymassage=JSON.parse(xhr.responseText)
+        if(mymassage.length>0){
+            console.log(mymassage)
+        }
+    })
+}
+sessionStorage.myhref=location.href;
+</script>
+</body>
+</html>

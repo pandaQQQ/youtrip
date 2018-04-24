@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>订单信息</title>
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <script async="" src="http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&amp;num=5&amp;output=json&amp;q=http%3A%2F%2Frss.cnn.com%2Frss%2Fedition.rss&amp;hl=en&amp;callback=jQuery110209046796949893003_1513592899002&amp;_=1513592899003"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+  <!--<link rel="stylesheet" type="text/css" href="../css/calander/htmleaf-demo.css">-->
+  <!--<link rel="stylesheet" href="../font/font_icon/iconfont.css">-->
+  <link rel="stylesheet" type="text/css" href="../css/calander/bootstrap-datepicker3.css">
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <link rel="stylesheet" href="../css/ordermsg.css">
+</head>
+<style>
+  tr,
+  tr>td,
+  th{
+    text-align:center;
+  }
+  #NAV{
+    background-color: #685b3b;
+    position: inherit;
+  }
+</style>
+<body>
+
+<div class="container-fluid">
+    <%-include("left_nav.ejs")%>
+  <!--============================navbar:导航条 ======================================-->
+    <%-include("head.ejs")%>
+  <!------------------------需求标题------------------------------>
+  <div class="rational_customTitleTop">
+    <div class="rational_customTitleIn">
+      <span class="rational_customTitleWordBig">订单详情</span><br>
+      <span class="rational_customTitleWordSmall">Order details</span>
+      <div class="rational_customTitleLine"></div>
+    </div>
+  </div>
+  <!--------------------------步骤轴------------------------------>
+  <div class="container customItemStepOut">
+    <div class="row customItemStepin">
+      <div class="col-lg-3 col-mid-3 col-sm-3 customItemStepinContent">
+        <div id="stepBar1" class="customItemStepinLine1 timeBarLineActive"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum1" class="customItemStepinCircle timeBarCircleActive">
+            <span id="stepBarNumWord1" class="timeBarWordActive" style="color:white">1</span>
+          </div>
+          <span class="customItemStepinContent">填写信息</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-mid-3 col-sm-3 customItemStepinContent">
+        <div id="stepBar2" class="customItemStepinLine1"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum2" class="customItemStepinCircle">
+            <span id="stepBarNumWord2">2</span>
+          </div>
+          <span class="customItemStepinContent">提交审核</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-mid-3 col-sm-3 customItemStepinContent">
+        <div id="stepBar3" class="customItemStepinLine1"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum3" class="customItemStepinCircle">
+            <span id="stepBarNumWord3">3</span>
+          </div>
+          <span class="customItemStepinContent">在线支付</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-mid-3 col-sm-3 customItemStepinContent">
+        <div id="stepBar4" class="customItemStepinLine1"></div>
+        <div class="customItemStepinLine2">
+          <div id="stepBarNum4" class="customItemStepinCircle">
+            <span id="stepBarNumWord4">4</span>
+          </div>
+          <span class="customItemStepinContent">预定成功</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--------------------------订单详情表------------------------------>
+  <div class="container orderMsgPer">
+    <div class="row orderMsgTableMid">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="orderMsgTitle">
+          <p><span><%=data.name%></span></p>
+        </div>
+        <div class="orderMsgTable">
+          <table width="100%" >
+            <tr style="height:40px">
+              <th>出港城市</th>
+              <th>出发时间</th>
+              <th>预定人数</th>
+              <th>取消险</th>
+              <th>金额（总金额）</th>
+            </tr>
+            <tr>
+              <td style="text-align:center">全国</td>
+              <td style="text-align:center"><%=data.Time%></td>
+              <td style="text-align:center"><%=data.Num%></td>
+              <td style="text-align:center"><%=data.caname%></td>
+              <td style="text-align:center"><%=data.total%></td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-12 col-md-12 col-sm-12 orderMsgTableBottom">
+        <div class="orderMsgTableBottomIn">
+          <div class="orderTitle"><h5>联系人信息</h5></div>
+          <div class="orderPerson form-inline">
+            <table>
+              <tr>
+                <th><span>*</span>姓名:</th>
+                <td>
+                  <div class="orderInput">
+                    <input id="orderName" type="text" class="form-control" placeholder="姓名">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th><span>*</span>手机号码:</th>
+                <td>
+                  <div class="orderInput">
+                    <input id="orderTel" type="text" class="form-control" placeholder="手机号码">
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <th>电子邮箱:</th>
+                <td>
+                  <div class="orderInput">
+                    <input id="orderMail" type="text" class="form-control" placeholder="电子邮箱">
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row myBtnStep2Out ">
+      <div class="row myBtnStep2In">
+        <div class="col-lg-12 col-md-12 col-sm-12 myBtnStep2">
+          <p type="button" onclick="submitMsg()"  data-toggle="modal" data-target=".bs-example-modal-sm">提交信息</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--===========================页脚================================-->
+    <%-include("foot.ejs")%>
+</div>
+<script src="../js/jquery-1.11.3.js"></script>
+<!--<script type="text/javascript" src="../js/calander/bootstrap-datepicker.min.js"></script>-->
+<!--<script type="text/javascript" src="../js/calander/locales/bootstrap-datepicker.zh-CN.min.js" charset="UTF-8"></script>-->
+<script src="../js/bootstrap.js"></script>
+<script>
+    sessionStorage.myhref=location.href;
+    var time='<%=data.Time%>'
+    var name='<%=data.name%>'
+    var Num='<%=data.Num%>'
+    var caname='<%=data.caname%>'
+    var total='<%=data.total%>'
+    function submitMsg(){
+        var orderName=$('#orderName').val()
+        var orderTel=$('#orderTel').val()
+        var orderMail=$('#orderMail').val()
+        var orderNo='A'+(new Date().toLocaleString().split(' ')[0]).split('/').join('')+parseInt(Math.random()*99999+10000)
+        var orderDate=(new Date().toLocaleString().split(' ')[0])
+        window.location.href="OrderSuccess?name="+name+'&time='+time+'&Num='+Num+'&total='+total+'&orderNo='+orderNo;
+        $.ajax({
+            type:"get",//提交方式
+            url:"submitorder.do",//提交地址
+            data: {
+                Num:Num,
+                caname:caname,
+                total:total,
+                time:time,
+                orderNo:orderNo,
+                orderDate:orderDate,
+                orderName:orderName,
+                orderTel:orderTel,
+                orderMail:orderMail,
+            },//要发送的数据（参数）格式为{'val1':"1","val2":"2"}
+            dataType: "json",//后台处理后返回的数据格式
+            success:function (data) {//执行成功回调函数
+                console.log(data);
+            },
+            async:true
+        })
+    }
+</script>
+</body>
+</html>

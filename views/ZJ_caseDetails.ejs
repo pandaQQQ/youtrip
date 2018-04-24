@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>行程详情</title>
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <!--===================================公共CSS样式===========================-->
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <!--=====================================字体图标===============================-->
+  <link rel="stylesheet" href="../font/font_icon/iconfont.css">
+  <!-- ===================================自己的css样式========================== -->
+  <link rel="stylesheet" href="../css/ZJ-public.css">
+  <link rel="stylesheet" href="../css/ZJ-jour.css">
+  <style>
+    #NAV{
+      background-color: #63532d;
+      position: inherit;
+    }
+  </style>
+</head>
+<body>
+<!--============================navbar:导航条 ======================================-->
+<div class="container-fluid" id="ZJ_nav" style="background-color: #b48552; border: 1px solid silver">
+    <%-include("head.ejs")%>
+</div>
+<%-include("left_nav.ejs")%>
+
+<!--=======================行程一览标题==================-->
+<div class="ZJ-body" id="ZJ_tripCase">
+  <div class="row lcfItinerary">
+    <p class="lcfpLine"></p>
+    <p>行程一览</p>
+    <p class="lcfpLine"></p>
+  </div>
+</div>
+
+
+<!--==========================行程安排=======================-->
+<div class="ZJ-body">
+  <div class="container-fluid">
+    <!--行程-->
+    <div class="row ZJ-trip ">
+      <div class="row ZJ-detailsT">项目体验</div>
+      <div class="row ZJ-relative">
+        <div class="col-lg-1 ol-md-1 col-sm-1 text-center ZJ-round">
+          <p class="">体</p><!--圆-->
+          <p class="">D1</p><!--圆-->
+          <p class="">D1</p><!--圆-->
+          <p class="">D1</p><!--圆-->
+          <div class="ZJ-absolute"></div><!--线-->
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 ZJ-details">
+
+
+          <!--=========================体验项目======================-->
+          <%for(let i=0;i<myShop.length;i++){%>
+          <div class="row ZJ-CaseDetailsTu2">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+              <h3>day<%=i%></h3>
+              <div class="col-lg-12 col-sm-12 col-md-12 ZJ-padding0 ZJ-margin0">
+                <div class="ZJ-detailsArticle col-lg-6 col-md-6">
+                  <div>
+                    <img src="<%=myShop[i].t_imgSrc1%>" alt="">
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 ZJ-detailsArticle">
+                  <div>
+                    <p class="text-left">
+                      <p><span>住宿:</span> <span><%=myShop[i].t_hotel%></span></p>
+                      <p><span>餐食:</span><span><%=myShop[i].t_foods%></span></p>
+                      <p><span>出发地:</span><span><%=myShop[i].t_setOut%></span></p>
+                      <p><span>上午:</span><span><%=myShop[i].t_morning%></span></p>
+                      <p><span>下午:</span><span><%=myShop[i].t_afternoon%></span></p>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%}%>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+<!--===========================页脚================================-->
+<%-include("foot.ejs")%>
+
+<!-- =============================框架============================= -->
+<script src="../js/jquery-3.3.1%20(1).js"></script>
+<script src="../js/bootstrap.js"></script>
+
+<!--===============================公共样式=======================-->
+<script src="../js/ZJ-public.js"></script>
+<script src="js/homePublic.js"></script>
+
+
+<!--==============================自己的样式===========================-->
+<script src="../js/ZJ-jour.js"></script>
+
+
+</body>
+</html>

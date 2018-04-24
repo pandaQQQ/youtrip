@@ -1,0 +1,471 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+li{
+    list-style:none;
+}
+.container-fluid{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgba(213, 213, 213, 0.11);
+}
+.row{
+    padding: 0;
+    margin: 0;
+}
+.col-lg-1,.col-md-1,.col-sm-1, .col-lg-2,.col-md-2,.col-sm-2, .col-lg-3,.col-md-3,.col-sm-3, .col-lg-4,.col-md-4,.col-sm-4, .col-lg-5,.col-md-5,.col-sm-5, .col-lg-6,.col-md-6,.col-sm-6, .col-lg-7,.col-md-7,.col-sm-7, .col-lg-8,.col-md-8,.col-sm-8, .col-lg-9,.col-md-9,.col-sm-9, .col-lg-10,.col-md-10,.col-sm-10, .col-lg-11,.col-md-11,.col-sm-11, .col-lg-12,.col-md-12,.col-sm-12{
+    padding: 0;
+    margin: 0;
+}
+#NAV{
+    background-color: #685b3b;
+    position: inherit;
+}
+.lcfContentTitle{
+    margin: 2% 0 0 6.5%;
+    padding: 1% 0 1% 0;
+    width: 87%;
+}
+.panelChip>span>a{
+    color: #333333;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+.panelChip>span:last-child a{
+    color: #a79865;
+}
+.panelChip>span>a:hover{
+    color: #a79865;
+}
+
+.lcfContentPanl{
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    padding: 0 0 4% 2%;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.lcfContentPanl .lcfpanlTitle{
+    color: #333333;
+    font-size: 1.9em;
+    padding: 2% 0 1% 0;
+}
+.lcfContentImg .contentimg{
+    width: 55%;
+}
+.lcfContentImg .contentimg>img{
+     width: 100%;
+     height: 360px;
+}
+.lcfContentImg .contentRight{
+    width: 42%;
+    margin-left: 3%;
+}
+.contentRight>div{
+    font-size: 1.15em;
+    color: #333333;
+    margin-top: 3%;
+}
+.contentRight>div>p>span:last-child{
+    color: #000000;
+}
+.contentRight>div:first-child{
+    color: #ff380e;
+    font-size: 2.2em;
+}
+.contentRight>div:first-child>p>span{
+     color: #ff380e;
+ }
+.contentRight>div:last-child .lcfReserve{
+    width: 30%;
+    margin-top: 2.2%;
+    margin-left: 10%;
+    height: 35px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+    line-height: 35px;
+    background-color: #a79865;
+}
+.lcfReserve>a{
+    color: white;
+    text-decoration: none;
+}
+
+.contentRight>div:nth-child(9){
+    margin-top: 2%;
+}
+.contentRight>div:nth-child(10) .lcfNumber{
+    width: 30%;
+}
+
+.lcfNumber>div{
+    width: 100%;
+    height: 37px;
+    border: solid 1px #a79865;
+}
+.lcfNumber>div>div{
+    float: left;
+}
+.lcfNumber>div .number{
+    width: 40%;
+    height: 35px;
+    border-left: solid 1px #a79865;
+    border-right: solid 1px #a79865;
+}
+.lcfNumber>div .number>input{
+    width: 100%;
+    height: 35px;
+    color: #ff380e;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+    line-height: 35px;
+}
+.number>input[type=text]:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.lcfNumber>div .numBotton{
+    width: 30%;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.lcfNumber>div .numBotton:last-child{
+    font-size: 1.6em;
+    color: #464646;
+}
+
+.titlePanle{
+    border-bottom: solid 1px rgba(176, 176, 176, 0.36);
+    text-align: center;
+    height: 60px;
+    margin: 2% 0 0 6.5%;
+    width: 87%;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.titlePanle>div{
+    width: 13%;
+}
+.titlePanle>div:first-child{
+    margin-left: 0;
+}
+.titlePanle>div>p{
+    color: #333333;
+    font-size: 1.4em;
+    cursor: pointer;
+    line-height: 58px;
+}
+.titlePanle>div>.activeA{
+    color: #bb780f;
+    border-bottom: solid 2px #a79865;
+    transition: left .2s linear;
+}
+
+.lcfImportant{
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    padding: 2% 0 1% 2%;
+    color: #333333;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.lcfImportant .textP{
+    font-size: 1.4em;
+}
+.lcfImportant .textOL>ol>li{
+    font-size: 1.1em;
+    line-height: 25px;
+}
+
+.idCard{
+    font-size: 1.5em;
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    padding: 2% 0 1% 2%;
+    color: #985f0d;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.checkUser{
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    font-size: 1.2em;
+    padding: 1% 0 0 2%;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.checkID{
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    padding: 2% 0 1% 2%;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.checkID>div{
+    margin-left: 2%;
+    width: 15%;
+}
+.checkID>div:first-child{
+    margin-left: 0;
+}
+.checkID>div>div{
+    width: 100%;
+    height: 35px;
+    color: #333333;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 35px;
+    background-color:white;
+    border: solid 1px #a79865;
+    transition: all .1s linear;
+}
+.checkID>div .idCardbg{
+    transition: all .1s linear;
+    background-color: #a79865;
+    border: none;
+    color: white;
+}
+
+.lcfContainer{
+    margin: 0 0 0 6.5%;
+    width: 87%;
+    padding: 0 0 4% 2%;
+    background-color: rgba(226, 226, 226, 0.19);
+}
+.lcfInstruction{
+     width: 100%;
+     color: #333333;
+ }
+.lcfInstruction .lcf_visaLeft{
+    margin-top: 3%;
+}
+.lcf_visaLeft .visaleft{
+    width: 7%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.lcf_visaLeft .visaleft>div:nth-child(1){
+    margin-top: 0;
+}
+.lcf_visaLeft .visaleft>div:nth-child(2){
+    margin-top: 1385px;
+}
+.lcf_visaLeft .visaleft>div:nth-child(3){
+    margin-top: 355px;
+}
+.lcf_visaLeft .visamiddle{
+    width: 2%;
+    position: relative;
+    margin-left: 1%;
+}
+.visamiddle .middleLine{
+    width: 1%;
+    margin-left: 50%;
+    margin-top: 20%;
+    height: 2950px;
+    position: absolute;
+    border-right: solid 1px rgba(180, 180, 180, 0.49);
+}
+.visamiddle .middleCircle{
+    position: absolute;
+    width: 45%;
+    margin-top: 20%;
+    margin-left: 30%;
+}
+.middleCircle>p{
+    width: 100%;
+    height: 11px;
+    border-radius: 50%;
+    background-color: #985f0d;
+}
+.middleCircle>p:first-child{
+    margin-top: 0;
+}
+.middleCircle>p:nth-child(2){
+    margin-top: 360px;
+}
+.middleCircle>p:nth-child(3){
+    margin-top: 395px;
+}
+.middleCircle>p:nth-child(4){
+    margin-top: 73px;
+}
+.middleCircle>p:nth-child(5){
+    margin-top: 425px;
+}
+.middleCircle>p:nth-child(6){
+    margin-top: 100px;
+}
+.middleCircle>p:nth-child(7){
+    margin-top: 365px;
+}
+.middleCircle>p:nth-child(8){
+    margin-top: 365px;
+}
+.middleCircle>p:nth-child(9){
+    margin-top: 393px;
+}
+.middleCircle>p:nth-child(10){
+    margin-top: 365px;
+}
+
+#professional,#retiree,#student,#children{
+    display: none;
+}
+#professional .lcfInstruction>div .lcf_visaLeft .visamiddle .middleLine{
+    height: 2520px;
+}
+#professional .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(9){
+    margin-top: 343px;
+}
+
+#retiree .lcfInstruction>div .lcf_visaLeft .visamiddle .middleLine{
+    height: 2600px;
+}
+#retiree .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(7){
+    margin-top: 425px;
+}
+#retiree .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(9){
+    margin-top: 363px;
+}
+#retiree .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(2){
+    margin-top: 1820px;
+}
+#retiree .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(3){
+    margin-top: 350px;
+}
+
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleLine{
+    height: 2590px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(7){
+    margin-top: 335px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(9){
+    margin-top: 70px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(10){
+    margin-top: 155px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(11){
+    margin-top: 92px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(12){
+    margin-top: 90px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(2){
+    margin-top: 2105px;
+}
+#student .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(3){
+    margin-top: 55px;
+}
+
+#children .lcfInstruction>div .lcf_visaLeft .visamiddle .middleLine{
+    height: 2085px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(7){
+    margin-top: 365px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(8){
+    margin-top: 72px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(9){
+    margin-top: 92px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visamiddle .middleCircle>p:nth-child(10){
+    margin-top: 93px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(2){
+    margin-top: 1760px;
+}
+#children .lcfInstruction>div .lcf_visaLeft .visaleft>div:nth-child(3){
+    margin-top: 60px;
+}
+
+.visaright{
+    width: 89%;
+    margin-left:1%;
+}
+.visaright1{
+    margin-top: 1%;
+}
+.visaright1:first-child{
+    margin-top: 0;
+}
+.visaright1 .right1Title>p{
+    color: #333333;
+    font-size: 1em;
+}
+.right1Title>p:first-child{
+    font-size: 1.2em;
+    margin-bottom: 2%;
+    color: black;
+    font-weight: bold;
+}
+.visaright1 .right1Img{
+    padding: 2% 0 3% 0;
+}
+.right1Img>div{
+    width: 30%;
+}
+.right1Img>div>img{
+    margin-left: 10%;
+}
+.right1Img>div>p{
+    width: 40%;
+    margin-left:17%;
+    line-height: 40px;
+    text-align: center;
+}
+.visa .right1Img>div>img{
+    height: 240px;
+}
+
+.lcf_trouble{
+    margin-top: 3%;
+    font-size: 1.5em;
+    color: #985f0d;
+    border-bottom: solid 1px rgba(180, 180, 180, 0.49);
+}
+.trouble1{
+    font-size: 1.1em;
+}
+.trouble1{
+    padding: 2% 0 1% 0%;
+    border-bottom: solid 1px rgba(180, 180, 180, 0.49);
+}
+.trouble1:last-child{
+    border-bottom: none;
+}
+.trouble1Line{
+    padding: 2% 0 1% 2%;
+}
+.trouble1>p>span{
+    font-weight: bold;
+}
+.reservationOL{
+    margin-top: 2%;
+}
+.reservationOL>ol>li{
+    font-size: 1em;
+    line-height: 25px;
+}
+
+/*=====================================页脚========================*/
+.footer{
+    padding: 2% 0 2% 0;
+    background-color: #a79865;
+}
+.footerText{
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: 4%;
+}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--===================================公共CSS样式===========================-->
+  <link rel="stylesheet" href="css/homePublic.css">
+  <link rel="stylesheet" href="css/LCF_visaOrder.css">
+  <title>办理签订详情页</title>
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+  <!--============================navbar:导航条 ======================================-->
+    <%-include("head.ejs")%>
+
+  <!--=============================右侧固定导航===============================-->
+    <%-include("left_nav.ejs")%>
+
+  <!--================面包屑标题===================-->
+  <div class="row lcfContent">
+    <div class="row lcfContentTitle">
+      <div class="panelChip">
+        <span>
+          <a href="/LCF_YouTripHome">首页</a>
+        </span>
+        <span>></span>
+        <span>
+          <a href="/LCF_visa">签证</a>
+        </span>
+        <span>></span>
+        <span>
+          <a href="/LCF_visaDetails?id=<%=visaOrder[0].c_countryname%>"><%=visaOrder[0].c_countryname%>个人旅游签证（<%=visaOrder[0].vp_place%>办理）</a>
+        </span>
+        <span>></span>
+        <span>填写订单</span>
+      </div>
+    </div>
+    <div class="row orderContent">
+      <div class="row orderTitle">
+        <span id="orderVisaName"><%=visaOrder[0].c_countryname%></span>个人旅游签证（<%=visaOrder[0].vp_place%>办理）
+      </div>
+      <div class="row orderContainer">
+        <form action="">
+          <div class="row orderFormTitle">
+            <p>填写联系人</p>
+          </div>
+          <!--============联系人信息信息=================-->
+          <div class="row">
+            <div class="row orderpeople">
+              <p>
+                <span>联系人信息</span>
+                <span>(为方便客服及时与您联系，请准确填写联系人信息)</span>
+              </p>
+            </div>
+            <div class="row orderForm">
+              <p>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</p>
+              <div class="orderInput">
+                <input type="text" placeholder="请输入您的姓名" name="contactUname">
+              </div>
+            </div>
+            <div class="row orderForm">
+              <p>联系方式</p>
+              <div class="orderInput">
+                <input type="text" placeholder="请输入您的电话号码" name="contactTel">
+              </div>
+            </div>
+            <div class="row orderForm">
+              <p>电子邮箱</p>
+              <div class="orderInput">
+                <input type="text" placeholder="请输入您的电子邮箱" name="contactEmail">
+              </div>
+            </div>
+            <div class="row orderForm">
+              <p>出发日期</p>
+              <div class="orderInput">
+                <input type="date" placeholder="2018/1/29" name="goDate">
+              </div>
+            </div>
+          </div>
+          <!--============出游人信息=================-->
+          <div class="row numpeo1">
+            <div class="row orderpeople">
+              <p>
+                <span>出游人信息</span>
+                <span>(为了您能顺利出行，请准确填写以下信息)</span>
+              </p>
+            </div>
+            <div class="row">
+              <div class="col-lg-1 col-md-1 col-sm-1 lcfresadult">
+                <p>预定人数：</p>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2 lcfNumber">
+                <div>
+                  <div class="numBotton" id="reduceAdult" onclick="reduceAdult()">一</div>
+                  <div class="number">
+                    <input type="text" value="1" id="numValue1">
+                  </div>
+                  <div class="numBotton" id="addAdult" onclick="addAdult()">+</div>
+                </div>
+              </div>
+            </div>
+            <div class="row addpeople">
+              <div class="col-lg-5 col-md-5 col-sm-5 addvisitor">
+                <div class="col-lg-2 col-md-2 col-sm-2">
+                  出游人1
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10">
+                  <div class="row visitor1">
+                    <div class="col-lg-4 col-sm-4 col-md-4">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</div>
+                    <div class="col-lg-8 col-sm-8 col-md-8 orderInput1">
+                      <input type="text" placeholder="请输入您的姓名" name="pelName">
+                    </div>
+                  </div>
+                  <div class="row visitor1">
+                    <div class="col-lg-4 col-sm-4 col-md-4">客户类型</div>
+                    <div class="col-lg-8 col-sm-8 col-md-8 orderInput1">
+                      <select class="typeSelect">
+                        <option value="">在职人员</option>
+                        <option value="">自由职业者</option>
+                        <option value="">退休人员</option>
+                        <option value="">在校学生</option>
+                        <option value="">学龄前儿童</option>
+                      </select>
+                    </div>
+                  </div>
+                  <!--<div class="row visitor1">-->
+                    <!--<div class="col-lg-4 col-sm-4 col-md-4">出生日期</div>-->
+                    <!--<div class="col-lg-8 col-sm-8 col-md-8 orderInput2">-->
+                      <!--<select class="sel_year" rel="2000"> </select> 年-->
+                      <!--<select class="sel_month" rel="2"> </select> 月-->
+                      <!--<select class="sel_day" rel="14"> </select> 日-->
+                    <!--</div>-->
+                  <!--</div>-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--============邮寄信息=================-->
+          <div class="row youji orderFormTitle">
+            <p>邮寄信息</p>
+          </div>
+          <div class="row">
+            <div class="row orderpeople">
+              <p>
+                <span>邮寄信息</span>
+                <span>（配送费按照实际快递费用收取，注：资料返还方式顺丰）</span>
+              </p>
+            </div>
+            <div class="row orderForm">
+              <p>所在区域</p>
+              <div class="secdiv">
+                <select id="cmbProvince" name="cmbProvince"></select>
+                <select id="cmbCity" name="cmbCity"></select>
+                <select id="cmbArea" name="cmbArea"></select>
+              </div>
+            </div>
+            <div class="row orderForm">
+              <p>街道地址</p>
+              <div class="orderaddress">
+                <input type="text" placeholder="请输入详细地址" name="address">
+              </div>
+            </div>
+          </div>
+          <!--=====================结算信息======================-->
+          <div class="row orderFormTitle">
+            <p>结算信息</p>
+          </div>
+          <div class="row takeMoney2">
+            <p class="yiwaixian">意外险:</p>
+            <div class="row ywfree">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                  <span id="insurancxeName">泰康境外旅行综合意外保险（亚洲计划）</span>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 insurancxePrice">
+                  ¥<span>100</span>/份
+                </div>
+                <div class="col-lg-1 col-md-1 col-sm-1">
+                  <input type="checkbox" name="checkbox" onclick="check(0)"/>
+                </div>
+              </div>
+            <div class="row ywfree">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <span id="insurancxeName">泰康境外旅行综合意外保险（亚洲计划）</span>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 insurancxePrice">
+                ¥<span>120</span>/份
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1">
+                <input type="checkbox" name="checkbox" onclick="check(1)"/>
+              </div>
+            </div>
+            <div class="row ywfree">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <span id="insurancxeName">泰康境外旅行综合意外保险（亚洲计划）</span>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 insurancxePrice">
+                ¥<span>140</span>/份
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1">
+                <input type="checkbox" name="checkbox" onclick="check(2)"/>
+              </div>
+            </div>
+          </div>
+          <div class="row takeMoney2">
+            <p class="yiwaixian">拒签险:</p>
+            <div class="row ywfree">
+              <div class="col-lg-6 col-md-6 col-sm-6">
+                <span id="refusalName">中国华泰签证拒签保险（亚洲线路保险）</span>
+              </div>
+              <div class="col-lg-3 col-md-3 col-sm-3 insurancxePrice">
+                ¥<span>10</span>/份
+              </div>
+              <div class="col-lg-1 col-md-1 col-sm-1">
+                <input type="checkbox" name="checkboxfee" onclick="checkfee(this)"/>
+              </div>
+            </div>
+          </div>
+          <div class="row orderForm takeMoney">
+            <p>签证费用</p>
+            <p><span id="visafree"><%=visaOrder[0].v_price%></span>元 X <span id="peopleNumber">1</span></p>
+          </div>
+          <div class="row orderForm takeMoney">
+            <p>快递费</p>
+            <p><span id="ktfree">23</span>元&nbsp;X&nbsp;<span>1</span></p>
+          </div>
+          <div class="row orderForm takeMoney insurance">
+            <p>意外险</p>
+            <p><span id="free">0</span>元&nbsp;X&nbsp;<span id="peopleFree">1</span></p>
+          </div>
+          <div class="row orderForm takeMoney antiFee">
+            <p>拒签险</p>
+            <p><span id="antifree">0</span>元&nbsp;X&nbsp;<span id="peopleanti">1</span></p>
+          </div>
+          <div class="row orderForm takeMoney">
+            <p>应付金额</p>
+            <p><span class="sum" id="sumFree"><%=visaOrder[0].v_price%></span>元</p>
+          </div>
+          <div class="row orderForm takeMoney1">
+            <p>
+              <input type="checkbox" name="checkbox" class="agree"/>
+              <span>我已阅读并同意<a href="">《You Trip签证服务条款》</a></span>
+            </p>
+          </div>
+          <div class="row orderForm orderBotton" onclick="orderContact()">提交订单</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--===========================页脚================================-->
+    <%-include("foot.ejs")%>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ajax.js"></script>
+<script src="js/LCF_visaOrder.js"></script>
+<script type="text/javascript">
+    addressInit('cmbProvince', 'cmbCity', 'cmbArea');
+</script>
+</body>
+</html>

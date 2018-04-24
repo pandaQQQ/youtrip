@@ -1,0 +1,74 @@
+
+
+input::-moz-placeholder { color: #fff; }
+input:-ms-input-placeholder { color: #fff; }
+input::-webkit-input-placeholder { color: #fff; }
+
+input:focus{color:white}
+
+body{
+    background: url("../images/newimg.jpg") no-repeat;
+    background-size: cover;
+
+}
+.xt_inputmargintop{
+    margin-top:4%;
+}
+.xr_denlutu{
+    margin-top: 5%;
+    margin-left: 40%;
+    width:15%
+ }
+.xr_input{
+    color:white;
+    outline: none;
+    width:56%;
+    border: none;
+    background-color: transparent;
+
+}
+#xr_mistakemeg{
+    color:red;
+    font-weight: bold;
+}
+#xr_mistakepass{
+    color:red;
+    font-weight: bold;
+}
+.xr_inputuser{
+
+margin-right: 2%;
+    color:white;
+    font-size: 1.8em;
+}
+.xr_inputweizhi1{
+
+}
+
+.xr_inputborder{
+    border-top: solid 1px white;
+    width:90%;
+}
+.xr_inputweizhi{
+    margin-left: 3%;
+}
+.xr_span2{
+    cursor: pointer;
+}
+.xr_span2:hover{
+    color:#A79865
+}
+.xr_denluziti{
+cursor: pointer;
+    color:white;
+    font-size: 1.1em;
+}
+.xr_iputright{
+    margin-left:6.8%;
+}
+.xr_denluzitidenlu{
+background-color: #a79865;
+    width:70%;
+    padding: 3% 0;
+
+}

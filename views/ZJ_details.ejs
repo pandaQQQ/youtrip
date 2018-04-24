@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>套餐详情页</title>
+  <link href='../bootstrap-3.3.7-dist/css/bootstrap.css' rel="stylesheet">
+  <link rel="stylesheet" href="../css/date/bootstrap-datetimepicker.min.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <!--===================================公共CSS样式===========================-->
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <link rel="stylesheet" href="../css/fz-community.css">
+  <link rel="stylesheet" href="../css/input.css">
+  <!--=====================================字体图标===============================-->
+  <link rel="stylesheet" href="../font/font_icon/iconfont.css">
+  <!-- ===================================自己的css样式========================== -->
+  <link rel="stylesheet" href="../css/ZJ-public.css">
+  <link rel="stylesheet" href="../css/ZJ-jour.css">
+  <style>
+    #NAV{
+      background-color: #63532d;
+      position: inherit;
+    }
+  </style>
+</head>
+<body>
+
+<%-include("left_nav.ejs")%>
+
+<!--============================navbar:导航条 ======================================-->
+<div class="container-fluid">
+    <%-include("head.ejs")%>
+</div>
+
+
+
+<!--==================轮播图及详情==================================================-->
+<div class="ZJ-body mag" >
+  <div class="container-fluid">
+    <!--商品全名-->
+    <div class="row " id="tit">
+      <h1 class="SecondSubtitle2 name" id="<%=myDetailsShops[0].id%>"><%=myDetailsShops[0].s_name%></h1>
+    </div>
+    <!--轮播图部分-->
+    <div class="row ZJ-detailsTU1" >
+      <!--轮播图-->
+      <div class="col-lg-6 col-md-6" id="ZJ_lun">
+        <div class="row">
+          <img src="<%=myDetailsImages[0].si_imgSrc%>" alt="">
+        </div>
+        <div class="row">
+
+          <span> ></span>
+          <span> <</span>
+          <div>
+              <%for(let i=0;i<myDetailsImages.length;i++){%>
+            <div class="ZJ-yin">
+              <img src="<%=myDetailsImages[i].si_imgSrc%>" alt="">
+            </div>
+              <%}%>
+
+          </div>
+        </div>
+      </div>
+
+      <!--介绍详情-->
+      <div class="col-lg-6 col-md-6 ZJ-detailsTitle" id="too">
+        <hr class="ZJ-line ZJ-margin0">
+        <!--产品详情-->
+        <div class="SmallTitle2 ">
+          <ul class="ZJ-menuArticle">
+            <li>出发地点|<span><%=myDetailsShops[0].s_go%></span></li>
+            <li>成团人数|<span><%=myDetailsShops[0].s_teamNumber%>人</span></li>
+            <li>出行天数|<span><%=myDetailsShops[0].s_day%>天<%=myDetailsShops[0].s_day-1%>晚</span></li>
+            <li>推荐出行季节|<span>全季</span></li>
+          </ul>
+        </div>
+        <!--产品亮点-->
+        <hr class="ZJ-line ZJ-margin0">
+        <div>
+          <ul class="SmallTitle ZJ-menuArticle">
+            <span class="SmallTitle2">产品亮点</span>
+            <li><%=myDetailsShops[0].s_productdec%></li>
+          </ul>
+        </div>
+        <!---套餐包含-->
+        <hr class="ZJ-line ZJ-margin0">
+        <div>
+          <div class="SmallTitle2">
+            套餐包含:
+          </div>
+          <ul class="ZJ-F-menu ZJ-menuArticle">
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>导游</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>车费</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>摄影</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>高尔夫球费</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>农场</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>用餐</span>
+            </li>
+            <li>
+              <span class="iconfont">&#xe6db;</span><span>门票</span>
+            </li>
+
+          </ul>
+          <div class="ZJ-clear"></div>
+        </div>
+        <!--价钱-->
+        <hr class="ZJ-line ZJ-margin0">
+        <div class="ZJ-relative ZJ-money">
+          <div>
+            <span class="SmallTitle3">￥<%=myDetailsShops[0].s_price%>/人<a href="#too" class="tooltip-test" data-toggle="tooltip" title="起价说明">起价说明</a></span>
+            <span class="ZJ-absolute"><span>♥</span>立即收藏</span>
+          </div>
+          <p>
+            <span>*提前预订时间：</span><span>建议您至少提前7天预订</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--======表单=======-->
+    <div class="information ">
+      <!--表单一-->
+      <form action="" class="row ZJ-forbid">
+
+        <div class="col-lg-3 col-md-4">
+          <span>出发时间：</span>
+          <div class="ZJ-time">
+            <div class="form-group ZJ-date">
+                    <span class="input-group date form_datetime" data-date="" data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                        <input class="form-control" style="width: 120px" size="16" type="text" value="" placeholder="请选择时间" readonly id="ZJ_date">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                    </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4">
+          <span>人数：</span>
+          <div class="ZJ-count">
+
+            <div onclick="count.reduced($('#adult'));ZJ_transfer();total()" class="ZJ-count-btn">
+              <span class="glyphicon glyphicon-minus "></span>
+            </div>
+            <div id="adult">2</div>
+            <div onclick="count.add($('#adult'));ZJ_transfer();total()" class="ZJ-count-btn">
+              <span class="glyphicon glyphicon-plus "></span>
+            </div>
+
+          </div>
+          <span >￥<span id="ZJ_AdultPrice"><%=myDetailsShops[0].s_price%></span>/人起</span>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4">
+        </div>
+
+        <div class="col-lg-3 visible-lg ZJ-relative">
+                    <span class="moneyIn">
+                        <span >总价：￥</span><span id="ZJ_total1"><%=myDetailsShops[0].s_price*2%></span>
+                    </span>
+          <div class="awayTake ZJ-absolute">
+            <div class="awayTakeBtn" id="ZJ_reserve" onclick="">
+              <p>立即定制</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="hiddenIn col-md-12 ZJ-relative hidden-lg">
+          <span class="SmallTitle3">
+              <span>总价：￥</span><span id="ZJ_total2">11883</span>
+          </span>
+
+          <div class="awayTake ZJ-absolute">
+            <div class="awayTakeBtn">
+              <p><a href="">立即定制</a></p>
+            </div>
+          </div>
+        </div>
+      </form>
+
+
+
+      <!--====表单2-->
+      <div class="row hiddenIn2">
+        <div class="col-lg-2 visible-lg text-center">
+          <div class="glyphicon glyphicon-th ZJ-CSP" ></div>
+          <div>可选资源</div>
+        </div>
+        <div class="col-lg-10 col-md-12 extraService">
+          <div  class="row ">
+            <div class="col-lg-1 col-md-1 col-sm-1">产品类型</div>
+            <div class="col-lg-4 col-md-4 col-sm-4">产品名称</div>
+            <div class="col-lg-1 col-md-1 col-sm-1">价格</div>
+            <div class="col-lg-2 col-md-2 col-sm-2">使用时间</div>
+            <div class="col-lg-2 col-md-2 col-sm-2">份数</div>
+            <div class="col-lg-2 col-md-2 col-sm-2">选择</div>
+          </div>
+
+          <!--=====================房差价===================-->
+          <div class="row">
+            <div class="col-lg-1 col-md-1 col-sm-1">单房差</div>
+            <div class="col-lg-4 col-md-4 col-sm-4">单房差</div>
+            <div class="col-lg-1 col-md-1 col-sm-1"><span class="ZJ-money2" >￥<span id="ZJ_roomRate">3500</span></span></div>
+            <div class="col-lg-2 col-md-2 col-am-2">——</div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+              <div  class="ZJ-count ZJ-forbid">
+                <div onclick="count.reduced($('#ZJ_cha'));total();" class="ZJ-count-btn">
+                  <span class="glyphicon glyphicon-minus"></span>
+                </div>
+                <div id="ZJ_cha">0</div>
+                <div onclick="count.add($('#ZJ_cha'));total()" class="ZJ-count-btn">
+                  <span class="glyphicon glyphicon-plus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ZJ-care">*如您有特殊需求，请在订单提交后、付款前，联系客服协调，我们将会尽量满足您的需求.</div>
+            </div>
+          </div>
+          <!--==========================意外险===================================-->
+          <div class="row" id='ZJ_InsurancePrice'>
+              <%for(let i=0;i<myDetailsInsurance.length;i++){%>
+              <div class="col-lg-1 col-md-1 col-sm-1 ">意外险</div>
+              <div  class="col-lg-4 col-md-4 col-sm-4">
+                <p class="ZJ_TArticle"><%=myDetailsInsurance[i].in_name%></p>
+              </div>
+              <div  class="col-lg-1 col-md-1 col-sm-1"><span class="ZJ-money2">￥<span class="ZJ_InsurancePrice"><%=myDetailsInsurance[i].in_price%></span></span></div>
+              <div  class="col-lg-2 col-md-2 col-sm-2">——</div>
+              <div  class="col-lg-2 col-md-2 col-sm-2">
+                <span class="ZJ_InsurancePrice_shu">2</span>
+              </div>
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <input type="checkbox" name="checkbox1" id="<%=myDetailsInsurance[i].id%>" onclick="check(this,'checkbox1');total()"/>
+              </div>
+              <!--文章内容-->
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ZJ-article">
+                  <article>
+                    <p>特别说明：</p>
+                    <p>
+                        <%=myDetailsInsurance[i].in_content%>
+                    </p>
+
+
+
+
+                    <p>本产品适用条款《国寿旅游综合人身意外伤害保险(2013版)》（国寿人险呈【2013】472号）</p>
+                  </article>
+                </div>
+              </div>
+               <%}%>
+
+
+
+            <!--提示-->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ZJ-care">*旅游意外险能够给您的出行带来更多安全保障，所以同程旅游强烈建议您购买旅游意外险。如您放弃购买，则行程中的风险和损失将由您自行承担</div>
+            </div>
+
+          </div>
+          <!--=================取消险==================-->
+          <div class="row" id="ZJ_CancelInsurance">
+            <%for(let i=0;i<myDetailsCancel.length;i++){%>
+            <div class="col-lg-1 col-md-1 col-sm-1">取消险</div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <p class="ZJ_CancelTitle">
+                  <%=myDetailsCancel[i].ca_name%>
+              </p>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1">
+              <span class="ZJ-money2">￥<span class="ZJ_CancelInsurance"><%=myDetailsCancel[i].ca_price%></span></span>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2">——</div>
+            <div class="col-lg-2 col-md-2 col-sm-2"><span class="ZJ_CancelInsurance_shu">2</span></div>
+            <div class="col-lg-2 col-md-2 col-sm-2">
+              <input type="checkbox" name="checkbox2" id="<%=myDetailsCancel[i].id%>" onclick="check(this,'checkbox2');total()"/>
+            </div>
+            <!--文章内容-->
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ZJ-article">
+                <article>
+                  <p>特别说明：</p>
+                  <p>
+                    <%=myDetailsCancel[i].ca_content%>
+                  </p>
+                </article>
+              </div>
+            </div>
+            <%}%>
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="col-lg-offset-1 col-md-offset-1 col-sm-offset-1 ZJ-care">**取消险能够减少线路取消时产生的赔付金额，所以同程旅游强烈建议您购买取消险。如您放弃购买，则线路取消时造成的赔付金额将由您自行承担。</div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--最佳旅行季节-->
+    <div class="row ZJ-detailsTU2 ZJ-yuan">
+      <div class="col-lg-3 col-md-4 col-sm-12 ZJ-relative ZJ-padding0">
+        <h3 class="SecondSubtitle2">最佳旅行季节</h3>
+        <ul class="ZJ-F-menu">
+          <li>
+            <p>Spring</p>
+            <div class="ZJ-def">春</div>
+          </li>
+          <li>
+            <p>Summer</p>
+            <div >夏</div>
+          </li>
+          <li>
+            <p>Autumn</p>
+            <div class="ZJ-def">秋</div>
+          </li>
+          <li>
+            <p>Winter</p>
+            <div>冬</div>
+          </li>
+        </ul>
+        <div class="ZJ-hr visible-lg"></div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <p><%=myDetailsShops[0].s_seasonsay%></p>
+      </div>
+    </div>
+
+
+    <!--亮点标签-->
+    <div class="row ZJ-yuan ZJ-BrightSpot">
+      <div class="col-lg-3 col-md-4 col-sm-12 ZJ-relative">
+        <h3 class="SecondSubtitle2">亮点标签</h3>
+        <ul class="ZJ-F-menu">
+          <li>
+            <p>Site</p>
+            <div class="ZJ-def">景点</div>
+          </li>
+          <li>
+            <p>Play</p>
+            <div class="ZJ-def">玩乐</div>
+          </li>
+        </ul>
+        <div class="ZJ-hr visible-lg"></div>
+
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <div class="ZJ-sp-label" id="ZJ_label"></div>
+      </div>
+    </div>
+
+
+    <!--设计师导言-->
+    <div class="row ZJ-designer ZJ-yuan ">
+      <div class="col-lg-3 col-md-4  ZJ-relative">
+        <div class="ZJ-hr visible-lg"></div>
+        <h3 class="SecondSubtitle2">设计师导言</h3>
+        <div>
+          <div class="text-center">
+            <div class="ZJ-HeadPortrait "><img src="<%=myDetailsDesigner[0].d_imgSrc%>" alt=""></div>
+            <h3><%=myDetailsDesigner[0].d_name%></h3>
+            <p><%=myDetailsDesigner[0].d_label%></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9 col-md-8">
+        <p><%=myDetailsDesigner[0].de_say%></p>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--==========================行程安排=======================-->
+<div class="ZJ-body" data-spy="scroll" data-target=".navbar-example">
+  <div class="container-fluid">
+    <!--导航栏-->
+    <div class="row text-center ZJ-detailsMenu">
+      <div class="col-lg-1 col-md-2"><p>地图</p></div>
+      <div class="col-lg-1 col-md-2"><p>行程</p></div>
+      <div class="col-lg-1 col-md-2"><p>费用</p></div>
+      <div class="col-lg-1 col-md-2"><p>须知</p></div>
+      <div class="col-lg-1 col-md-2"><p>签证</p></div>
+    </div>
+
+    <!--地图-->
+    <div class="row ZJ-ditu">
+      <div id="container"></div>
+    </div>
+    <!--行程-->
+    <div class="row ZJ-trip">
+      <div class="row ZJ-detailsT">行程</div>
+      <div class="row ZJ-relative">
+        <div class="col-lg-1 ol-md-1 col-sm-1 text-center ZJ-round" id="ZJ-round">
+        </div>
+        <div class="col-lg-11 col-md-11 col-sm-11 ZJ-details">
+          <%for(let i=0;i<myDetailsTrip.length;i++){%>
+          <div class="row " id="D1">
+            <div class="col-lg-12 col-sm-12 col-md-12">
+              <h3>Day<%=i+1%></h3>
+              <div>
+                <div class="ZJ-detailsArticle">
+                  <p>
+                    <span>餐食：</span>
+                    <span><%=myDetailsTrip[i].t_foods%></span>
+                  </p>
+                  <p>
+                    <span>住宿：</span>
+                    <span><%=myDetailsTrip[i].t_hotel%></span>
+                  </p>
+                </div>
+
+                <div  class="ZJ-detailsArticle">
+                  <p>
+                    <span>出发地点：</span>
+                    <span><span class="iconfont">&#xe6db;</span> <%=myDetailsTrip[i].t_setOut%></span>
+                  </p>
+                </div>
+                <div class="ZJ-detailsArticle">
+                  <p>
+                    <span>上午：</span>
+                    <span><%=myDetailsTrip[i].t_morning%></span>
+                  </p>
+                  <p>
+                    <span>下午：</span>
+                    <span><%=myDetailsTrip[i].t_afternoon%></span>
+                  </p>
+                </div>
+              </div>
+              <div class="ZJ-detailsImg">
+                <img src="<%=myDetailsTrip[i].t_imgSrc1%>" alt="">
+                <img src="<%=myDetailsTrip[i].t_imgSrc2%>" alt="">
+              </div>
+
+            </div>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </div>
+    <!--费用-->
+    <div class="row ZJ-trip ZJ-detailsCost">
+      <div class="row ZJ-detailsT">费用</div>
+      <div class="row">
+        <h5>费用包含：</h5>
+        <ul>
+
+          <li>【住宿】全程 8 晚双人两床房。上面行程中所列星级酒店的双人间或同等级别的酒店（标准为二人一房，如需入住单间则另付单间差费用）。</li>
+          <li>【门票】包含大英博物馆，都柏林三一学院和健力士门票。</li>
+          <li>【高尔夫】包含上面行程表里所列 6 个高尔夫球场的球位费，以及其中 4 个球场的球车费(按照每 2 人共用一辆球车计算)。</li>
+          <li>【用车】奔驰豪华旅行车。</li>
+          <li>【机票】伦敦到爱丁堡机票，爱丁堡到爱尔兰机票以及球包拖运费。</li>
+          <li>【司导】专职司机和专职中文导游全程陪同，含司机导游的用餐住宿补贴及小费。</li>
+        </ul>
+        <h5>费用不包含：</h5>
+        <ul>
+          <li>【机票】中国到英国的往返机票。请特别注意不包含爱尔兰到伦敦的回程机票。（如果需要加，每人另加机票以及球包托运费成本）</li>
+          <li>【门票】除了上面列举包含的门票外不包含其他景点或者活动项目门票，请特别注意不包含骑马的费用。</li>
+          <li>【球童费】不含高尔夫球童费</li>
+          <li>【用餐】不含午晚餐费。</li>
+          <li>【加时费】司机和导游每天工作时间不超过 10 小时，超出部分按每小时45英镑收取加班费。</li>
+          <li>【行李】不含行李物品的搬运费、保管费及超重费；如行李或物品丢失、被盗等意外损失费用</li>
+          <li>【个人消费】不含一切个人消费（如：电话、传真、电视付费频道、洗衣、饮料等）</li>
+          <li>【自身损失】旅游者因违约、自身过错或自身疾病引起的人身和财产损失。</li>
+          <li>【不可抗力】非我公司所能控制因素下引起的额外费用，如：自然灾害、罢工、境外当地政策或民俗禁忌、景点维修等。</li>
+        </ul>
+      </div>
+
+    </div>
+    <!--须知-->
+    <div class="row ZJ-trip ZJ-detailsReservation">
+      <div class="row ZJ-detailsT ">预定须知</div>
+      <div>
+        <ul>
+          <li><span>【行程调整】</span>此产品为推荐行程，可根据个人喜好安排实际出行行程，最终费用以实际行程为准。</li>
+          <li><span>【酒店调整】</span>行程中的住宿如果遇到当地大型活动、大型展会、体育赛事等，酒店及房型可能有所调整，所有确认入住的酒店及房型以出行通知书为准。</li>
+          <li><span>【景点调整】</span>景点如遇当地假期、关闭日期或罢工、暴动等临时通知关闭的，请以出行通知书为准。</li>
+          <li><span>【参加项目注意】</span>为了您的安全起见，当您参加有一定危险性的室内或户外活动时，请务必了解当天的天气情况及您个人身体状况是否适宜参加此类项目。</li>
+          <li><span>【不可抗力】</span>在出发前或旅行期间，我方保留因不可抗力（如天气、天灾、战争、罢工等）因素对具体行程进行适当调整的权利。</li>
+          <li><span>【护照及签证有效期】</span>请确认您的护照有效，并确认您的签证期限在有效期内，有旧护照一起携带，如果以上原因导致您无法出行，如鱼旅行不承担任何责任和损失。如因个人原因在机场被当地移民局盘查、询问、拒绝入境者，于旅行社无关，费用不予以退回所有产生的损失由客人承担。</li>
+          <li><span>【航班】</span>为了不耽误您的行程，请您在国际航班起飞前180分钟前到达机场办理相关手续，并且核对好自己的姓名</li>
+        </ul>
+
+      </div>
+    </div>
+    <!--签证-->
+    <div class="row ZJ-trip ZJ-detailsSigned">
+      <div class="row ZJ-detailsT">签证说明</div>
+      <div>请尽量提前20个工作日以上办理签证。</div>
+    </div>
+
+  </div>
+  <!--返回上一页按钮-->
+  <div class="ZJ-body  ZJ-details">
+    <div class="row awayTake ZJ-btn ZJ-awayTake">
+      <div class="awayTakeBtn ZJ-absolute">
+        <p><a href="/goods.do?id=<%=myDetailsShops[0].s_country%>">返回上一页</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!--===========================页脚================================-->
+<div class="container-fluid">
+    <%-include("foot.ejs")%>
+
+</div>
+
+<!-- =============================框架============================= -->
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/date/bootstrap-datetimepicker.js"></script>
+<script type="text/javascript" src="../js/date/bootstrap-datetimepicker.fr.js"></script>
+<script type="text/javascript" src="../js/date/bootstrap-datetimepicker.zh-CN.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ea6d8NIlfft5B6HdXcnLXQB0yzFKboK9"></script>
+
+<!--===============================公共样式=======================-->
+<script src="../js/input.js"></script>
+<script src="js/homePublic.js"></script>
+
+<!--==============================自己的样式===========================-->
+<script src="../js/ZJ-public.js"></script>
+
+<script src="../js/ZJ-jour.js"></script>
+<script src="../js/date.js"></script>
+
+<script>
+    let myTitle="<%=myDetailsShops[0].s_shopkey%>";
+    let myTitle2=[];
+    console.log(myTitle)
+    myTitle2=myTitle.split("，");
+    let titleBox=document.getElementById("ZJ_label");
+    ele=(ele2)=>{
+        for(let t=0;t<myTitle2.length;t++){
+        ele2.innerHTML+="<div>"+myTitle2[t]+"</div>"
+        }
+    }
+
+    window.onload=function () {
+        ele(titleBox);
+    };
+
+
+    //===================地图=================
+    var map = new BMap.Map("container");          // 创建地图实例
+    var point = new BMap.Point(<%=myDetailsMap[0].s_jing%>);  // 创建点坐标
+    map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+
+</script>
+
+
+</body>
+</html>

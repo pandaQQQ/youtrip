@@ -1,0 +1,569 @@
+@media screen  and (max-width:768px){/*  1200> screen>768*/
+    .customItemStepOut{
+        display: none;
+    }
+}
+*{
+    margin:0;
+    padding:0;
+    font-family:"微软雅黑";
+}
+.bgFix{
+    position:fixed;
+    z-index:-1;
+}
+.primaryMsgStep2{
+    display:none;
+}
+.primaryMsgStep3{
+    display:none;
+}
+
+/*-------------------------模态框---------------------------+*/
+.customOneModal{
+    padding:16px;
+}
+/*--------------------------banner图-------------------------*/
+.pic-title{
+    height:500px;
+    background-image:url("../images/wy/banner_custom.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.pic-titleIn{
+    width:500px;
+    text-align:center;
+    margin:0 auto;
+}
+.customOneTitleBig{
+    display: inline-block;
+    margin-top:50%;
+    color:white;
+    font-size:3em;
+}
+.customOneTitleSmall{
+    line-height:4em;
+    color:white;
+    font-size:1.2em;
+}
+.cus-bg{
+    position:relative;
+    height:100%;
+    /*margin-top:50px;*/
+    margin-bottom:50px;
+}
+h4{
+    border:1px solid #a79865;
+    border-radius:18px 0 18px 0;
+    background:rgba(255,255,255,0);
+    display:inline-block;
+    margin-top:5px;
+    margin-left:60px;
+    padding:10px;
+}
+.top-title{
+    border-radius:5px;
+    background:white;
+    margin-top:-45px;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:20px;
+    height:140px;
+}
+.top-title>img{
+    float:left;
+    height:80px;
+    width:100px;
+    display: inline-block;
+}
+.line{
+    float:left;
+    display:inline-block;
+    width:2px;
+    height:100px;
+    background:#a79865;
+;
+}
+#cus-word{
+    float:left;
+    font-size:1em;
+    display:inline-block;
+    margin-left:30px;
+    height:100px;
+    width:320px;
+    border-radius:5px;
+    background:rgb(242,142,67);
+}
+#cus-word>div>span{
+    color:white;
+}
+#cus-word>div:nth-child(1){
+    padding-left:20px;
+    padding-top:5px;
+    font-size:1.8em;
+    width:300px;
+}
+#cus-word>div:nth-child(2){
+    float:left;
+    width:50px;
+    height:60px;
+}
+#cus-word>div:nth-child(3){
+    float:left;
+    margin-top:10px;
+    width:250px;
+}
+/*----------------------------时间轴--------------------*/
+.customItemStepOut{
+    padding-left:15%;
+    padding-right:15%;
+    margin-top:-80px;
+    height:100px;
+}
+.customItemStepin{
+    margin:0;
+    padding:0;
+}
+.customItemStepinContent{
+    padding:0;
+    position:relative;
+    height:30px;
+}
+.customItemStepinLine1{
+    height:50%;
+    width:100%;
+    border-bottom:1px solid #c9c9c9;
+}
+.customItemStepinCircle{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-20px;
+    margin-top:-20px;
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    border:1px solid #c9c9c9;
+    text-align:center;
+    line-height:40px;
+    background:white;
+}
+.customItemStepinCircle>span{
+    color: #c9c9c9;
+}
+.timeBarLineActive{
+    border-bottom:1px solid #a79865;
+}
+.timeBarCircleActive{
+    background:#a79865;
+}
+.customItemStepinLine2{
+    text-align:center;
+}
+.customItemStepinContent{
+    display: inline-block;
+    margin-top:25px;
+}
+/*-------------------以上是头部标题-----------------*/
+.content{
+    position:relative;
+}
+section>div>h4{
+    display:inline-block;
+    margin-top:50px;
+}
+.rational_customTitleTop{
+    width:100%;
+    height:150px;
+}
+.rational_customTitleIn{
+    width:300px;
+    margin:0 auto;
+    text-align:center;
+}
+.rational_customTitleWordBig{
+    display: inline-block;
+    margin-top:10%;
+    font-size:2em;
+}
+.rational_customTitleWordSmall{
+    display: inline-block;
+    margin:3px 0 10px 0;
+    font-size:1em;
+    color: #6a6a6a;
+}
+.rational_customTitleLine{
+    margin:0 auto;
+    border:1px solid #b1a86c;
+    width:60px;
+}
+.customItemStepinContent{
+    height:135px;
+}
+/*---------------基本信息表单--------------*/
+.primaryMsgOut{
+    padding-left:26%;
+    padding-right:26%;
+    margin:0 auto;
+}
+.primaryMsgIn{
+    margin:0;
+    padding:0;
+    font-size:1em;
+}
+.primaryMsgIn2{
+    margin-top:15px;
+}
+.primaryMsgLeft{
+    padding:0;
+    position:relative;
+}
+.primaryMsgRight{
+    padding:0;
+    position:relative;
+}
+/*-----------------目的地选择---------------------*/
+.customItemStepinLable{
+    line-height:60px;
+}
+.customItemStepinLableIm{
+    color:red;
+}
+.customItemStepinContentLeft{
+    padding-right:10px;
+    text-align:right;
+}
+.customItemStepinContentRight{
+    text-align:left;
+    padding:0;
+}
+.customItemStepSiteOut{
+    margin: 0;
+    padding:0;
+    height:60px;
+}
+#customItemStepinPlaceOut{
+    padding:0;
+    margin:0;
+    width:100%;
+    height:60px;
+}
+#customItemStepinCountry{
+    height:30px;
+    border:1px solid #c1c1c1;
+    border-radius:0;
+    margin-top:15px;
+    background:white;
+}
+#cprimaryMsgOut{
+    position: relative;
+}
+#customItemStepinCountry-tab{
+    background:white;
+    position:absolute;
+    z-index:1;
+    display:none;
+}
+.country-close{
+    color: #686868;
+    line-height:40px;
+    text-align:right;
+    font-size:1.2em;
+    cursor:pointer;
+}
+.country-close:hover{
+    color:red;
+}
+.customItemStepinCountryTab{
+    width:400px;
+}
+/*----------------出游人数---------------*/
+.customItemStepPeopleOut{
+    padding:0;
+}
+.customItemStepPeopleLeft{
+    margin:0;
+    padding:0;
+    height:60px;
+}
+.customItemAdult{
+    height:60px;
+}
+.customItemAdultNum{
+   margin-top:15px;
+}
+.customItemStepPeopleRight{
+    height:60px;
+}
+.customItemAdultNum{
+    display: inline-block;
+    height:30px;
+    width:60%;
+    float:left;
+}
+.customItemAdultWord{
+    text-align:left;
+    float:left;
+    width:40%;
+    font-size:1em;
+}
+.customItemAdultWord>span{
+    line-height:60px;
+}
+#selNum1,
+#selNum2,
+#selNum3,
+#selNum1-1,
+#selNum2-1,
+#selNum3-1{
+    border:1px solid #c1c1c1;
+    width:33.33%;
+    height:30px;
+    float:left;
+    text-align:center;
+    line-height:25px;
+    font-size:2em;
+}
+#selNum1{
+    font-size:2.6em;
+}
+#selNum1-1{
+    font-size:2.6em;
+}
+#selNum1:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNum3:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNum1-1:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNum3-1:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNum1>span,
+#selNum1-1>span,
+#selNum3>span,
+#selNum3-1>span{
+    color:#c1c1c1;
+}
+#selNum2,
+#selNum2-1{
+    font-size:1em;
+    border-left:none;
+    border-right:none;
+}
+.customItemAdultNumLeft{
+
+}
+.customItemAdultNumCenter{
+    width:33.33%;
+}
+.customItemAdultNumRight{
+    width:33.33%;
+}
+#selNumText{
+    color: #adadad;
+    width: 100%;
+    height:30px;
+    font-size:1em;
+}
+/*-----------------人均预算-----------------*/
+.Personbudget{
+    position:relative;
+    height:30px;
+    border:1px solid #c1c1c1;
+    border-radius:0;
+    margin-top:15px;
+    background:white;
+    width:180px;
+    text-align: center;
+    font-size:1em;
+    color:#c1c1c1;
+    line-height:30px;
+    cursor:pointer;
+}
+.PersonbudgetYes{
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:12px;
+    height:12px;
+    background:#b1a86c;
+    display: none;
+}
+.PersonbudgetYes>span{
+    position:absolute;
+    top:-10px;
+    right:0;
+    color:white;
+    display: none;
+}
+/*--------------出行时间---------------*/
+.calenderbox{
+    margin-top:15px;
+}
+.datebox{
+    border:1px solid #c1c1c1;
+    border-radius:0;
+    width:100%
+}
+/*--------------------选择旅行天数-------------------*/
+#selNumDay1,
+#selNumDay2,
+#selNumDay3{
+    border:1px solid #c1c1c1;
+    width:33.33%;
+    height:30px;
+    float:left;
+    text-align:center;
+    line-height:25px;
+    font-size:2em;
+}
+#selNumDay1{
+    font-size:2.6em;
+}
+#selNumDay1:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNumDay3:hover>span{
+    color:#b1a86c;
+    cursor:pointer;
+}
+#selNumDay1>span,
+#selNumDay3>span{
+    color:#c1c1c1;
+}
+#selNumDay2 {
+    font-size:1em;
+    border-left:none;
+    border-right:none;
+}
+
+/*-----------------step2样式-------------------*/
+.primaryMsgStep2{
+    padding-left:16%;
+    padding-right:16%;
+    margin:0 auto;
+}
+/*--------------出游主题------------*/
+.customerThemeRight{
+    /*height:60px;*/
+    width:100%;
+}
+.customerThemeCheckSquare,
+.customerThemeCheckWord{
+    cursor:pointer;
+}
+.customerThemeCheckSquare{
+    position:relative;
+    display:inline-block;
+    width:15px;
+    height:15px;
+    border:1px solid #c1c1c1;
+}
+.customerThemeCheckYes{
+    display:none;
+    color:white;
+    position:absolute;
+    top:-5px;
+}
+.customerThemeCheckWord{
+    font-size:1em;
+    display:inline-block;
+    line-height:60px;
+}
+
+/*-------------------备注------------------*/
+.box-styleText{
+    border:1px solid #c1c1c1;
+    border-radius:0;
+    margin-top:20px;
+    margin-left:12px;
+    width:95%;
+}
+/*---------------------按钮----------------*/
+.myBtnStep2Out{
+    margin:20px 0;
+    width:100%;
+}
+.myBtnStep2Two{
+    float:left;
+}
+.myBtnStep2In{
+    margin:0 auto;
+    width:215px;
+}
+.myBtnStep2In>div:nth-child(2){
+    margin-left:13px;
+}
+.myBtnStep2{
+    margin:0 auto;
+    text-align: center;
+    line-height:30px;
+    color:#b1a86c;
+    width:100px;
+    height:30px;
+    background:white;
+    border:1px solid #b1a86c;
+    cursor:pointer;
+    transition:.3s linear;
+}
+.myBtnStep2:hover{
+    color:white;
+    background:#b1a86c;
+}
+
+/*---------------------step3-------------------*/
+.box-style{
+    width:100%;
+    height:30px;
+}
+.primaryMsgStep3{
+    padding-left:26%;
+    padding-right:26%;
+}
+.primaryMsgStep3>div>div>input{
+    margin-top:15px;
+}
+/*----------------推荐商品---------------------------*/
+.popularContent{
+    padding:10px;
+}
+.hotImg,
+.hotImg>img{
+    width:100%;
+}
+.hotImgWord{
+    padding:5px 0;
+    text-align: center;
+    font-size:1.6em;
+}
+.hotImgWordSmall{
+    text-align: left;
+}
+.hotImgWord>p{
+    line-height:20px;
+}
+.hotImgWordMoney{
+    font-size:1em;
+    color:red;
+}
+.hotImgWordDay,
+.hotImgWordDetail {
+    color: #797979;
+    font-size:0.6em;
+}
+.hotImgWordDetail:hover{
+    cursor:pointer;
+    color: #ffaa2a;
+}
+.hotImgTitle{
+    line-height:50px;
+}

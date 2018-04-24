@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>youtrip</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="font/font-awesome.css">
+  <link rel="stylesheet" href="font/font_icon/iconfont.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <link rel="stylesheet" href="css/homePublic.css">
+  <link rel="stylesheet" href="css/fz-community.css">
+</head>
+<style>
+  #NAV{
+    background-color: #63532d;
+    position: inherit;
+  }
+</style>
+
+<body>
+<section class="myLinear">
+  <div class="container-fluid" >
+      <%-include("left_nav.ejs")%>
+    <div class="row">
+        <%-include("head.ejs")%>
+    </div>
+  </div>
+</section>
+<div class="fz-mymin">
+  <section>
+    <div class="container-fluid">
+      <div class="row fz-top">
+        <p class="fz-top-p"><span class="one7">&#xe64e;</span><span>首页</span><span>></span><span>墨西哥旅行</span><span>></span><span>点评详情</span></p>
+        <div class="fz-min">
+          <span class="fz-min-le"> <%=data[0].t_title%></span>
+          <div class="fz-min-span">
+            <ul>
+              <li class="one">
+                <img src="../<%=data[0].t_imgSrc%>">
+                <span><%=data[0].t_nickname%></span>
+              </li>
+              <li class="one">
+                <span class="one8">&#xe60a;</span>
+                <span></span>
+                <span>人点赞</span>
+              </li>
+              <li class="one">
+                <span class="one8">&#xe672;</span>
+                <span><%=data[0].s_day%>天</span>
+              </li>
+              <li class="one">
+                <span class="one8">&#xe62f;</span>
+                <span><%=data[0].s_teamNumber%>人</span>
+              </li>
+              <li class="one">
+                <span class="one8">&#xe61b;</span>
+                <span><%=data[0].s_price%>元/人</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row fz-show">
+        <div class="fz-myimg">
+          <img src="../images/fz-imge/fz-39.jpg">
+        </div>
+      </div>
+      <div class="row fz-box">
+        <div class="pre text-right" onclick="pre()">《</div>
+        <div class="fz-lshow">
+          <div class="fz-lubo"></div>
+        </div>
+        <div class="nex" onclick="nex()">》</div>
+      </div>
+      <div class="row fz-text">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于工作的原因，每年的长假也就只有年假了。之前的几年时间，陆陆续续和几个好友去了泰国、毛里求斯、帕劳等地方，好像形成了习惯一样，每年大家都会固定的相约一起出去玩耍。刚好16年6月份的时候摩洛哥对中国免签，从宣传中看到摩洛哥的风景真的很好看，而且还有大海也有沙漠，刚好符合我们的出行需求，于是几个人当下决定今年可以来一次摩洛哥之旅了。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;晚上下班之后开始在网上找摩洛哥的行程，在和客服聊天的过程中感觉很贴心，晚上下班之后客服还很热心的帮忙找机票，规划行程，感觉很贴心，而且行程安排的也是很合理，虽然是小团的旅游，但是真的感觉这是很自由的行程。沟通了很多行程方面的问题，根据我们的出行需求也修改了很多的行程。</p>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;旅行当中出现的一些小问题导游也帮忙做了很好的解决，虽然和当地人语言不通，但是还是会让人感觉很贴心。非常凑巧的是这次的小团中大部分都是来自一个省份的，大家相处起来也是很愉快的。</p>
+      </div>
+      <div class="row fz-geshi">
+        <div class="fz-com">
+          <h3>全部评论<span>(&)</span></h3>
+        </div>
+        <div class="fz-com">
+            <%for(var i=0;i<comment.length;i++){%>
+              <p ><span><%=comment[i].t_nickname%></span>: <span><%=comment[i].t_content%></span></p>
+            <%}%>
+        </div>
+        <div class="pin">
+          <textarea placeholder="我也说两句..."  class="fz-say"></textarea>
+        </div>
+        <div class="fz-bottom">
+          <div class="fz-one-btn">参与分享</div>
+          <div class="fz-one-btn Ri" onclick="insertcomment('<%=comment[0].id%>')">发表评论</div>
+        </div>
+        <div class="fz-pinjia">
+          <h3>Ta的评价</h3>
+          <hr style="width: 100%;  border-top: .5px solid gray;">
+          <p>Ta的行程：<a class="fz-a"> 糖果女士摩洛哥全景之旅 10天9晚</a></p>
+          <p>参考行程：<a class="fz-a"> 摩洛哥穿越摩尔王朝【每周六发团】</a><span class="fz-ri">
+                   <img src="../images/fz-imge/fz-4.jpg" style="width: 40px;height: 40px;border-radius: 40px">
+                    定制旅行社: Mathieu
+                </span></p>
+          <div class="fz-com-com">
+            <div>
+              <div class="fz-le one1"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg">
+                </div>
+                <div class="fz-img-te">特赞</div>
+              </div>
+            </div>
+            <div>
+              <div class="fz-le one2"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg">
+                </div>
+                <div class="fz-img-te">特赞</div>
+              </div>
+            </div>
+            <div>
+              <div class="fz-le one3"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg">
+                </div>
+                <div class="fz-img-te">特赞</div>
+              </div>
+            </div>
+            <div>
+              <div class="fz-le one4"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg">
+                </div>
+                <div class="fz-img-te">特赞</div>
+              </div>
+            </div>
+            <div>
+              <div class="fz-le one5"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg five">
+                </div>
+                <div class="fz-img-te">美赞</div>
+              </div>
+            </div>
+            <div>
+              <div class="fz-le one6"></div>
+              <div class="fz-img-ri">
+                <div class="fz-img-bg">
+                </div>
+                <div class="fz-img-te">特赞</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fz-tuijian">
+          <p class="fz-title">更多当地行程</p>
+          <p class="fz-title1">Location Recommend</p>
+          <div class="fz-mytui">
+            <div>
+              <div>
+                <img src="../images/fz-imge/fz-68.jpg">
+                <div class="fz-title2">
+                  <p class="fz-title2-top">摩洛哥穿越摩尔王朝【每周六发团】</p>
+                  <p class="fz-title2-content">
+                    <span>卡萨布兰卡</span>
+                    <span>撒哈拉</span>
+                  </p>
+                </div>
+                <div class="fz-title3">
+                  <div  class="fz-title3-1">
+                    <span class="one9">&#xe672;</span>10天九晚
+                  </div>
+                  <div class="text-right fz-title3-3"><span class="fz-title3-2">￥8999</span>起</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <img src="../images/fz-imge/fz-69.jpg">
+                <div class="fz-title2">
+                  <p class="fz-title2-top">摩洛哥穿越摩尔王朝【每周六发团】</p>
+                  <p class="fz-title2-content">
+                    <span>卡萨布兰卡</span>
+                    <span>撒哈拉</span>
+                  </p>
+                </div>
+                <div class="fz-title3">
+                  <div  class="fz-title3-1">
+                    <span class="one9">&#xe672;</span>10天九晚
+                  </div>
+                  <div class="text-right fz-title3-3"><span class="fz-title3-2">￥8999</span>起</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <img src="../images/fz-imge/fz-70.jpg">
+                <div class="fz-title2">
+                  <p class="fz-title2-top">摩洛哥穿越摩尔王朝【每周六发团】</p>
+                  <p class="fz-title2-content">
+                    <span>卡萨布兰卡</span>
+                    <span>撒哈拉</span>
+                  </p>
+                </div>
+                <div class="fz-title3">
+                  <div  class="fz-title3-1">
+                    <span class="one9">&#xe672;</span>10天九晚
+                  </div>
+                  <div class="text-right fz-title3-3"><span class="fz-title3-2">￥8999</span>起</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <img src="../images/fz-imge/fz-71.png">
+                <div class="fz-title2">
+                  <p class="fz-title2-top">摩洛哥穿越摩尔王朝【每周六发团】</p>
+                  <p class="fz-title2-content">
+                    <span>卡萨布兰卡</span>
+                    <span>撒哈拉</span>
+                  </p>
+                </div>
+                <div class="fz-title3">
+                  <div  class="fz-title3-1">
+                    <span class="one9">&#xe672;</span>10天九晚
+                  </div>
+                  <div class="text-right fz-title3-3"><span class="fz-title3-2">￥8999</span>起</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--===========================页脚================================-->
+    <%-include("foot.ejs")%>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/ajax.js"></script>
+<script>
+    sessionStorage.myhref=location.href;
+    var lubo=document.getElementsByClassName("fz-lubo")[0];
+    var index=0;
+    var myImgArr=[]
+    window.onload=function(){
+        var a='<%=data[0].t_shareimgs.split(',').length%>'
+
+        var c='<%=data[0].t_shareimgs.split(',')%>'
+        var d=c.split(',')
+        for(var i=0;i<a;i++){
+            myImgArr.push("../images/fz-imge/"+d[i])
+        }
+        lubo.style.width=260*myImgArr.length+"px";
+        //lubo.innerHTML+="<div>" +
+        //"<img src='"+myImgArr[0]+"'>" +
+        //"</div>";
+        for(var i=0;i<myImgArr.length;i++){
+            lubo.innerHTML+="<div>" +
+                "<img src='"+myImgArr[i]+"'>" +
+                "</div>"
+        }
+        if(lubo.style.marginLeft==""){
+            lubo.style.marginLeft=0
+        }
+        $(".fz-lubo div").find("img")[index].style.border="5px solid #a79865";
+        $(".fz-myimg img").attr('src',myImgArr[0]);
+    };
+    function pre(){
+        index--;
+        if(index<5||lubo.style.marginLeft==""){
+            lubo.style.marginLeft=0
+        }else{
+            lubo.style.marginLeft=parseInt(lubo.style.marginLeft)+260+"px";
+            console.log(lubo.style.marginLeft)
+        }
+        if(index<0){
+            index=myImgArr.length-1;
+            lubo.style.marginLeft=-260*(myImgArr.length-4)+"px";
+        }
+        for(var i=0;i<myImgArr.length;i++){
+            $(".fz-lubo div").find("img")[i].style.border="1px solid white"
+        }
+        $(".fz-lubo div").find("img")[index].style.border="5px solid #a79865";
+        var a=$(".fz-lubo div").find("img")[index].src;
+        console.log(a);
+        $(".fz-myimg img").attr('src',a);
+    }
+    function nex(){
+        index++;
+        if(index>myImgArr.length-5){
+            lubo.style.marginLeft=-260*(myImgArr.length-4)+"px";
+        }else{
+            lubo.style.marginLeft=parseInt(lubo.style.marginLeft)-260+"px";
+            console.log(lubo.style.marginLeft)
+        }
+        if(index>myImgArr.length-1){
+            index=0;
+            lubo.style.marginLeft=0;
+        }
+        for(var i=0;i<myImgArr.length;i++){
+            $(".fz-lubo div").find("img")[i].style.border="5px solid white"
+        }
+        $(".fz-lubo div").find("img")[index].style.border="5px solid #a79865";
+        var a=$(".fz-lubo div").find("img")[index].src;
+        console.log(a);
+        $(".fz-myimg img").attr('src',a);
+    }
+
+    function insertcomment(obj) {
+        var insert=document.getElementsByClassName('fz-com')[1]
+        var mysay=document.getElementsByClassName('fz-say')[0]
+        console.log(mysay.value)
+        insert.innerHTML+="<p><span>小豪豪</span>: <span>"+mysay.value+"</span></p>"
+        var comment=mysay.value
+        ajax("post","/insertcomment","obj="+obj+"&comment="+comment,(data=>{
+            console.log("data")
+        }))
+        mysay.value='';
+    }
+
+</script>
+</body>
+</html>

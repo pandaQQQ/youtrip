@@ -1,0 +1,209 @@
+.myLogo{
+    width: 100%;
+    height:600px;
+    position: relative;
+    color: #e8e8e8;
+    background-image: url("../images/DjTheme/banner_custom.jpg");
+}
+
+/*.themeHg{*/
+    /*height:500px;*/
+    /*border:1px solid red;*/
+/*}*/
+.margin{
+    margin-right: 20px;
+}
+.djMargin{
+    height:8px;
+    width:100% ;
+}
+.daiJun{
+    width: 100%;
+    height:600px;
+    margin: 0 auto;
+
+}
+
+.zheZao{
+    width: 100%;
+    height:500px;
+    background-color:rgba(0,0,0,.5);
+    overflow: hidden;
+    position: absolute;
+    display: block;
+    transition:all 2s linear;
+}
+.textDiv{
+    margin-top:20%;
+}
+.textDiv h2,p{
+    line-height: 150%;
+    color: #f4f4f4;
+}
+.btDiv{
+    margin-top:70%;
+    /*text-align: center;*/
+    display: block;
+    transition:all .3s ease-in-out;
+}
+.img{
+    background-image: url("../images/home/jpa_wq/jpn_wq13.jpg");
+
+}
+.ImageAll:hover .zheZao{
+    display: none;
+}
+/*.ImageAll:hover .btDiv{*/
+    /*display: block;*/
+/*}*/
+
+/*修改过后的样式*/
+.picter6{
+    width: 100%;
+    height:100%;
+}
+
+
+.img1{
+    background-image:url("../images/home/jpa_wq/jpn_wq09.jpg");
+}
+
+.img2{
+    background-image:url("../images/home/jpa_wq/jpn_wq10.jpg");
+}
+.img3{
+    background-image:url("../images/home/jpa_wq/jpn_wq15.jpg");
+}
+.img4{
+    background-image:url("../images/home/jpa_wq/jpn_wq02.jpg");
+}
+.img5{
+    background-image:url("../images/home/jpa_wq/jpn_wq12.jpg");
+}
+
+
+
+
+
+.firtDiv{
+    width:49%;
+    height:600px;
+    margin-left: 5px;
+    float:left;
+
+}
+
+.picter6{
+    width: 100%;
+    height: 600px;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.pic6_img img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    right:0;
+
+}
+.picter6 .img_text{
+    width: 100%;
+
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    font-size: 30px;
+    color: white;
+    transition: all .2s linear;
+}
+.picter6 .line_div{
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all .2s linear;
+}
+.picter6 p{
+    width: 1px;
+    border: 2px solid white;
+    position: absolute;
+    visibility: hidden;
+    transition: all .2s linear;
+}
+.picter6 .pic6_img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+}
+.picter6 .bg_text{
+     width: 370px;
+     height: 40px;
+     position: absolute;
+     top: 120px;
+     left: 100%;
+     font-size: 14px;
+     color: white;
+     letter-spacing: 1px;
+     transition: all .2s linear;
+ }
+.picter6 .bgc_text{
+    width: 370px;
+    height: 40px;
+    position: absolute;
+    top: 120px;
+    right: 100%;
+    font-size: 14px;
+    color: white;
+    letter-spacing: 1px;
+    transition: all .2s linear;
+}
+.picter6 .pic6_mb{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(34, 104, 42, 0);
+    opacity: 0;
+    transition: all .2s linear;
+}
+.picter6:hover .pic6_mb{
+    background-color: rgba(34, 104, 42, 0.5);
+    opacity: 1;
+    transition: all .2s linear;
+}
+.picter6:hover .bg_text{
+    left: 40px;
+    transition: all .2s linear;
+}
+.picter6:hover .bgc_text{
+    right:40px;
+    transition: all .2s linear;
+}
+
+.picter6:hover .line_div p{
+    visibility: visible;
+    transform: scaleX(370);
+    transition: all .2s linear;
+}
+
+
+/*按钮的颜色和文字*/
+.awayTake .awayTakeBtn{
+    margin-left:28%;
+}
+
+.lcfItinerary{
+    margin:10px auto;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <!--===================================公共CSS样式===========================-->
+  <link rel="stylesheet" href="css/homePublic.css">
+  <link rel="stylesheet" href="css/LCF_visaDetails.css">
+  <title>签证详情页</title>
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div class="container-fluid">
+  <!--============================navbar:导航条 ======================================-->
+    <%-include("head.ejs")%>
+
+  <!--=============================右侧固定导航===============================-->
+    <%-include("left_nav.ejs")%>
+
+  <!--================面包屑标题===================-->
+  <div class="row">
+    <div class="row lcfContentTitle">
+      <div class="panelChip">
+        <span>
+          <a href="">首页</a>
+        </span>
+        <span>></span>
+        <span>
+          <a href="LCF_visa">签证</a>
+        </span>
+        <span>></span>
+        <span id="visaUname">
+          <a href=""><%=visaDetails[0].c_countryname%>个人旅游签证（<%=visaDetails[0].vp_place%>办理）</a>
+        </span>
+      </div>
+    </div>
+    <!--====================内容=================-->
+    <div class="row lcfContentPanl">
+      <div class="row lcfpanlTitle">
+        <p>
+          <span><%=visaDetails[0].c_countryname%>个人旅游签证（<%=visaDetails[0].vp_place%>办理）</span>
+        </p>
+      </div>
+      <div class="row lcfContentImg">
+        <div class="col-lg-5 col-md-5 col-sm-5 contentimg">
+          <img src="<%=visaDetails[0].v_imgSrc%>" alt="">
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-5 contentRight">
+          <div class="row firstDiv">
+            <p>￥<span><%=visaDetails[0].v_price%></span>元/人</p>
+          </div>
+          <div class="row">
+            <p>
+              <span>&nbsp;&nbsp;&nbsp;送签地&nbsp;|&nbsp;</span>
+              <span><%=visaDetails[0].vp_place%></span>
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              <span>入境次数&nbsp;|&nbsp;</span>
+              <span>按使馆签发为准</span>
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              <span>有效时间&nbsp;|&nbsp;</span>
+              <span>
+                <span><%=visaDetails[0].v_starttime%></span>个月
+              </span>
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              <span>停留时间&nbsp;|&nbsp;</span>
+              <span>
+                <span><%=visaDetails[0].v_stoptime%></span>个月
+              </span>
+            </p>
+          </div>
+          <div class="row">
+            <p>
+              <span>办理时长&nbsp;|&nbsp;</span>
+              <span>
+                <span><%=visaDetails[0].v_handling%></span>周左右，具体受理时间以使馆的受理为准
+              </span>
+            </p>
+          </div>
+          <div class="row">
+            <div class="lcfReserve"><a href="/LCF_visaOrder?orderName=<%=visaDetails[0].c_countryname%>">立即预定</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row titlePanle">
+      <div class="col-lg-1 col-md-1 col-sm-1">
+        <p class="activeP activeA">重要提醒</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1">
+        <p class="activeP" onclick="problem()">问题解答</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1">
+        <p class="activeP" onclick="reservation()">预定须知</p>
+      </div>
+    </div>
+
+    <div class="row lcfImportant">
+      <div class="row">
+        <p class="textP">
+          <span><%=visaDetails[0].c_countryname%></span>旅游签证<%=visaDetails[0].vp_place%>领区服务范围
+        </p>
+      </div>
+      <div class="row textOL">
+        <ol>
+          <li>1.本次申请目的为旅游。</li>
+          <li>2.仅限护照签发地为北京,天津,河北,山西,内蒙古,河南,湖北,湖南,西藏,陕西,甘肃,青海,宁夏,新疆的申请人.若非以上地区申请者，需提供居住证或居住卡原件。</li>
+          <li>3.申请过程中使馆要求提交补充资料必须及时提供。</li>
+          <li>4.使馆在收到签证材料之后有一定几率电话回访，请保持手机畅通，熟悉提交的材料。</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="row idCard">
+      签证材料&nbsp;|&nbsp;Visa Materials
+    </div>
+
+    <div class="row checkUser">
+      <p>选择身份：</p>
+    </div>
+    <div class="row checkID">
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="idDefault idCardbg" onclick="clickoffBearer()">在职人员</div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="idDefault" onclick="clickprofessional()">自由职业者</div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="idDefault" onclick="clickretiree()">退休人员</div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="idDefault" onclick="clickstudent()">学生</div>
+      </div>
+      <div class="col-lg-2 col-md-2 col-sm-2">
+        <div class="idDefault" onclick="clickchildren1()">学龄前儿童</div>
+      </div>
+    </div>
+    <!--======================在职人员offBearer======================-->
+    <div class="row lcfContainer" id="offBearer">
+      <div class="row lcfInstruction">
+        <div class="row">
+          <div class="row lcf_visaLeft">
+            <div class="col-lg-1 ol-md-1 col-sm-1 visaleft">
+              <div class="row">
+                身份证明
+              </div>
+              <div class="row">
+                资产证明
+              </div>
+              <div class="row">
+                其他资料
+              </div>
+            </div>
+            <div class="col-lg-1 ol-md-1 col-sm-1 visamiddle">
+              <div class="row middleLine"></div>
+              <div class="row middleCircle">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 visaright">
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>身份证</p>
+                  <p>正反面复印件</p>
+                  <p>彩色复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard1.png" alt="">
+                    <p>身份证正面</p>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard2.png" alt="">
+                    <p>身份证反面</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>因私护照原件</p>
+                  <p>护照必须在行程结束之后有半年以上的有效期</p>
+                  <p>护照彩色复印件2份</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fuzhao.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>照片</p>
+                  <p>白底彩色两寸近照4张, 照片尺寸要求35×45mm （注：照片的头顶-下巴的尺寸上下35mm，左右25mm）</p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>户口本</p>
+                  <p>全家户口本复印件，如夫妻不在同一户口本上，需提供配偶的完整户口本复印件，且需提供结婚证复印件。</p>
+                  <p>请清晰的复印户口本首页及所有内容页。</p>
+                  <p>如是集体户口，请提供集体户口本户主首页及本人信息页</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fukouben.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>个人信息表</p>
+                  <p>请准确填写每一项内容</p>
+                  <p><a href="">模板下载</a></p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>活期储蓄卡或者工资卡对账单</p>
+                  <p>需要提供近六个月活期储蓄卡或者工资卡或退休金卡的对账单，必须有银行的印章，余额3万以上。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/gzd.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>结婚证或离婚证</p>
+                  <p>已婚的申请者必须提供结婚证复印件，离婚的必须提供离婚证或者判决书复印件。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/jhz.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>营业执照 或 组织机构代码证</p>
+                  <p>所在单位为企业单位请提供营业执照副本的复印件并加盖公章</p>
+                  <p>所在单位为事业单位请提供组织机构代码证的复印件并加盖公章</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/yyzz.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>房产／车产／股权</p>
+                  <p>房产证复印件或车产证复印件， 股权证，国库券等一切可以证明申请人经济情况的材料（如有，请尽可能提供）</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fangchan.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>在职证明</p>
+                  <p>使用公司正规抬头纸打印， 内容全部为中英文，并加盖公司红章</p>
+                  <p>在职证明内容需包括：申请人姓名、出生日期、护照号、职位、年收入、入职时间-任职时间不能早于营业执照上公司成立的时间、旅游具体起止时间并需注明担保申请人按期回国；单位名称、地址、传真、联系电话；以及负责人姓名和职务并请负责人签字</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>问题解答&nbsp;|&nbsp;Trouble Shooting</p>
+          </div>
+          <div class="row trouble1Line">
+            <div class="row trouble1">
+              <p><span>问：</span>持有旅游签证去公务?</p>
+              <p><span>答：</span>不可以（no）</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>我自己可以预定酒店，机票么？</p>
+              <p><span>答：</span>可以(ok)，但是要提供我方酒店，机票订单，并在使馆电话询问中回答酒店，机票都由旅行社预定</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>使馆要求我补资料我必须要补交么？</p>
+              <p><span>答：</span>必须补交，否则有拒签的可能性</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>预订须知&nbsp;|&nbsp;Reservation Notes </p>
+          </div>
+          <div class="row">
+            <div class="row reservationOL">
+              <ol>
+                <li>1.办理周期为我司拿到资料后的2-3周时间，请按实际出行日期合理安排送签日期 </li>
+                <li>2.签证的申请是否成功，取决于使领馆对资料的审核，若发生拒签，请申请人自然接受结果，并放弃追究本公司任何责任的权利</li>
+                <li>3.申请人需保证提供材料的真实性，申请人应特别注意诚实信用的原则 </li>
+                <li>4.我司在收取申请人资料后，保留作出不予受理申请人签证申请决定的权利</li>
+                <li>5.办理周期、停留时间、签证有效期等均系基于以往经验的预估时限，准确时限以使领馆实际审批结果为准。</li>
+                <li>6.获得签证前切勿先行支付机票、酒店费用，以免因签证问题产生费用损失，否则损失将由您自行承担。</li>
+                <li>7.签发的签证入境次数，签证有效期以及可停留天数以使馆批发的签证为准。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--=======================自由职业者professional===========================-->
+    <div class="row lcfContainer" id="professional">
+      <div class="row lcfInstruction">
+        <div class="row">
+          <div class="row lcf_visaLeft">
+            <div class="col-lg-1 ol-md-1 col-sm-1 visaleft">
+              <div class="row">
+                身份证明
+              </div>
+              <div class="row">
+                资产证明
+              </div>
+              <div class="row">
+                其他资料
+              </div>
+            </div>
+            <div class="col-lg-1 ol-md-1 col-sm-1 visamiddle">
+              <div class="row middleLine"></div>
+              <div class="row middleCircle">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 visaright">
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>身份证</p>
+                  <p>正反面复印件</p>
+                  <p>彩色复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard1.png" alt="">
+                    <p>身份证正面</p>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard2.png" alt="">
+                    <p>身份证反面</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>因私护照原件</p>
+                  <p>护照必须在行程结束之后有半年以上的有效期</p>
+                  <p>护照彩色复印件2份</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fuzhao.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>照片</p>
+                  <p>白底彩色两寸近照4张, 照片尺寸要求35×45mm （注：照片的头顶-下巴的尺寸上下35mm，左右25mm）</p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>户口本</p>
+                  <p>全家户口本复印件，如夫妻不在同一户口本上，需提供配偶的完整户口本复印件，且需提供结婚证复印件。</p>
+                  <p>请清晰的复印户口本首页及所有内容页。</p>
+                  <p>如是集体户口，请提供集体户口本户主首页及本人信息页</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fukouben.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>个人信息表</p>
+                  <p>请准确填写每一项内容</p>
+                  <p><a href="">模板下载</a></p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>活期储蓄卡或者工资卡对账单</p>
+                  <p>需要提供近六个月活期储蓄卡或者工资卡或退休金卡的对账单，必须有银行的印章，余额3万以上。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/gzd.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>结婚证或离婚证</p>
+                  <p>已婚的申请者必须提供结婚证复印件，离婚的必须提供离婚证或者判决书复印件。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/jhz.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>房产／车产／股权</p>
+                  <p>房产证复印件或车产证复印件， 股权证，国库券等一切可以证明申请人经济情况的材料（如有，请尽可能提供）</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fangchan.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>出资信</p>
+                  <p>提供出资人（一般是指配偶或父母）的在职证明 （用公司正规抬头纸打印，列明出资人与申请人的关系，出资人的职务，薪水，以及承担申请人此次的出行费用），以及加盖公章的营业执照或组织机构代码证</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>问题解答&nbsp;|&nbsp;Trouble Shooting</p>
+          </div>
+          <div class="row trouble1Line">
+            <div class="row trouble1">
+              <p><span>问：</span>持有旅游签证去公务?</p>
+              <p><span>答：</span>不可以（no）</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>我自己可以预定酒店，机票么？</p>
+              <p><span>答：</span>可以(ok)，但是要提供我方酒店，机票订单，并在使馆电话询问中回答酒店，机票都由旅行社预定</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>使馆要求我补资料我必须要补交么？</p>
+              <p><span>答：</span>必须补交，否则有拒签的可能性</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>预订须知&nbsp;|&nbsp;Reservation Notes </p>
+          </div>
+          <div class="row">
+            <div class="row reservationOL">
+              <ol>
+                <li>1.办理周期为我司拿到资料后的2-3周时间，请按实际出行日期合理安排送签日期 </li>
+                <li>2.签证的申请是否成功，取决于使领馆对资料的审核，若发生拒签，请申请人自然接受结果，并放弃追究本公司任何责任的权利</li>
+                <li>3.申请人需保证提供材料的真实性，申请人应特别注意诚实信用的原则 </li>
+                <li>4.我司在收取申请人资料后，保留作出不予受理申请人签证申请决定的权利</li>
+                <li>5.办理周期、停留时间、签证有效期等均系基于以往经验的预估时限，准确时限以使领馆实际审批结果为准。</li>
+                <li>6.获得签证前切勿先行支付机票、酒店费用，以免因签证问题产生费用损失，否则损失将由您自行承担。</li>
+                <li>7.签发的签证入境次数，签证有效期以及可停留天数以使馆批发的签证为准。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--=======================退休人员retiree===========================-->
+    <div class="row lcfContainer" id="retiree">
+      <div class="row lcfInstruction">
+        <div class="row">
+          <div class="row lcf_visaLeft">
+            <div class="col-lg-1 ol-md-1 col-sm-1 visaleft">
+              <div class="row">
+                身份证明
+              </div>
+              <div class="row">
+                资产证明
+              </div>
+              <div class="row">
+                其他资料
+              </div>
+            </div>
+            <div class="col-lg-1 ol-md-1 col-sm-1 visamiddle">
+              <div class="row middleLine"></div>
+              <div class="row middleCircle">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 visaright">
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>身份证</p>
+                  <p>正反面复印件</p>
+                  <p>彩色复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard1.png" alt="">
+                    <p>身份证正面</p>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard2.png" alt="">
+                    <p>身份证反面</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>因私护照原件</p>
+                  <p>护照必须在行程结束之后有半年以上的有效期</p>
+                  <p>护照彩色复印件2份</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fuzhao.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>照片</p>
+                  <p>白底彩色两寸近照4张, 照片尺寸要求35×45mm （注：照片的头顶-下巴的尺寸上下35mm，左右25mm）</p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>户口本</p>
+                  <p>全家户口本复印件，如夫妻不在同一户口本上，需提供配偶的完整户口本复印件，且需提供结婚证复印件。</p>
+                  <p>请清晰的复印户口本首页及所有内容页。</p>
+                  <p>如是集体户口，请提供集体户口本户主首页及本人信息页</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fukouben.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>个人信息表</p>
+                  <p>请准确填写每一项内容</p>
+                  <p><a href="">模板下载</a></p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>退休证</p>
+                  <p>彩色复印件</p>
+                  <p>退休人员请提供退休证复印件。（用A4纸复印）</p>
+                  <p>如退休证正在办理中，请提供所在单位出具的退休证办理证明，其单位领导签字并加盖公章。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/tuixiuz.jpg" alt="">
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/tuixiuz1.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>活期储蓄卡或者工资卡对账单</p>
+                  <p>需要提供近六个月活期储蓄卡或者工资卡或退休金卡的对账单，必须有银行的印章，余额3万以上。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/gzd.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>结婚证或离婚证</p>
+                  <p>已婚的申请者必须提供结婚证复印件，离婚的必须提供离婚证或者判决书复印件。</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/jhz.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>房产／车产／股权</p>
+                  <p>房产证复印件或车产证复印件， 股权证，国库券等一切可以证明申请人经济情况的材料（如有，请尽可能提供）</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fangchan.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>问题解答&nbsp;|&nbsp;Trouble Shooting</p>
+          </div>
+          <div class="row trouble1Line">
+            <div class="row trouble1">
+              <p><span>问：</span>持有旅游签证去公务?</p>
+              <p><span>答：</span>不可以（no）</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>我自己可以预定酒店，机票么？</p>
+              <p><span>答：</span>可以(ok)，但是要提供我方酒店，机票订单，并在使馆电话询问中回答酒店，机票都由旅行社预定</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>使馆要求我补资料我必须要补交么？</p>
+              <p><span>答：</span>必须补交，否则有拒签的可能性</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>预订须知&nbsp;|&nbsp;Reservation Notes </p>
+          </div>
+          <div class="row">
+            <div class="row reservationOL">
+              <ol>
+                <li>1.办理周期为我司拿到资料后的2-3周时间，请按实际出行日期合理安排送签日期 </li>
+                <li>2.签证的申请是否成功，取决于使领馆对资料的审核，若发生拒签，请申请人自然接受结果，并放弃追究本公司任何责任的权利</li>
+                <li>3.申请人需保证提供材料的真实性，申请人应特别注意诚实信用的原则 </li>
+                <li>4.我司在收取申请人资料后，保留作出不予受理申请人签证申请决定的权利</li>
+                <li>5.办理周期、停留时间、签证有效期等均系基于以往经验的预估时限，准确时限以使领馆实际审批结果为准。</li>
+                <li>6.获得签证前切勿先行支付机票、酒店费用，以免因签证问题产生费用损失，否则损失将由您自行承担。</li>
+                <li>7.签发的签证入境次数，签证有效期以及可停留天数以使馆批发的签证为准。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--=======================学生student===========================-->
+    <div class="row lcfContainer" id="student">
+      <div class="row lcfInstruction">
+        <div class="row">
+          <div class="row lcf_visaLeft">
+            <div class="col-lg-1 ol-md-1 col-sm-1 visaleft">
+              <div class="row">
+                身份证明
+              </div>
+              <div class="row">
+                资产证明
+              </div>
+              <div class="row">
+                其他资料
+              </div>
+            </div>
+            <div class="col-lg-1 ol-md-1 col-sm-1 visamiddle">
+              <div class="row middleLine"></div>
+              <div class="row middleCircle">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 visaright">
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>身份证</p>
+                  <p>正反面复印件</p>
+                  <p>彩色复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard1.png" alt="">
+                    <p>身份证正面</p>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard2.png" alt="">
+                    <p>身份证反面</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>因私护照原件</p>
+                  <p>护照必须在行程结束之后有半年以上的有效期</p>
+                  <p>护照彩色复印件2份</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fuzhao.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>照片</p>
+                  <p>白底彩色两寸近照4张, 照片尺寸要求35×45mm （注：照片的头顶-下巴的尺寸上下35mm，左右25mm）</p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>户口本</p>
+                  <p>全家户口本复印件，如夫妻不在同一户口本上，需提供配偶的完整户口本复印件，且需提供结婚证复印件。</p>
+                  <p>请清晰的复印户口本首页及所有内容页。</p>
+                  <p>如是集体户口，请提供集体户口本户主首页及本人信息页</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fukouben.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>个人信息表</p>
+                  <p>请准确填写每一项内容</p>
+                  <p><a href="">模板下载</a></p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>学生证</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/studentimg.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>出生证明</p>
+                  <p>未满十八周岁需提供出生医学证明复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/cszm.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>活期储蓄卡或者工资卡对账单</p>
+                  <p>需要提供近六个月活期储蓄卡或者工资卡或退休金卡的对账单，必须有银行的印章，余额3万以上。</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>学校准假证明</p>
+                  <p>使用学校正规抬头纸打印，中英文即可</p>
+                  <p>准假证明内容需包括：学生姓名、学生所在系或班级、具体的旅游起止时间并需注明担保申请人按期回国；学校名称、地址、传真和联系电话；学校领导的姓名和职位并请领导签字;</p>
+                  <p>若申请人是毕业生，暂无工作请提供学校的毕业证复印件；若申请人处于升学期间，请提供录取通知书复印件</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>出资人营业执照或组织机构代码证</p>
+                  <p>请提供出资人所在单位营业执照副本的清晰复印件，用A4纸复印，并在复印件上加盖单位公章或出资人所在单位组织机构代码证的清晰复印件，用A4纸复印，并在复印件上加盖单位公章。</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>出资信</p>
+                  <p>提供出资人（一般是指配偶或父母）的在职证明 （用公司正规抬头纸打印，列明出资人与申请人的关系，出资人的职务，薪水，以及承担申请人此次的出行费用），以及加盖公章的营业执照或组织机构代码证</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>父母的身份证复印件</p>
+                  <p>父母身份证的彩色复印件</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>问题解答&nbsp;|&nbsp;Trouble Shooting</p>
+          </div>
+          <div class="row trouble1Line">
+            <div class="row trouble1">
+              <p><span>问：</span>持有旅游签证去公务?</p>
+              <p><span>答：</span>不可以（no）</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>我自己可以预定酒店，机票么？</p>
+              <p><span>答：</span>可以(ok)，但是要提供我方酒店，机票订单，并在使馆电话询问中回答酒店，机票都由旅行社预定</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>使馆要求我补资料我必须要补交么？</p>
+              <p><span>答：</span>必须补交，否则有拒签的可能性</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>预订须知&nbsp;|&nbsp;Reservation Notes </p>
+          </div>
+          <div class="row">
+            <div class="row reservationOL">
+              <ol>
+                <li>1.办理周期为我司拿到资料后的2-3周时间，请按实际出行日期合理安排送签日期 </li>
+                <li>2.签证的申请是否成功，取决于使领馆对资料的审核，若发生拒签，请申请人自然接受结果，并放弃追究本公司任何责任的权利</li>
+                <li>3.申请人需保证提供材料的真实性，申请人应特别注意诚实信用的原则 </li>
+                <li>4.我司在收取申请人资料后，保留作出不予受理申请人签证申请决定的权利</li>
+                <li>5.办理周期、停留时间、签证有效期等均系基于以往经验的预估时限，准确时限以使领馆实际审批结果为准。</li>
+                <li>6.获得签证前切勿先行支付机票、酒店费用，以免因签证问题产生费用损失，否则损失将由您自行承担。</li>
+                <li>7.签发的签证入境次数，签证有效期以及可停留天数以使馆批发的签证为准。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--=======================学龄前儿童children===========================-->
+    <div class="row lcfContainer" id="children">
+      <div class="row lcfInstruction">
+        <div class="row">
+          <div class="row lcf_visaLeft">
+            <div class="col-lg-1 ol-md-1 col-sm-1 visaleft">
+              <div class="row">
+                身份证明
+              </div>
+              <div class="row">
+                资产证明
+              </div>
+              <div class="row">
+                其他资料
+              </div>
+            </div>
+            <div class="col-lg-1 ol-md-1 col-sm-1 visamiddle">
+              <div class="row middleLine"></div>
+              <div class="row middleCircle">
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+              </div>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 visaright">
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>身份证</p>
+                  <p>正反面复印件</p>
+                  <p>彩色复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard1.png" alt="">
+                    <p>身份证正面</p>
+                  </div>
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/idcard2.png" alt="">
+                    <p>身份证反面</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>因私护照原件</p>
+                  <p>护照必须在行程结束之后有半年以上的有效期</p>
+                  <p>护照彩色复印件2份</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fuzhao.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>照片</p>
+                  <p>白底彩色两寸近照4张, 照片尺寸要求35×45mm （注：照片的头顶-下巴的尺寸上下35mm，左右25mm）</p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>户口本</p>
+                  <p>全家户口本复印件，如夫妻不在同一户口本上，需提供配偶的完整户口本复印件，且需提供结婚证复印件。</p>
+                  <p>请清晰的复印户口本首页及所有内容页。</p>
+                  <p>如是集体户口，请提供集体户口本户主首页及本人信息页</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/fukouben.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>个人信息表</p>
+                  <p>请准确填写每一项内容</p>
+                  <p><a href="">模板下载</a></p>
+                </div>
+              </div>
+              <div class="row visaright1 visa">
+                <div class="row right1Title">
+                  <p>出生证明</p>
+                  <p>未满十八周岁需提供出生医学证明复印件</p>
+                </div>
+                <div class="row right1Img">
+                  <div class="col-lg-5 col-md-5 col-sm-5">
+                    <img src="images/lcfImg/visa/details/cszm.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>活期储蓄卡或者工资卡对账单</p>
+                  <p>需要提供近六个月活期储蓄卡或者工资卡或退休金卡的对账单，必须有银行的印章，余额3万以上。</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>出资信</p>
+                  <p>提供出资人（一般是指配偶或父母）的在职证明 （用公司正规抬头纸打印，列明出资人与申请人的关系，出资人的职务，薪水，以及承担申请人此次的出行费用），以及加盖公章的营业执照或组织机构代码证</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>出资人营业执照或组织机构代码证</p>
+                  <p>请提供出资人所在单位营业执照副本的清晰复印件，用A4纸复印，并在复印件上加盖单位公章或出资人所在单位组织机构代码证的清晰复印件，用A4纸复印，并在复印件上加盖单位公章。</p>
+                </div>
+              </div>
+              <div class="row visaright1">
+                <div class="row right1Title">
+                  <p>父母的身份证复印件</p>
+                  <p>父母身份证的彩色复印件</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>问题解答&nbsp;|&nbsp;Trouble Shooting</p>
+          </div>
+          <div class="row trouble1Line">
+            <div class="row trouble1">
+              <p><span>问：</span>持有旅游签证去公务?</p>
+              <p><span>答：</span>不可以（no）</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>我自己可以预定酒店，机票么？</p>
+              <p><span>答：</span>可以(ok)，但是要提供我方酒店，机票订单，并在使馆电话询问中回答酒店，机票都由旅行社预定</p>
+            </div>
+            <div class="row trouble1">
+              <p><span>问：</span>使馆要求我补资料我必须要补交么？</p>
+              <p><span>答：</span>必须补交，否则有拒签的可能性</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="row lcf_trouble">
+            <p>预订须知&nbsp;|&nbsp;Reservation Notes </p>
+          </div>
+          <div class="row">
+            <div class="row reservationOL">
+              <ol>
+                <li>1.办理周期为我司拿到资料后的2-3周时间，请按实际出行日期合理安排送签日期 </li>
+                <li>2.签证的申请是否成功，取决于使领馆对资料的审核，若发生拒签，请申请人自然接受结果，并放弃追究本公司任何责任的权利</li>
+                <li>3.申请人需保证提供材料的真实性，申请人应特别注意诚实信用的原则 </li>
+                <li>4.我司在收取申请人资料后，保留作出不予受理申请人签证申请决定的权利</li>
+                <li>5.办理周期、停留时间、签证有效期等均系基于以往经验的预估时限，准确时限以使领馆实际审批结果为准。</li>
+                <li>6.获得签证前切勿先行支付机票、酒店费用，以免因签证问题产生费用损失，否则损失将由您自行承担。</li>
+                <li>7.签发的签证入境次数，签证有效期以及可停留天数以使馆批发的签证为准。</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--===========================页脚================================-->
+    <%-include("foot.ejs")%>
+</div>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/LCF_visaDetails.js"></script>
+</body>
+</html>

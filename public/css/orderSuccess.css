@@ -1,0 +1,138 @@
+*{
+    margin:0;
+    padding:0;
+}
+#NAV{
+    background-color: #685b3b;
+    position: inherit;
+}
+.container-fluid .navbar {
+    background-color: inherit;
+    padding: 0 0 0 6.5%;
+    border-radius: 0;
+    border: none;
+    width: 100%;
+    min-height: 74px;
+    z-index: 999;
+    position: fixed;
+}
+/*----------------------------时间轴--------------------*/
+.customItemStepOut{
+    padding-left:15%;
+    padding-right:15%;
+    height:100px;
+}
+.customItemStepin{
+    margin:0;
+    padding:0;
+}
+.customItemStepinContent{
+    padding:0;
+    position:relative;
+    height:30px;
+}
+.customItemStepinLine1{
+    height:50%;
+    width:100%;
+    border-bottom:1px solid #c9c9c9;
+}
+.customItemStepinCircle{
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-left:-20px;
+    margin-top:-20px;
+    width:40px;
+    height:40px;
+    border-radius:40px;
+    border:1px solid #c9c9c9;
+    text-align:center;
+    line-height:40px;
+    background:white;
+}
+.customItemStepinCircle>span{
+    color: #c9c9c9;
+}
+.timeBarLineActive{
+    border-bottom:1px solid #a79865;
+}
+.timeBarCircleActive{
+    background:#a79865;
+}
+.customItemStepinLine2{
+    text-align:center;
+}
+.customItemStepinContent{
+    display: inline-block;
+    margin-top:25px;
+}
+.customItemStepOut{
+    margin-bottom:20px;
+}
+
+/*-------------提交成功---------------*/
+.successMsg{
+    margin-left:20%;
+    margin-right:20%;
+}
+.sucBottom{
+    margin-bottom: 5%;
+}
+.successMsg>table{
+    margin-top:30px;
+    margin-bottom:30px;
+    border: #eeeeee;
+}
+.successMsg>h6>span{
+    color:blue;
+}
+a{
+    text-decoration:none;
+    color:blue;
+}
+.successMsg>h3>span{
+    font-size:.4em;
+    color: #929292;
+}
+.total{
+    text-align:right;
+    padding-right:20px;
+}
+.total>span>i{
+    color:red;
+    font-size:1.5em;
+}
+.titleMsg{
+    padding-left:5px;
+    font-size:1.3em;
+}
+.successMsg th,
+.successMsg td
+{
+    line-height:30px;
+}
+.successMsg th{
+   background-color: #f4f4f4;
+}
+.successBtn{
+    border:1px solid #a69765;
+    width:100px;
+    text-align: center;
+    margin:0 auto;
+    color:#a69765;
+    padding:5px 15px;
+    transition:.2s all linear;
+}
+.successBtn>a{
+    text-decoration:none;
+    color:#a69765;
+}
+.successBtn:hover{
+    cursor:pointer;
+    background-color:#a69765;
+    transition:.3s all linear;
+}
+.successBtn:hover>a>span{
+    color:white;
+    transition:.3s all linear;
+}

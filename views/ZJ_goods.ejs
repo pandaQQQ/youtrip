@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+  <title>套餐页</title>
+
+  <!-- Bootstrap -->
+  <link href="../css/bootstrap.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <!--===================================公共CSS样式===========================-->
+  <link rel="stylesheet" href="../css/homePublic.css">
+  <!--=====================================字体图标===============================-->
+  <link rel="stylesheet" href="../font/font_icon/iconfont.css">
+  <!-- ===================================自己的css样式========================== -->
+  <link rel="stylesheet" href="../css/ZJ-public.css">
+  <link rel="stylesheet" href="../css/ZJ-jour.css">
+</head>
+<body>
+<!--============================navbar:导航条 ======================================-->
+<%-include("head.ejs")%>
+<%-include("left_nav.ejs")%>
+
+
+<!--================国家介绍图片=============-->
+<div class="container-fluid ZJ-padding0" style="height: 500px;background-color: lightgoldenrodyellow">
+  <div class="row">
+    <div class="col-lg-12 col-md-12 ZJ-padding0 ZJ-ban">
+      <!--图片盒子-->
+      <div class=" ZJ-relative">
+        <img src="<%=myCountry2[0].c_imgSrcbig%>" alt="">
+        <div class="text-center ZJ-absolute">
+          <p class="ZJ-title">
+            <span id="ZJ-destination"><%=myCountry2[0].c_countryname%>定制旅行</span><!--目的地的span-->
+          </p>
+          <p>为您提供全程的定制旅行服务</p>
+        </div>
+      </div>
+      <!--按钮盒子-->
+      <div class="row awayTake ZJ-btn ZJ-awayTake">
+        <div class="awayTakeBtn ZJ-absolute">
+          <p><a href="/customOne">开启您的定制</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--======================面包导航====================-->
+<div class="ZJ-body">
+  <div class=" container-fluid ZJ-margin0 ZJ-padding0"></div>
+</div>
+<!--=================================商品罗列===============================-->
+<div class="ZJ-body">
+  <div class="container-fluid ZJ-padding0 ZJ-goods">
+    <div class="row ">
+      <%for(let i=0;i<myCountry.length;i++){%>
+      <div class="col-lg-6 col-md-12 col-sm-12 shop ZJ-padding0 ZJ-relative">
+        <div class="row ZJ-Y" >
+          <div class="col-lg-12 col-md-12 ZJ-GoodsImg ZJ-padding0">
+            <img src="<%=myShopsImg[i].si_imgSrc%>" alt="">
+          </div>
+          <div class="col-lg-12 col-md-12 ZJ-GoodsLabel text-center yiru">
+            <h3><a href="/details.do?id=<%=myCountry[i].id%>"><%=myCountry[i].s_name%></a></h3>
+
+            <div class="ZJ-sp-label ZJ_label">
+
+            </div>
+            <div class="ZJ-price text-center">
+            <span>
+                <span class="iconfont">&#xe6db;</span>
+                <span>价钱：<span class="ZJ-color"><%=myCountry[i].s_price%>￥/人</span></span>
+            </span>
+              <span >
+                <span class="iconfont">&#xe6db;</span>
+                <span>时间： <span class="ZJ-color"><%=myCountry[i].s_day%>天<%=myCountry[i].s_day-1%>晚</span></span>
+              </span>
+              <span >
+                <span class="iconfont">&#xe6db;</span>
+                <span>定制师：<span>城域名</span></span>
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%}%>
+    </div>
+    <!--按钮盒子-->
+    <div class="row awayTake ZJ-btn ZJ-awayTake">
+      <div class="awayTakeBtn ZJ-absolute">
+        <p><a href="/customOne">开启您的定制</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--===========================页脚================================-->
+<div class="container-fluid">
+  <div class="row footer">
+    <div class="row">
+      <div class="footerLogo col-lg-1 col-md-1 col-sm-1">
+        <img src="../images/logo.png" alt="">
+      </div>
+      <div class="footerul col-lg-7 col-md-7 col-sm-7">
+        <ul id="horizontal">
+          <li>
+            <a href="">主题推荐</a>
+            <ul>
+              <li>
+                <a href="">一个人的旅行</a>
+              </li>
+              <li>
+                <a href="">文化体验之旅</a>
+              </li>
+              <li>
+                <a href="">一生必去的地方</a>
+              </li>
+              <li>
+                <a href="">遗落的美景</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">旅行服务</a>
+            <ul>
+              <li>
+                <a href="">定制旅行</a>
+              </li>
+              <li>
+                <a href="">甄选行程</a>
+              </li>
+              <li>
+                <a href="">签证服务</a>
+              </li>
+              <li>
+                <a href="">客户案例</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">You Trip社区</a>
+            <ul>
+              <li>
+                <a href="">旅行者分享</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">帮助中心</a>
+            <ul>
+              <li>
+                <a href="">用户协议</a>
+              </li>
+              <li>
+                <a href="">旅行理念</a>
+              </li>
+              <li>
+                <a href="">服务保障</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">关于我们</a>
+            <ul>
+              <li>
+                <a href="">团队介绍</a>
+              </li>
+              <li>
+                <a href="">联系我们</a>
+              </li>
+            </ul>
+          </li>
+          <li>002-556-5209</li>
+        </ul>
+        <br>
+        <!--<p>&nbsp;&nbsp;&nbsp;&nbsp;客服热线：400-995-1115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新浪微博：@You Trip定制旅行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商家合作：info@YouTrip.travel 022-556-5209</p>-->
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 searchNum">
+        <img src="../images/logoCode.png" alt="">
+        <p>YouTrip服务号</p>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 searchNum">
+        <img src="../images/logoCode.png" alt="">
+        <p>YouTrip订阅号</p>
+      </div>
+    </div>
+    <div class="row footerText">
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;客服热线：400-995-1115&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新浪微博：@You Trip定制旅行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;商家合作：info@YouTrip.travel 022-556-5209</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- =============================框架============================= -->
+<script src="../js/jquery-1.11.3.js"></script>
+<script src="../js/bootstrap.js"></script>
+
+<!--===============================公共样式=======================-->
+<script src="js/homePublic.js"></script>
+
+<script src="../js/ZJ-public.js"></script>
+
+<!--==============================自己的样式===========================-->
+<script src="../js/ZJ-jour.js"></script>
+<script>
+  let myTitle=[];
+  let myTitle2=[];
+  <%for(let i=0;i<myShopsTitle.length;i++){%>
+    myTitle.push("<%=myShopsTitle[i].s_shopkey%>")
+  <%}%>
+  let ele2=document.getElementById("ZJ_label");
+  for(let i=0;i<myTitle.length;i++){
+      myTitle2.push(myTitle[i].split("，"));
+}
+
+
+  let titleBox=document.getElementsByClassName("ZJ_label");
+  ele=(ele2)=>{
+      for (let j=0;j<ele2.length;j++){
+          console.log(ele2[j]);
+          for(let t=0;t<8;t++){
+              ele2[j].innerHTML+="<div>"+myTitle2[j][t]+"</div>"
+          }
+      }
+  }
+
+  window.onload=function () {
+      ele(titleBox);
+  };
+  window.onscroll = function() {/*窗口滚动*/
+      var navbar = document.getElementsByClassName("navbar-default")[0];
+      var onlineIcon = document.getElementsByClassName("onlineIcon")[0];
+      var lcfBackUp = document.getElementsByClassName("lcfBackUp")[0];
+      var scrlength =parseInt(document.documentElement.scrollTop||document.body.scrollTop);/*获取窗口当前的滚动位置*/
+      if (scrlength>500){
+          // console.log("窗口当前的滚动位置大",scrlength)
+          var colorRgba ="rgba(167,152,101, 0.6)"
+          navbar.style.backgroundColor=colorRgba;
+          // $(".navbar-default").css("background-color","rgba(167, 167, 167, 0.49)")
+      }else if (scrlength<500){
+          navbar.style.backgroundColor="inherit";
+      }
+
+      if (scrlength>180){
+          onlineIcon.style.backgroundColor="#615839"
+          lcfBackUp.style.backgroundColor="#615839"
+      }else if (scrlength<180){
+          onlineIcon.style.backgroundColor="#a79865"
+          lcfBackUp.style.backgroundColor="#a79865"
+      }
+  }
+
+</script>
+</body>
+</html>
